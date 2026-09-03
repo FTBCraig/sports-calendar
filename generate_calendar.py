@@ -27,22 +27,29 @@ headers = {
 }
 
 # --- 1. AFL & NRL DATA ---
-sports_urls = {
-    'AFL': 'https://fixturedownload.com/feed/json/afl-2026',
-    'NRL': 'https://fixturedownload.com/feed/json/nrl-2026'
+sports_config = {
+    'AFL': {
+        'url': 'https://fixturedownload.com/feed/json/afl-2026',
+        'emoji': '🏈'
+    },
+    'NRL': {
+        'url': 'https://fixturedownload.com/feed/json/nrl-2026',
+        'emoji': '🏉'
+    }
 }
 
-for sport, url in sports_urls.items():
+for sport, config in sports_config.items():
     try:
-        req = urllib.request.Request(url, headers=headers)
+        req = urllib.request.Request(config['url'], headers=headers)
         with urllib.request.urlopen(req) as response:
             data = json.loads(response.read().decode('utf-8'))
             print(f"Successfully fetched {len(data)} items for {sport}")
             for item in data:
                 match_id = f"{sport.lower()}-{item.get('MatchNumber', '0')}-{item.get('HomeTeam', '')}"
-                title = f"[{sport}] {item.get('HomeTeam')} vs {item.get('AwayTeam')}"
                 
-                # FixtureDownload uses 'DateUtc'
+                # Title with Emoji Prefix
+                title = f"{config['emoji']} [{sport}] {item.get('HomeTeam')} vs {item.get('AwayTeam')}"
+                
                 date_str = item.get('DateUtc') or item.get('UtcDate')
                 if not date_str:
                     continue
@@ -70,8 +77,11 @@ try:
         for component in ufc_cal.walk():
             if component.name == "VEVENT":
                 summary = str(component.get('summary'))
-                if not summary.startswith('[UFC]'):
-                    component['summary'] = f"[UFC] {summary}"
+                
+                # Strip previous tags if present, then prefix with 🥊 [UFC]
+                clean_summary = summary.replace('[UFC]', '').strip()
+                component['summary'] = f"🥊 [UFC] {clean_summary}"
+                
                 cal.add_component(component)
 except Exception as e:
     print(f"Error fetching UFC: {e}")
