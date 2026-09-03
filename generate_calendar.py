@@ -20,7 +20,6 @@ def add_event(uid, summary, start_time, end_time, location="", description=""):
         event.add('description', str(description))
     cal.add_component(event)
 
-# Browser headers to bypass 403 anti-bot blocking
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
     'Accept': 'application/json, text/plain, */*',
@@ -43,7 +42,12 @@ for sport, url in sports_urls.items():
                 match_id = f"{sport.lower()}-{item.get('MatchNumber', '0')}-{item.get('HomeTeam', '')}"
                 title = f"[{sport}] {item.get('HomeTeam')} vs {item.get('AwayTeam')}"
                 
-                utc_str = item['UtcDate'].replace('Z', '+00:00')
+                # FixtureDownload uses 'DateUtc'
+                date_str = item.get('DateUtc') or item.get('UtcDate')
+                if not date_str:
+                    continue
+                    
+                utc_str = date_str.replace('Z', '+00:00')
                 start = datetime.fromisoformat(utc_str)
                 end = datetime.fromtimestamp(start.timestamp() + 9000, tz=timezone.utc)
                 
@@ -55,7 +59,7 @@ for sport, url in sports_urls.items():
                     location=item.get('Location', '')
                 )
     except Exception as e:
-        print(f"Error fetching {sport}: {e}")
+        print(f"Error processing {sport}: {e}")
 
 # --- 2. UFC DATA ---
 ufc_feed_url = 'https://raw.githubusercontent.com/clarencechaan/ufc-cal/ics/UFC.ics'
