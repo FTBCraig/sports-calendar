@@ -47,9 +47,31 @@ for sport, config in sports_config.items():
             for item in data:
                 match_id = f"{sport.lower()}-{item.get('MatchNumber', '0')}-{item.get('HomeTeam', '')}"
                 
-                # Title with Emoji Prefix
-                title = f"{config['emoji']} [{sport}] {item.get('HomeTeam')} vs {item.get('AwayTeam')}"
+                home_team = item.get('HomeTeam', '')
+                away_team = item.get('AwayTeam', '')
                 
+                # Fetch scores & ladder positions if present in feed
+                h_score = item.get('HomeTeamScore')
+                a_score = item.get('AwayTeamScore')
+                h_pos = f"({item.get('HomeTeamPosition')}th)" if item.get('HomeTeamPosition') else ""
+                a_pos = f"({item.get('AwayTeamPosition')}th)" if item.get('AwayTeamPosition') else ""
+
+                # Format title based on match completion state
+                if h_score is not None and a_score is not None:
+                    try:
+                        h_val = int(h_score)
+                        a_val = int(a_score)
+                        if h_val > a_val:
+                            title = f"{config['emoji']} [{sport}] 🏆 {home_team} {h_pos} {h_val} - {a_val} {away_team} {a_pos} ❌"
+                        elif a_val > h_val:
+                            title = f"{config['emoji']} [{sport}] ❌ {home_team} {h_pos} {h_val} - {a_val} {away_team} {a_pos} 🏆"
+                        else:
+                            title = f"{config['emoji']} [{sport}] 🤝 {home_team} {h_pos} {h_val} - {a_val} {away_team} {a_pos}"
+                    except ValueError:
+                        title = f"{config['emoji']} [{sport}] {home_team} {h_pos} vs {away_team} {a_pos}"
+                else:
+                    title = f"{config['emoji']} [{sport}] {home_team} {h_pos} vs {away_team} {a_pos}".replace("  ", " ")
+
                 date_str = item.get('DateUtc') or item.get('UtcDate')
                 if not date_str:
                     continue
@@ -77,11 +99,8 @@ try:
         for component in ufc_cal.walk():
             if component.name == "VEVENT":
                 summary = str(component.get('summary'))
-                
-                # Strip previous tags if present, then prefix with 🥊 [UFC]
                 clean_summary = summary.replace('[UFC]', '').strip()
                 component['summary'] = f"🥊 [UFC] {clean_summary}"
-                
                 cal.add_component(component)
 except Exception as e:
     print(f"Error fetching UFC: {e}")
