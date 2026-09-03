@@ -1,0 +1,32 @@
+name: Refresh Sports Calendar
+
+on:
+  schedule:
+    - cron: '0 0,12 * * *'  # Runs at 00:00 and 12:00 UTC daily
+  workflow_dispatch:          # Allows manual trigger anytime
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install Dependencies
+        run: pip install icalendar
+
+      - name: Run Calendar Generator
+        run: python generate_calendar.py
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
