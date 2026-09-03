@@ -20,13 +20,18 @@ def add_event(uid, summary, start_time, end_time, location="", description=""):
         event.add('description', str(description))
     cal.add_component(event)
 
+# Browser headers to bypass 403 anti-bot blocking
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+    'Accept': 'application/json, text/plain, */*',
+    'Accept-Language': 'en-US,en;q=0.9',
+}
+
 # --- 1. AFL & NRL DATA ---
 sports_urls = {
     'AFL': 'https://fixturedownload.com/feed/json/afl-2026',
     'NRL': 'https://fixturedownload.com/feed/json/nrl-2026'
 }
-
-headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
 
 for sport, url in sports_urls.items():
     try:
@@ -35,7 +40,7 @@ for sport, url in sports_urls.items():
             data = json.loads(response.read().decode('utf-8'))
             print(f"Successfully fetched {len(data)} items for {sport}")
             for item in data:
-                match_id = f"{sport.lower()}-{item.get('MatchNumber', item.get('RoundNumber', '0'))}-{item.get('HomeTeam', '')}"
+                match_id = f"{sport.lower()}-{item.get('MatchNumber', '0')}-{item.get('HomeTeam', '')}"
                 title = f"[{sport}] {item.get('HomeTeam')} vs {item.get('AwayTeam')}"
                 
                 utc_str = item['UtcDate'].replace('Z', '+00:00')
@@ -67,6 +72,6 @@ try:
 except Exception as e:
     print(f"Error fetching UFC: {e}")
 
-# Write output file
+# Save master .ics output
 with open('sports_master.ics', 'wb') as f:
     f.write(cal.to_ical())
