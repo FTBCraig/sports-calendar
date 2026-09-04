@@ -1473,7 +1473,7 @@ UID:afl-210-Fremantle
 LOCATION:Optus Stadium
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:🏈 [AFL] Geelong Cats vs Carlton 
+SUMMARY:🏈 [AFL] 🏆 Geelong Cats  107 - 74 Carlton  ❌
 DTSTART:20260904T094000Z
 DTEND:20260904T121000Z
 UID:afl-212-Geelong Cats
@@ -1494,10 +1494,10 @@ UID:afl-213-Adelaide Crows
 LOCATION:Adelaide Oval
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:🏈 [AFL] To be announced vs To be announced 
+SUMMARY:🏈 [AFL] Fremantle vs Geelong Cats 
 DTSTART:20260912T020000Z
 DTEND:20260912T043000Z
-UID:afl-214-To be announced
+UID:afl-214-Fremantle
 LOCATION:TBC
 END:VEVENT
 BEGIN:VEVENT
@@ -1508,10 +1508,10 @@ UID:afl-215-To be announced
 LOCATION:TBC
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:🏈 [AFL] To be announced vs To be announced 
+SUMMARY:🏈 [AFL] Hawthorn vs To be announced 
 DTSTART:20260919T020000Z
 DTEND:20260919T043000Z
-UID:afl-216-To be announced
+UID:afl-216-Hawthorn
 LOCATION:TBC
 END:VEVENT
 BEGIN:VEVENT
@@ -2908,14 +2908,14 @@ UID:nrl-197-Bulldogs
 LOCATION:Accor Stadium
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:🏉 [NRL] Titans vs Dolphins 
+SUMMARY:🏉 [NRL] ❌ Titans  20 - 24 Dolphins  🏆
 DTSTART:20260904T080000Z
 DTEND:20260904T103000Z
 UID:nrl-198-Titans
 LOCATION:Cbus Super Stadium
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:🏉 [NRL] Rabbitohs vs Roosters 
+SUMMARY:🏉 [NRL] 🏆 Rabbitohs  50 - 20 Roosters  ❌
 DTSTART:20260904T100000Z
 DTEND:20260904T123000Z
 UID:nrl-199-Rabbitohs
