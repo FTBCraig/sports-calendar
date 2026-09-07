@@ -33,7 +33,7 @@ def get_news(query):
     except Exception:
         return []
 
-# 1. PROCESS AFL & NRL
+# --- 1. PROCESS AFL & NRL ---
 for sport, config in sports_config.items():
     try:
         req = urllib.request.Request(config['url'], headers=headers)
@@ -71,6 +71,7 @@ for sport, config in sports_config.items():
                     'title': f"{home} vs {away}",
                     'full_title': title,
                     'date': start.strftime('%Y-%m-%d %H:%M UTC'),
+                    'start_dt': start,
                     'location': item.get('Location', 'TBD'),
                     'odds_link': f"https://www.google.com/search?q={urllib.parse.quote(home + ' vs ' + away + ' odds')}",
                     'news': get_news(f"{home} {away} {sport}")
@@ -88,11 +89,51 @@ for sport, config in sports_config.items():
     except Exception as e:
         print(f"Error processing {sport}: {e}")
 
+# --- 2. PROCESS UFC ---
+ufc_feed_url = 'https://raw.githubusercontent.com/clarencechaan/ufc-cal/ics/UFC.ics'
+try:
+    req = urllib.request.Request(ufc_feed_url, headers=headers)
+    with urllib.request.urlopen(req) as response:
+        ufc_cal = Calendar.from_ical(response.read())
+        for component in ufc_cal.walk():
+            if component.name == "VEVENT":
+                summary = str(component.get('summary'))
+                clean_summary = summary.replace('[UFC]', '').replace('🥊', '').strip()
+                full_summary = f"🥊 [UFC] {clean_summary}"
+                
+                component['summary'] = full_summary
+                cal.add_component(component)
+                
+                # Format start time for web dashboard
+                dtstart = component.get('dtstart').dt
+                if isinstance(dtstart, datetime):
+                    start_str = dtstart.strftime('%Y-%m-%d %H:%M UTC')
+                else:
+                    dtstart = datetime.combine(dtstart, datetime.min.time(), tzinfo=timezone.utc)
+                    start_str = dtstart.strftime('%Y-%m-%d')
+
+                all_games.append({
+                    'sport': 'UFC',
+                    'emoji': '🥊',
+                    'title': clean_summary,
+                    'full_title': full_summary,
+                    'date': start_str,
+                    'start_dt': dtstart,
+                    'location': str(component.get('location', 'TBD')),
+                    'odds_link': f"https://www.google.com/search?q={urllib.parse.quote(clean_summary + ' odds')}",
+                    'news': get_news(f"{clean_summary} UFC")
+                })
+except Exception as e:
+    print(f"Error fetching UFC: {e}")
+
+# Sort all games by start date for web view
+all_games.sort(key=lambda x: x['start_dt'])
+
 # Save ICS File
 with open('sports_master.ics', 'wb') as f:
     f.write(cal.to_ical())
 
-# 2. BUILD HTML WEB PAGE
+# --- 3. BUILD HTML WEB PAGE ---
 html_content = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -106,6 +147,7 @@ html_content = f"""<!DOCTYPE html>
         .card {{ background: #1e1e1e; border-radius: 8px; padding: 15px; margin-bottom: 15px; border-left: 5px solid #007bff; }}
         .card.AFL {{ border-color: #ff4757; }}
         .card.NRL {{ border-color: #2ed573; }}
+        .card.UFC {{ border-color: #ffa500; }}
         .card-header {{ font-size: 1.2em; font-weight: bold; margin-bottom: 5px; }}
         .card-meta {{ color: #aaa; font-size: 0.9em; margin-bottom: 10px; }}
         .news-box {{ background: #2a2a2a; padding: 10px; border-radius: 5px; margin-top: 10px; }}
@@ -116,12 +158,12 @@ html_content = f"""<!DOCTYPE html>
 </head>
 <body>
     <div class="container">
-        <h1>🏈 🏉 Live Sports Dashboard</h1>
+        <h1>🏈 🏉 🥊 Multi-Sport Live Hub</h1>
         <p style="text-align:center; color:#aaa;">Auto-updated every 12 hours</p>
         <div id="games">
 """
 
-for game in all_games[:50]:  # Limits to upcoming 50 games for clean layout
+for game in all_games[:60]:
     news_html = ""
     for article in game['news']:
         news_html += f'<a href="{article["link"]}" target="_blank">📰 {article["title"]}</a>'

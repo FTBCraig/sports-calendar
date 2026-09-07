@@ -11,6 +11,7 @@
         .card { background: #1e1e1e; border-radius: 8px; padding: 15px; margin-bottom: 15px; border-left: 5px solid #007bff; }
         .card.AFL { border-color: #ff4757; }
         .card.NRL { border-color: #2ed573; }
+        .card.UFC { border-color: #ffa500; }
         .card-header { font-size: 1.2em; font-weight: bold; margin-bottom: 5px; }
         .card-meta { color: #aaa; font-size: 0.9em; margin-bottom: 10px; }
         .news-box { background: #2a2a2a; padding: 10px; border-radius: 5px; margin-top: 10px; }
@@ -21,17 +22,67 @@
 </head>
 <body>
     <div class="container">
-        <h1>🏈 🏉 Live Sports Dashboard</h1>
+        <h1>🏈 🏉 🥊 Multi-Sport Live Hub</h1>
         <p style="text-align:center; color:#aaa;">Auto-updated every 12 hours</p>
         <div id="games">
 
+        <div class="card NRL">
+            <div class="card-header">🏉 [NRL] 🏆 Knights  28 - 18 Cowboys  ❌</div>
+            <div class="card-meta">📅 2026-03-01 02:15 UTC | 📍 Allegiant Stadium</div>
+            <a href="https://www.google.com/search?q=Knights%20vs%20Cowboys%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
+            <div class="news-box">
+                <strong>Latest News:</strong><br>
+                <a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxQMEhjSlBtMWpNU3J6eUhPS2Zsejczek5jMmlvSzctb3RTRWxTdnVUS25CSTVEZDFEaXZxV21KNnZkSVlXal92LVFDQWw0cU5qdzhHNXZNYzlVQ2VGbW41NXlPU0dLYnVDMzlZUWlYdUlQTU54dGJHX0dLaTFpVE5hM1lUUWpUOWk3RFE?oc=5" target="_blank">📰 As it happened: Predebon stars for Knights; Roosters roll on; Sharks salute - NRL.com</a><a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxNUXlCWFI3S3p1N0h3T0VRVG13THFwM3lMYWpxRWVBLUU0UlhWY3c3TW9tYVQ3WDYtbkxEU2dhSG8wRXFVU0dIVWFLaVlrQnJVYTJMY29DeU5sQXlJUHB2SWlHTGNXM1pQMFlnN2hzbTg1ZkFQNzZZenlJYkVOa0RvbVB1ZXlKTF9oTXk3bkJld0xDM2RoUzV0WUxiWQ?oc=5" target="_blank">📰 Final Cowboys NRLW team list: Round 9 v Knights - North Queensland Cowboys</a>
+            </div>
+        </div>
+    
+        <div class="card NRL">
+            <div class="card-header">🏉 [NRL] 🏆 Bulldogs  15 - 14 Dragons  ❌</div>
+            <div class="card-meta">📅 2026-03-01 04:30 UTC | 📍 Allegiant Stadium</div>
+            <a href="https://www.google.com/search?q=Bulldogs%20vs%20Dragons%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
+            <div class="news-box">
+                <strong>Latest News:</strong><br>
+                <a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxOdTlqM2tscmxtWXhpcVplcE9OTmpfcEhPYlphREFJbmtvUGlzQzVhM0JjM2VrU2hLT0pneXF1dW1OMEVHWlNna3Zyd3lydHJqNm5Pd2lzb0pERktlcmtlVzhxMXk3OUZrbzd6aVNfVVBHRkRTOVBvZ2RFRW1qZlp3N056ang1cmFZdWFrZXNtX3FyMTZl?oc=5" target="_blank">📰 Bulldogs to snare rising Dragons star on long-term deal - Zero Tackle</a><a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxPUGs3VWZKWkRnVWFzbURlVUs4X2xqU1pPR0oxYlRWSmUtcmllOGJFQmQwSldRc2JhY1lOakJkSW9mZmRrZ0NmVnBwWDZoLWJQS1J4MlRtWldoNmh6MVZUR1lmelM2Wklmd1VLZVFoVmZ4bzBBRUtNaHphZmJnNmQ5M19kbUo2eFRRWXhjbGNLYTNTVVdpU202bUZjOA?oc=5" target="_blank">📰 Dragons v Bulldogs: Atkinson settles in; Xerri's fresh chance - NRL.com</a>
+            </div>
+        </div>
+    
         <div class="card AFL">
             <div class="card-header">🏈 [AFL] 🏆 Sydney Swans  132 - 69 Carlton  ❌</div>
             <div class="card-meta">📅 2026-03-05 08:30 UTC | 📍 SCG</div>
             <a href="https://www.google.com/search?q=Sydney%20Swans%20vs%20Carlton%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMi0AJBVV95cUxOSWEzbkpHSXVtWG1MVHBTZmRFVjUwMlVOdW1pQmp6RktCZUozcndHOERhTVJiQ3JWT21kOHdVUEFINVY3OEZ6U0dXaFJHbEl2anlGUzcwMGF4b2k3UFA5TUtsTTh2R0o4TlRvMjRFcm5UU1BmUjF2ZW95bEZRZHFpZXRzUWZoZUlGU0JYb3dySEZmemd1aDM2RGI2NHRrMGN2NDFRMm0tWmU0SGFPLTZHTFFZUjNJb3pBbTlodHdya0xyNVlRUmZRVWFiVXpQRDRreTRCby1WVDRmbVVqa2lPVGxqWTQ0LWNaakpNbmZKYi1pelVyLUtMWE9qUFUySzc0cmszZ19VTGptLUcxZENvVWVKM0R5c0k3MmJfbDd2NkRFYkg2d0t5dUZIdEtrYjZLRl91WEJ5YnNRZUhlb3NtUDdVTS1VZUNZbXBXTDhoMFnSAdACQVVfeXFMTklhM25KR0l1bVhtTFRwU2ZkRVY1MDJVTnVtaUJqekZLQmVKM3J3RzhEYU1SYkNyVk9tZDh3VVBBSDVWNzhGelNHV2hSR2xJdmp5RlM3MDBheG9pN1BQOU1LbE04dkdKOE5UbzI0RXJuVFNQZlIxdmVveWxGUWRxaWV0c1FmaGVJRlNCWG93ckhGZnpndWgzNkRiNjR0azBjdjQxUTJtLVplNEhhTy02R0xRWVIzSW96QW05aHR3cmtMcjVZUVJmUVVhYlV6UEQ0a3k0Qm8tVlQ0Zm1VamtpT1Rsalk0NC1jWmpKTW5mSmItaXpVci1LTFhPalBVMks3NHJrM2dfVUxqbS1HMWRDb1VlSjNEeXNJNzJiX2w3djZERWJINndLeXVGSHRLa2I2S0ZfdVhCeWJzUWVIZW9zbVA3VU0tVWVDWW1wV0w4aDBZ?oc=5" target="_blank">📰 Contracted Demons champ told club wants to trade him; ruckman asks out again — Whispers - Fox Sports</a><a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxQYXlCUTFNamljUkRnVk9XMXJSeFVPMEpXQzZUS3gxUE1TVExhbjV4LWVLX1I2WjNhNHlvaXdEdEZfbG1tWlJWMUxwZFZ4NUswb1Y1cEk1OFJHQ0RyNVZiTWxzSVNHdjlFNlB3a0VraXlwbzZ5bXpXVTREc09JRHJrbjVBZXh5aUZXVkFxYWhHOVF6VHVRLURjNU9OZktmV3NLZmhWb1hpN1dVNHJ5dktfTS0teGtyaUR6czUtdTBSbW92dw?oc=5" target="_blank">📰 Crushing blow confirmed as Swans skipper set for surgery - Nine.com.au</a>
+                <a href="https://news.google.com/rss/articles/CBMi-wFBVV95cUxQSU1qbDVvR0drdUttamYtR1V6YzF3MXl2MWVheFo4Rk5TTXJ0Ni1rOXF3Y3hHazlHUFVqRVdfRlhYYU1ZbC1nUmJxN1lZanRiOUFJdW80UjFUY195QVZpYnU3OG1FWnRCSzFsSi16Rl9kUmpUeHNZcEthS0ZWbW5LOFFZTW53MF80N0xjZkFRd1VLaEtHR2lQRHVkMldnX25OX3RBOUVOelB0ay1FaVVjakRLdmROWFJEUFVabUNWaUxfaUpEZkJJRU9zUkR3WnJScTlLYkJSTWVWSElFMW9CMG5JQ0ZFTkdZREszeE0zaVhza1hvZ0lxVWh2OA?oc=5" target="_blank">📰 ‘Elephant in the room’ as clubs secretly circle banned Swans star - Nine.com.au</a><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE1QOTVtOWVMek9XZU1TV2IyWnNIbHd2Wk5FQjUzY0h2SXl0UHN0VlNkc2xCdUhHMkFFVnpqQy1VOEtHdnF2TVVyN2ZvMkVGUS1qRzVJUGpB?oc=5" target="_blank">📰 Official AFL Website of the Sydney Swans Football Club. All the latest news, videos, results and information. - sydneyswans.com.au</a>
+            </div>
+        </div>
+    
+        <div class="card NRL">
+            <div class="card-header">🏉 [NRL] 🏆 Storm  52 - 4 Eels  ❌</div>
+            <div class="card-meta">📅 2026-03-05 09:00 UTC | 📍 AAMI Park</div>
+            <a href="https://www.google.com/search?q=Storm%20vs%20Eels%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
+            <div class="news-box">
+                <strong>Latest News:</strong><br>
+                <a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxQRWZEc09MQWVYT2dSWXFPZldyVGpmbmJKaUdWM05pOHp6aDJNTFhZM0RMYnB4enlFMngzanBWcVdPRTlzbjdFZE9XNm5ydXZJRUs1Q1ZtYmY3MWZGc0xPWVJVdFNaVUdNeG90cFJFSHJPc3lNTUNGSkhiZldKaVdjaUNlVVBmczRvM0lJdmllNDZnd2N0VVZnUE1tYkl4ajhGYU5LcGd3?oc=5" target="_blank">📰 NRL Highlights: Storm v Eels - Round 11 - Nine.com.au</a><a href="https://news.google.com/rss/articles/CBMickFVX3lxTE11TTFDdC1Dd0MtaERUWVVWNDRDMjV0a05lMDFJakM5YW9DME1UWl9JTkNmQ3NFd3RCV2puejJxbmpjU0NIUkd6ZUxHYUhmcmpzX1dzVU1sOFpYQUlBa0QxLUs4dmswb3BoSnFmU3dqTWMxdw?oc=5" target="_blank">📰 Eels v Storm – Round 11, 2026 - NRL.com</a>
+            </div>
+        </div>
+    
+        <div class="card NRL">
+            <div class="card-header">🏉 [NRL] 🏆 Warriors  42 - 18 Roosters  ❌</div>
+            <div class="card-meta">📅 2026-03-06 07:00 UTC | 📍 Go Media Stadium</div>
+            <a href="https://www.google.com/search?q=Warriors%20vs%20Roosters%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
+            <div class="news-box">
+                <strong>Latest News:</strong><br>
+                <a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxQMEhjSlBtMWpNU3J6eUhPS2Zsejczek5jMmlvSzctb3RTRWxTdnVUS25CSTVEZDFEaXZxV21KNnZkSVlXal92LVFDQWw0cU5qdzhHNXZNYzlVQ2VGbW41NXlPU0dLYnVDMzlZUWlYdUlQTU54dGJHX0dLaTFpVE5hM1lUUWpUOWk3RFE?oc=5" target="_blank">📰 As it happened: Predebon stars for Knights; Roosters roll on; Sharks salute - NRL.com</a><a href="https://news.google.com/rss/articles/CBMihgFBVV95cUxQQlFENm00RS1EY1QxYnJuLVNrOXBrbDZNZHJQdXVhcWVwR1ZXRHB3TkpYVlRJemt2TlhjUmJWZGxhbGJfamc1bDhZMTZyQW16VFdhY1ZLQnVvRnFBbFE3MUpDRVZvRi1jWDl6SmVyWGZOWThlbk0taGgzSmdqNklHNndFRXNyZw?oc=5" target="_blank">📰 NRLW 24 Hour Update | Round 8 v Warriors - Sydney Roosters</a>
+            </div>
+        </div>
+    
+        <div class="card NRL">
+            <div class="card-header">🏉 [NRL] ❌ Broncos  0 - 26 Panthers  🏆</div>
+            <div class="card-meta">📅 2026-03-06 09:00 UTC | 📍 Suncorp Stadium</div>
+            <a href="https://www.google.com/search?q=Broncos%20vs%20Panthers%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
+            <div class="news-box">
+                <strong>Latest News:</strong><br>
+                <a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxNYWR1dHh0T2xlbnF0NzZlMlMwbGVJM0hpdk1DR0VxbjhvVXNkbFAzc0RCNGxWRlFZU01tZzhzOW5ESFdqRTVlQU9GWnJ0R25zanZEVUF5Nng1dmZYTVpQV0xydzJsVWVWYlBuU0dSSjFJcFBWaXFxTzYzazZleFBFUWx3?oc=5" target="_blank">📰 Broncos v Panthers - Finals Week 2, 2017 - NRL.com</a><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxOLTVQeDNHdGxPQWtEWFN4ZGFZMERTdlZmRjZZQk93U3htOFRtTklxTk9xSG9wVEdJTlp0MWxteTdQcFFqcTZOMUM1S25mWktkUG1ObG1xY3Z6TkJ1eU1wOVp4TUJFWWxEcURqdm52RHprQ21aZ01tcW9TRmQxYXRySmhiRQ?oc=5" target="_blank">📰 NRL Team List Round 20 v Panthers - Brisbane Broncos</a>
             </div>
         </div>
     
@@ -41,7 +92,7 @@
             <a href="https://www.google.com/search?q=Gold%20Coast%20SUNS%20vs%20Geelong%20Cats%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxNMjBRM09sS3dYcmF3Tk5nR0Vrc3dPeEhBMGhZSmM0amtfMEJNWG9HVUZDT1JOWTM2NlhQOWNfQml1OGZkQ2d6MmtJdXlwcDU5QnR0TVd1WjdVTkM1OE4zNXVoVVFlQWN2VC1ROUxGNXFjNjAxU1EyOWducFpHb2VLRXhSRjc1UjY0MWlwS3VobWh2U2NXa2I2aks2WFJweG83NTZFeEJ3?oc=5" target="_blank">📰 Clarkson offloads his Kangaroos gear - Nine.com.au</a><a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxPY3NvcldEaWtvalNaOV9EYkRZX3MycGtaX2FoajNGMm4wcUtNRFFyM0R5Mm1ERnJQNU1XQ3pfXzNkWmZQTFFyOEo5S3UxRE0wNzFLbzlOZ3F2a25qLVFKeF9YRXRGRDRMOWZwYUJaaVE0OXNNdE1RZTdRZDk4MmpSaEt2ck55cm9kZ2RlTUdpekJGblR4V2Ywc2hwQl96cEM5WXdHMzBScGM?oc=5" target="_blank">📰 Gutsy Cats overcome Suns as injuries hit hard - afl.com.au</a>
+                <a href="https://news.google.com/rss/articles/CBMi9AFBVV95cUxPb3NENHpmRFlySWs5dUhNVTZlcVJsazNTNkVBYXRvUmtqcVM4VmplODJPYnRORC02cG5ZVWtkVVE2OHNxWHB4aUYzRnNUWVh5VkRtWV84QWptVE1HSk5KOUFOcWZrdU1OWkM2X3FZRlBqN3I0ZWFMSW4zdUkxSnJRT01NQU1teUY2djRYRmloS3hCcVJod1FkXzItMjhoeFN4WXBSNWIxdlhqTEJVaE9OWDR3U0duQW05amVxeVp2VXJQdUczMkpqUnlsMUk5RnFmSlZnMmdNWGN1MmZSSVlyeVpvZzkyMF9VcDNMaFVFS3cwSnNY?oc=5" target="_blank">📰 Rival whacks Roos for ‘savage’ Clarkson comments as fresh details aired - Nine.com.au</a><a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxPY3NvcldEaWtvalNaOV9EYkRZX3MycGtaX2FoajNGMm4wcUtNRFFyM0R5Mm1ERnJQNU1XQ3pfXzNkWmZQTFFyOEo5S3UxRE0wNzFLbzlOZ3F2a25qLVFKeF9YRXRGRDRMOWZwYUJaaVE0OXNNdE1RZTdRZDk4MmpSaEt2ck55cm9kZ2RlTUdpekJGblR4V2Ywc2hwQl96cEM5WXdHMzBScGM?oc=5" target="_blank">📰 Gutsy Cats overcome Suns as injuries hit hard - afl.com.au</a>
             </div>
         </div>
     
@@ -55,6 +106,16 @@
             </div>
         </div>
     
+        <div class="card NRL">
+            <div class="card-header">🏉 [NRL] 🏆 Sharks  50 - 10 Titans  ❌</div>
+            <div class="card-meta">📅 2026-03-07 06:30 UTC | 📍 Ocean Protect Stadium</div>
+            <a href="https://www.google.com/search?q=Sharks%20vs%20Titans%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
+            <div class="news-box">
+                <strong>Latest News:</strong><br>
+                <a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxQaHAwS2dxcjR6T1kxUk1VQjhtek5wTkxRX1ZSczdQc2NESUtjeDRXRFJ2ODVXRmR3TVpuTlp3ekJQcS1MVUUtUjV3WjBXcTBvdW5UNkkyUzd4Y0ZEQkZBQjY0YUFrMU9rZVk3VmpLMG1fdTYtb0UzUHZSNWVYUS1kNjRaN2NkckV4X1JHaGJWcHN1dw?oc=5" target="_blank">📰 Titans v Sharks: Bai's time at lock; AFB props up pack - NRL.com</a><a href="https://news.google.com/rss/articles/CBMif0FVX3lxTFBqbTh2eWdNMnZXdHZCbGtRbWZ0LVp6LWtINDhxUkZvVE5pNzdVVk4ySU5EQ0pHUC1IZ2lGR0h4TzM0YmUyWVBhYll0NE15dnItT0p5SWNYOWt2emZMb2VyU1BJaHJXaFlsNjEtbms3RE9VdHBtLWhGclFMbVNHNTg?oc=5" target="_blank">📰 NRL Team List: Round 25 v Titans - sharks.com.au</a>
+            </div>
+        </div>
+    
         <div class="card AFL">
             <div class="card-header">🏈 [AFL] ❌ Brisbane Lions  106 - 111 Western Bulldogs  🏆</div>
             <div class="card-meta">📅 2026-03-07 08:35 UTC | 📍 Gabba</div>
@@ -62,6 +123,26 @@
             <div class="news-box">
                 <strong>Latest News:</strong><br>
                 <a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxNWEM1czdOSjhDY3VlU2w1Vms4bVI5eUt4MjFMTlpYalBUcDh6MVFqS3JpakhxRmVNUk9YbjczZktqSWtIaGQyeTQ1VWpLampzdkZld0t5TUpwWFlrdHJMZ29Kc0N2cm9WU2dQelllaHItT3lqWVRpSXJKWVNZOW1VeGdxV01FeHZORElGa3Z0QWpkUGhTemxnNmRoOGRwV3c?oc=5" target="_blank">📰 AFL Match Report: Surging Crows land Semi-Final date with Lions - afc.com.au</a><a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxPUllVMDhpZGdheWR1UmQ4c0RJNHdsTDE0NXhhZFZpMGI0UWV5WGlKR05IT1lCLTNiVk80U1NYWlZKMHRuRXZTS2ktMi1ITnZQUXFzVUZKT1VocjNUSDQyVHJPTDU5VEVhVE16SDltUEJlTmhxb3lqUG5IbzdFTTJ1bDB4aGVEVzhHN25WazkwTktfcDJpeUY0?oc=5" target="_blank">📰 RECAP: Crows fly home to down Dogs, Swans shock Lions - afl.com.au</a>
+            </div>
+        </div>
+    
+        <div class="card NRL">
+            <div class="card-header">🏉 [NRL] ❌ Sea Eagles  28 - 29 Raiders  🏆</div>
+            <div class="card-meta">📅 2026-03-07 08:35 UTC | 📍 4 Pines Park</div>
+            <a href="https://www.google.com/search?q=Sea%20Eagles%20vs%20Raiders%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
+            <div class="news-box">
+                <strong>Latest News:</strong><br>
+                <a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxQS2ZRZFQyMHpjc0RFNnBvQ0hudnUxaWdfdTY5QnpSY3IwLUw0eEJFa3hudFFOSDEwVF9EQUxGTzAwcjJRSV9mWFNFS2dOWjlma3FZdWx4bHJoUDkwUV9EamN2LXBfbEdYdUlfcXlwM0kzWkI2WV8yWjZseFkxWGtCeTlveF9FODFUY2R4d3FQT2JlRnpxYzRhbW1hTkkxbzNhcW10al9lZXh5a0ljVjFr?oc=5" target="_blank">📰 Storm claim last-gasp win after young winger stretchered off - ABC News & Headlines – Australian Broadcasting Corporation</a><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxONUdiWGZJTVVhMjhxMFNkcE5lSmFfNER2a2FNOVJtNmpMcTVfTzVWVGptV1o0YldtdjEzVFdIM1hjc1RzRzR4VTFuZkVybFFaUkNEY3VYNDlvc0FuZlU2OXpZN1FlRXc3Sjd6T0pZbWdYeEZvRzVhc08xZWJVRUIwSGdicTFxRDhV?oc=5" target="_blank">📰 Rabbitohs v Sea Eagles - Grand Final, 1968 - NRL.com</a>
+            </div>
+        </div>
+    
+        <div class="card NRL">
+            <div class="card-header">🏉 [NRL] ❌ Dolphins  30 - 40 Rabbitohs  🏆</div>
+            <div class="card-meta">📅 2026-03-08 05:05 UTC | 📍 Suncorp Stadium</div>
+            <a href="https://www.google.com/search?q=Dolphins%20vs%20Rabbitohs%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
+            <div class="news-box">
+                <strong>Latest News:</strong><br>
+                <a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxQWHBmWjJBZkVuUEgydnN1MncyLTFaeWltRlhFbkd5dVJ1SThvTlhmTl9JdUJoa1llYmY4WHZJUUJKR0V6MGF6M3oxdHk1V3RDLVhYZE1ySkRaZHJjem1fSkkxcm90UHNTSzI4dVBYQVkxbjFNSnZoT2NtQ3pMeFRQd2NKS0dzUU9PNkNucWlzQXhwMGhTT2xHa2dnWQ?oc=5" target="_blank">📰 As it happened: Bunnies do it for Jai; Dolphins scrape home - NRL.com</a><a href="https://news.google.com/rss/articles/CBMikAFBVV95cUxPNFl1WHhTVlA1b2l1b1FaWG1sUHl6a1VOT2hDbWVVbkZ5ZzRxZ0VzUlpiYlJWV2JYTExtUFd3amt4aGpxT0hGSWEyYWxwR011TDh5ZTZBMlNQRGFYU0hyQ2ZuTU00UW9tT3dZQ2VQYUZHUjhLQ2ZIVXRGdEpjdmpLTlRUWGlBTjhES3RDVWNwSG4?oc=5" target="_blank">📰 Dolphins Team List: Round 11 v Rabbitohs - Official website of The Dolphins</a>
             </div>
         </div>
     
@@ -85,13 +166,43 @@
             </div>
         </div>
     
+        <div class="card NRL">
+            <div class="card-header">🏉 [NRL] ❌ Broncos  32 - 40 Eels  🏆</div>
+            <div class="card-meta">📅 2026-03-12 09:00 UTC | 📍 Suncorp Stadium</div>
+            <a href="https://www.google.com/search?q=Broncos%20vs%20Eels%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
+            <div class="news-box">
+                <strong>Latest News:</strong><br>
+                <a href="https://news.google.com/rss/articles/CBMingFBVV95cUxNVTNick84WHBjWDVrc0RLc0V3RGc5Ymp0SThqX0dON2ptS0VDRkpkMkNpYTVTVkZPeVBtV1B2MnVEbGo5T1htUG9aV18tZVVRODIya2QxVEttNDk0T1pzRXBKVjdxbEdkNUx6bGJnNVN2WVlZZkJiaDZMQXBKMXo2WllZdGFPbUZ4SHlYRDQ4dFlXRnNNRVd6enJRUXpvZw?oc=5" target="_blank">📰 NRLW Sunday: Eels edge Raiders; Titans, Broncos claim key wins - NRL.com</a><a href="https://news.google.com/rss/articles/CBMifkFVX3lxTE5UUFlfVEFLY0toclA1Z2pKd1pWWG9ydThVaXFmZl9OZ1B5c0R6VjBrSUxSMFRYSl9DZWVMNmJoSDBVTkh1NlQ1T1BETjBnU2UtVUJsVWxad0ROVnFOSDFUYkhTN1BvbzBrTndDNnpxYnkxNFJGdW9LUTc5amFtQQ?oc=5" target="_blank">📰 NRLW Team List Round 9 v Eels - Brisbane Broncos</a>
+            </div>
+        </div>
+    
+        <div class="card NRL">
+            <div class="card-header">🏉 [NRL] 🏆 Warriors  40 - 6 Raiders  ❌</div>
+            <div class="card-meta">📅 2026-03-13 07:00 UTC | 📍 Go Media Stadium</div>
+            <a href="https://www.google.com/search?q=Warriors%20vs%20Raiders%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
+            <div class="news-box">
+                <strong>Latest News:</strong><br>
+                <a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxPVm5wY1RLeHUtcjlVbW9vWkNNb3lpRnJUd3hHR3BnQ0xudkhBZHFhZkZfMElQN1lsMURDNzIwcWI2ZzRNSWpWVXlLODh1VkR6eTNoUm1lN0Z4cUZwT1QtU0wtQUdIRllJMjhLRXNEblNhaXNUemI3Um03bm5HUi1Ka0lYSlVKdDJFRGtlUmtTTTRPa3RQT0tUUUpPV0JUaVcxMjFwV2dLMDV3QQ?oc=5" target="_blank">📰 As it happened: Raiders do it for Papa; Storm, Wahs win thrillers - NRL.com</a><a href="https://news.google.com/rss/articles/CBMizgFBVV95cUxON2Q3MkRHLXRaMkVrUmlNS1RFVjJNY21vZjhyZTV2MDJtOHh4aURscF84UldfMkhMT3BZRVN0XzRRUGM2c0JlVW43MFg5OEN0NlRoNFZrT1Frd0JCMzd0SG1UWWFDcUlBMmxkaE1GMmJwVi1JbVppQVhFV2stMkVpNk9uTDdOZ1I2bmw3SEVXdnBHZzQwOEh3Q1h1THZYNXdzM3FKbDlDTm5famQ1VnB3eHhUbUJ4QkxWaGk2Ulkxd1RSWGpxZUFDNFhGZTFnQQ?oc=5" target="_blank">📰 Warriors pip Manly to give Penrith minor premiership edge; new No.7 shines for Raiders - SMH.com.au</a>
+            </div>
+        </div>
+    
         <div class="card AFL">
             <div class="card-header">🏈 [AFL] ❌ Essendon  83 - 145 Hawthorn  🏆</div>
             <div class="card-meta">📅 2026-03-13 08:40 UTC | 📍 MCG</div>
             <a href="https://www.google.com/search?q=Essendon%20vs%20Hawthorn%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMi1AFBVV95cUxOcWZQUVpyR3U3N3V0c2tvWnpseW5PcTJhTDIxbG9WWTN2Zjd3OElPaXNoT2xFUnZrc2xGMVJOV2FHQ0JpMUtoTnVnRDl0TkhhVEM3TGk1WDNXSS1jMEZZdEdqVEZNaFlfTDRKS3Y3di05N2dpc0dDZmxVTDB2ekpDVHdXNW1JRjBxUUxyamZPMDFONHBLdVkwOGUwbVc1NUM1MVprZHQtNHVkWlU4eHhWRFJHWDVhVVRzb1BJR3pLRlFtTktic1NsWmRtZkF4dDlGMUhnQw?oc=5" target="_blank">📰 Door ajar for Merrett to remain a Bomber ahead of crucial meeting - Nine.com.au</a><a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxOWWJ4bzdqNXBhX01DWEhwQTFDRWpiZGhPQjVnOExlM2xEM2VEM0sxUmo1aS1TWmhKaVZJZ0NQUkYtakxneXVYMXpKaUx3dFdWNGhZLURIdnhSV1RaaHlHMm80UTljS2p1bWRzRU15TWdkYTdQX3BHQ2FFYnJhWXBmZm8zQ1JDdDlYMXY0OEtJdFJySE5tOEI0?oc=5" target="_blank">📰 VFL PRELIM FINAL FIXTURE: Box Hill to host Bombers - hawthornfc.com.au</a>
+                <a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxOWWJ4bzdqNXBhX01DWEhwQTFDRWpiZGhPQjVnOExlM2xEM2VEM0sxUmo1aS1TWmhKaVZJZ0NQUkYtakxneXVYMXpKaUx3dFdWNGhZLURIdnhSV1RaaHlHMm80UTljS2p1bWRzRU15TWdkYTdQX3BHQ2FFYnJhWXBmZm8zQ1JDdDlYMXY0OEtJdFJySE5tOEI0?oc=5" target="_blank">📰 VFL PRELIM FINAL FIXTURE: Box Hill to host Bombers - hawthornfc.com.au</a><a href="https://news.google.com/rss/articles/CBMi1AFBVV95cUxOcWZQUVpyR3U3N3V0c2tvWnpseW5PcTJhTDIxbG9WWTN2Zjd3OElPaXNoT2xFUnZrc2xGMVJOV2FHQ0JpMUtoTnVnRDl0TkhhVEM3TGk1WDNXSS1jMEZZdEdqVEZNaFlfTDRKS3Y3di05N2dpc0dDZmxVTDB2ekpDVHdXNW1JRjBxUUxyamZPMDFONHBLdVkwOGUwbVc1NUM1MVprZHQtNHVkWlU4eHhWRFJHWDVhVVRzb1BJR3pLRlFtTktic1NsWmRtZkF4dDlGMUhnQw?oc=5" target="_blank">📰 Door ajar for Merrett to remain a Bomber ahead of crucial meeting - Nine.com.au</a>
+            </div>
+        </div>
+    
+        <div class="card NRL">
+            <div class="card-header">🏉 [NRL] 🏆 Roosters  26 - 18 Rabbitohs  ❌</div>
+            <div class="card-meta">📅 2026-03-13 09:00 UTC | 📍 Allianz Stadium</div>
+            <a href="https://www.google.com/search?q=Roosters%20vs%20Rabbitohs%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
+            <div class="news-box">
+                <strong>Latest News:</strong><br>
+                <a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxNZjJPOUpveHkteXVNbnk5SXBBZ1BnYWQySFNlNHdybmpmNDd1eHJiM3BPZjVGNTBUM0ZqYlBHSmJ3RHJUOFI2NFdIamFqNFB2Q0FGZHl6bEZ1OS00WFdiSldnSFFsZTltQm5iM1BUOVhBNW14dlhRcjdQckZnVDdVOG5lakJCbnloNUhZS0tn?oc=5" target="_blank">📰 All Tries - Rabbitohs v Roosters - Round 27, 2026 - NRL.com</a><a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxOa2xZZlMtMGRPWllCNXE0NkFVQS11OGdfSHF2d0R3WC1veGl6R2Z1eXlfSUtjTWw1ZTR5cElCa2hUQ1p6aUJRd0xvZEgyVS1HeThpUEN3SGdWSzJfMEtLUHRuWVlJc3JycnZpTzMyTnJ4b3p2LW5pdE13U2xuc3p1MHpyOG9QYlo1VkNXNEhDR3MwUWRFWGxhU2JZTWZVa0llVWIzUjJCek1ZdFcySE1rbQ?oc=5" target="_blank">📰 NRL Highlights: Rabbitohs v Roosters - Round 27 - Nine.com.au</a>
             </div>
         </div>
     
@@ -105,13 +216,33 @@
             </div>
         </div>
     
+        <div class="card NRL">
+            <div class="card-header">🏉 [NRL] 🏆 Wests Tigers  44 - 16 Cowboys  ❌</div>
+            <div class="card-meta">📅 2026-03-14 04:00 UTC | 📍 Leichhardt Oval</div>
+            <a href="https://www.google.com/search?q=Wests%20Tigers%20vs%20Cowboys%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
+            <div class="news-box">
+                <strong>Latest News:</strong><br>
+                <a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxOdnZENHFSUXlENENSZ0hTVVVjcVBWX3dKbG10M3FoaUxxU0RaaVlWSDU2WExWbkNlSjAyTFVHeGxTSExsQU9KZ3BSMDF1SkFBamt4S01FaXRmZDFQZGQxZXlHcFkyOW0wVUJRVzdmZjJRazIxblVIVFVCUEhmMmpGVTNJRHZTOExGVnEySGRNcUNhM0pYVkdKazF3U1o1UTNqMm5ZRERn?oc=5" target="_blank">📰 Cowboys v Wests Tigers: Dearden, Nanai big ins; Aho eyes debut - NRL.com</a><a href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxQYVVTcll4VDJGMTdYYnFWdXFzMUhBenhZbjVwQzZVMnhzVFZkbS1wUmhrai1IUS1jdjF4dF9XTUZzZlFIaHhNazFfSXJSdzVxcFFKOHlsSTI5Q3NqR3lYd3ctRkdOVFhQX3RlYTJSWHpWTHhMdG40b0w5TkIzTGNpdUZ5OUZ1MGZjLTRr?oc=5" target="_blank">📰 NRL Squad Update: Round 26 v Cowboys - Wests Tigers</a>
+            </div>
+        </div>
+    
         <div class="card AFL">
             <div class="card-header">🏈 [AFL] 🏆 Geelong Cats  110 - 100 Fremantle  ❌</div>
             <div class="card-meta">📅 2026-03-14 05:15 UTC | 📍 GMHBA Stadium</div>
             <a href="https://www.google.com/search?q=Geelong%20Cats%20vs%20Fremantle%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxQRVZUVjhnZzlxS0RESXc3M3hfLU1lWGdWeDVWdTRkYVFQMHQ4R09leHU2WGwwUmUyRkFfWGVMdVlyREVfUHZUcFN0ZHFkaGFpOVlJeTQ4RnBaeDJwSWNBZTUyaEF2SExrY0Z6cFdtdDNidkJkMFZDUlB2UGRvbzJ2bmg0bmNHQ3N1N3NzLWdFYmJRUQ?oc=5" target="_blank">📰 AFL Confirms Details for Geelong's Semi-Final - geelongcats.com.au</a><a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxOem9COTR5aDlVa2dPbkVfSDl4WlpHMzMxbGRsd1oxMFJ0VDRPaDlrV1lxUjF5c202YzQyVnFCcklXN2oyNVJlaUlXdHRPRGg0QWxyWTlXQWhsMURPXzgwdmE0NkVHSURUNkVHeVR6NjJaMlZRYzg2bkVsRGdVVnJvRlpXcDdZZE9tMnF3SFF5MzB2NWR1ZVNDYUdac1FHZkFxclVmWkVnekpJbGNNTXNoTHZad3c3TlhOTV94Y3dBNzfSAcYBQVVfeXFMTlE0N3hWQmFfQVphWXpJWHlUNDB0VGNnTkZkZzh4TmRxVktLZTZ4clBjeG95eU5iSkFNSWc0eTZ2S2ROSkI0Skh6dkhSVVNDeVJXRmJMZHQtcEVQQlI5YmU3LXdxbUw4WFZrZWRld2VaTGtuNlBsa2VtMk9mdmZxbFJIa0psX2dHQms0bkpNbkxEQ0t5emxRMWk3YUZjRVhPbm5vMnR1RXBhd2FPMDBIQkRBWklPd19lbnN5bHNZN1BFb0VYYndR?oc=5" target="_blank">📰 AFL Finals: Geelong book semifinal date with Fremantle Dockers in Perth - The West Australian</a>
+                <a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxQRVZUVjhnZzlxS0RESXc3M3hfLU1lWGdWeDVWdTRkYVFQMHQ4R09leHU2WGwwUmUyRkFfWGVMdVlyREVfUHZUcFN0ZHFkaGFpOVlJeTQ4RnBaeDJwSWNBZTUyaEF2SExrY0Z6cFdtdDNidkJkMFZDUlB2UGRvbzJ2bmg0bmNHQ3N1N3NzLWdFYmJRUQ?oc=5" target="_blank">📰 AFL Confirms Details for Geelong's Semi-Final - geelongcats.com.au</a><a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxPOTBRNWpVcUFFRmtqLWFhOElleVlDRWFSQTN1QUpnNWJIYWJaMmdXSjlXNlEyU2FYM2FBbTdLR2NHRDJUc3VhVnFiNzF5TFl0UDNPODJVMXpQdFhPMW5rVnRvWjZ4NUVjazRHSVB2azJid1FlZmhhNWVNZG9iVHZtaUc0OTg4MDhaSGxxcTlJOUJ2dldkbmg2akVoRE5qUFdHeEpRcQ?oc=5" target="_blank">📰 'Full of Belief:' Blicavs Confident Ahead of Fremantle Battle - geelongcats.com.au</a>
+            </div>
+        </div>
+    
+        <div class="card NRL">
+            <div class="card-header">🏉 [NRL] ❌ Dragons  20 - 46 Storm  🏆</div>
+            <div class="card-meta">📅 2026-03-14 06:30 UTC | 📍 WIN Stadium</div>
+            <a href="https://www.google.com/search?q=Dragons%20vs%20Storm%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
+            <div class="news-box">
+                <strong>Latest News:</strong><br>
+                <a href="https://news.google.com/rss/articles/CBMi6gFBVV95cUxOUVFmN0Zydm1qX2pjTWlBcnM0ZDE3NU03MGRPTHlVendBSWg2bGRodkdKR0tIS1d1eFljN0FTWm5HWmJDMTNqVVFzZ1oyc0lOYUtnc2FmQjVyTjBXRmkxNy1rdGoxUmU0ei1fQzRXZHdkdkxEdlRSWmZoTklWMmlXYVlQd055aGpxZ3JvaUJyeWNac1kxWFRxWUNHTzM3MnJWc0lKeWVmdnBoaWxpZ2NoblZOWVg5aVg5eVNEd0U2MXRrY2w4TzI4SDZ0cEVhUDZYR3RIRUEwTG1wc2tXaG9wNkRDV052LUF1N3c?oc=5" target="_blank">📰 Storm winger experiencing ongoing numbness after brutal high shot - Nine.com.au</a><a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxOeE9VVXU3WEhKLTFrcHpMRUhZSnVaaXJ0b3c2VXVoTTM2MkFwY2EzdmxrcV9pdTdIbDJWSkVrd2ViMUt5TG1Cd0x3RElpQTB4amZtSGdJQkhnOUpaNXotXy1xNkpoRXZhV0k1RXFPY3BqYnZadm1LdC0xTEV2OGlkLVQtNnpIVG5sX1NFc2ZMSnpoeFpWVlZ6MGpnckdodGozZ0dYcnNNYnIwclU?oc=5" target="_blank">📰 NRL Round 2 Preview: Dragons aim to weather Storm in home opener - St George Illawarra Dragons</a>
             </div>
         </div>
     
@@ -121,7 +252,7 @@
             <a href="https://www.google.com/search?q=Sydney%20Swans%20vs%20Brisbane%20Lions%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxPVDJMWVhiRzlaTjhGSVp2TTFzQ25mRXVXVHJ3R2w0cXdJMHN3bU81SUJMQUtURC1oUmVHa3U2Qk40azRBNGpHRFQ4QURDNUluYV9fYmZNMGRRNl9KUHh3c1VtMFg1WkQ5WWpFZWVVdThwUTJGbGFzUW5PX2pPc3hGTE53UWExT2M0TXdHYjdWMlN4WWtjX1ZqM1VWU3BYb19Wem9VMFNfd0ZxZ0VtMW1ZUG5BUnZJaWQ2QXBqelRaVDU?oc=5" target="_blank">📰 Sydney blow away shellshocked Brisbane to revive ‘torpedoed’ AFL season - The Guardian</a><a href="https://news.google.com/rss/articles/CBMiY0FVX3lxTFBsZmNudEpvbWJfOGZCcGF2azhpdjBUNEphSFlHYlRGNjFxQnZjVXdCQ0VYZW03QklTbXRuWVAxdkJjMlgwZ1hqV2otalVMaTNJZWJQN2I2WFRldG9xc0xaTDBlRQ?oc=5" target="_blank">📰 Sydney Swans vs. Brisbane Lions - Box Score - September 5, 2026 - ESPN</a>
+                <a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxPVDJMWVhiRzlaTjhGSVp2TTFzQ25mRXVXVHJ3R2w0cXdJMHN3bU81SUJMQUtURC1oUmVHa3U2Qk40azRBNGpHRFQ4QURDNUluYV9fYmZNMGRRNl9KUHh3c1VtMFg1WkQ5WWpFZWVVdThwUTJGbGFzUW5PX2pPc3hGTE53UWExT2M0TXdHYjdWMlN4WWtjX1ZqM1VWU3BYb19Wem9VMFNfd0ZxZ0VtMW1ZUG5BUnZJaWQ2QXBqelRaVDU?oc=5" target="_blank">📰 Sydney blow away shellshocked Brisbane to revive ‘torpedoed’ AFL season - The Guardian</a><a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxPUllVMDhpZGdheWR1UmQ4c0RJNHdsTDE0NXhhZFZpMGI0UWV5WGlKR05IT1lCLTNiVk80U1NYWlZKMHRuRXZTS2ktMi1ITnZQUXFzVUZKT1VocjNUSDQyVHJPTDU5VEVhVE16SDltUEJlTmhxb3lqUG5IbzdFTTJ1bDB4aGVEVzhHN25WazkwTktfcDJpeUY0?oc=5" target="_blank">📰 RECAP: Crows fly home to down Dogs, Swans shock Lions - afl.com.au</a>
             </div>
         </div>
     
@@ -131,7 +262,17 @@
             <a href="https://www.google.com/search?q=Collingwood%20vs%20Adelaide%20Crows%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxPSzhLRElXcndzblpPVS1GWjgwbDYwb1l6R04yZVd3ZTZoYVRlMkVDY2RRaWhVYkhJVi1nMWJ6Nm5WYzdMeUs5a0R5SUlYVnJQQVRrSHBNcjZWZXN1eWF2d3RhTTB1UzlzYWdHUUNlRTB6cFdLOEhqTWdMWjNPeUsyXy1UUFA0a3JuZU10VWxsR1BVcVFNT1VFVW5haUMydU1KV2lRdzdobnJPeFZ4bjZWOXc5X1hRaUhFVk81Z1g1aw?oc=5" target="_blank">📰 Former Crows captain slams calls for coach to be sacked - Nine.com.au</a><a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxOY0tLUXZ3VkV5QThRZDBvendXTkRBU2FYQWlybmVMdHhVN3FRU0wwRDR6T2dQbUgwbFdac3libWtfVFpDY0Zwd0U5ZFgtTzNycjFjMlY4NHhpS0EySG1oQ3JtVkFLN29VZnVXMkVfUEowTUJONHNxaU9ac0ZfZkNJTDM1U2pLdTY1WDJZTnRDcjNjV0NiLTd4M2FNdmE4WUVBQUVIckJHUEg?oc=5" target="_blank">📰 Magpies ambush Crows to firm up finals credentials - afl.com.au</a>
+                <a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxOY0tLUXZ3VkV5QThRZDBvendXTkRBU2FYQWlybmVMdHhVN3FRU0wwRDR6T2dQbUgwbFdac3libWtfVFpDY0Zwd0U5ZFgtTzNycjFjMlY4NHhpS0EySG1oQ3JtVkFLN29VZnVXMkVfUEowTUJONHNxaU9ac0ZfZkNJTDM1U2pLdTY1WDJZTnRDcjNjV0NiLTd4M2FNdmE4WUVBQUVIckJHUEg?oc=5" target="_blank">📰 Magpies ambush Crows to firm up finals credentials - afl.com.au</a><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxONHBrb3ZIbXZaT2Q2cHdSZnRnclJUWDJMTThqaVNOcTJ4SGVDVFNKdzdtZjRaMVVYaTR4bnV4aXlPbjB4UWFFYlpVQk8zZG1XRUlnbFBtZlg0bHJ5cnZqOHBOaFB1cjUtbWtQVWVIQXdqYUE1bUxHa3dCdmxUcVBReEp5MA?oc=5" target="_blank">📰 AFL Team Selection Round 20 v Collingwood - afc.com.au</a>
+            </div>
+        </div>
+    
+        <div class="card NRL">
+            <div class="card-header">🏉 [NRL] 🏆 Panthers  26 - 6 Sharks  ❌</div>
+            <div class="card-meta">📅 2026-03-14 08:35 UTC | 📍 Carrington Park</div>
+            <a href="https://www.google.com/search?q=Panthers%20vs%20Sharks%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
+            <div class="news-box">
+                <strong>Latest News:</strong><br>
+                <a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxPNnRoQmNSdGlBeFdOamxBUVZ6UXdsalpHckF3MmQ3RTNjSWpiNUZGdW9IX2VRSElDb3U5dFlOaVhlMkhYbjFjZF9iWmtKNDRUSGlsN2lxdF9JMURJOUN0cHhwMEpjeGozUFB6dlFVUkQxMl9HMGloQ0JoeVV0d2sxM1FVMmJZaXVRYjN4R3UxRVBNdw?oc=5" target="_blank">📰 NRL Telstra Premiership 2026 Finals Series Week One - NRL.com</a><a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxNNGVYbGxIbVR1ZVdPc3N1eE0wNWp3cXQxZ2VyUzRyNC1naldabHVkLXp3aFNaSExvd19HUG5GUVBLMXBRVHVTNWpPdkgtVEU5NDJHMEh4Q3ZrVXQwMUhCUXZVWWU2aFZYaXlmYWN0NlE4bWNOODFHYVlaU003OG45LVRFSDJTVUwwN3k3ZERyM2pqNTNTQkljRl9ZblNJXzdtaU9SSXJ5WmdfbkFYZ2xwTVFHcVR2S2d5d2NSdjNfM1hHVk5M?oc=5" target="_blank">📰 Panthers secure top spot as blockbuster finals clashes locked in - Nine.com.au</a>
             </div>
         </div>
     
@@ -141,7 +282,7 @@
             <a href="https://www.google.com/search?q=North%20Melbourne%20vs%20Port%20Adelaide%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMizgFBVV95cUxQeE9kR3dfckhiUXFIVmZWZ21kaDZfeFhEaFhlTVZBeFR0TlFPeDF0dzRvRlEtX3dnblRFRVFsYXpwTXJBdmtxbmtKYmFHRG4yZmlpS3FhbVdwVjNNRVZTVzlmb3ZmRU1PY2ZCS2RrelBNSmJSOWNqR0lmS1JrYXlJWUZKM2NoZ0hYcEVpX0F2WnNCeExmQm93ZkhGS1UwQ0Zucm9vSEJfbjBHdjNHTS1wWHFBTjItUlpOMXh4VWp0STV0VDBLbzl2Z3Q3VVZ2QQ?oc=5" target="_blank">📰 ‘Don’t blame him’: Clarkson dumps Roos gear at local Vinnies - Nine.com.au</a><a href="https://news.google.com/rss/articles/CBMijwFBVV95cUxQb1FBNGExa2NpWTFmcW9vV2JkVkNRc0VXejBXRkFfYXVHdFFDYmwxcWtCb0xGV1lldkZnSURYOGhYcU1LZG9ETENySHJHekVwTExxRTJaek1sNjA0RTQ0clFlbHdod0N6WWFNRk9vUFRsUVpRZjZjd2xqM2t0Sm8xVEdPM18tUm9NaVU3UkFsMA?oc=5" target="_blank">📰 AFL R17 squad: Four possible inclusions to face Port Adelaide - nmfc.com.au</a>
+                <a href="https://news.google.com/rss/articles/CBMi9AFBVV95cUxPb3NENHpmRFlySWs5dUhNVTZlcVJsazNTNkVBYXRvUmtqcVM4VmplODJPYnRORC02cG5ZVWtkVVE2OHNxWHB4aUYzRnNUWVh5VkRtWV84QWptVE1HSk5KOUFOcWZrdU1OWkM2X3FZRlBqN3I0ZWFMSW4zdUkxSnJRT01NQU1teUY2djRYRmloS3hCcVJod1FkXzItMjhoeFN4WXBSNWIxdlhqTEJVaE9OWDR3U0duQW05amVxeVp2VXJQdUczMkpqUnlsMUk5RnFmSlZnMmdNWGN1MmZSSVlyeVpvZzkyMF9VcDNMaFVFS3cwSnNY?oc=5" target="_blank">📰 Rival whacks Roos for ‘savage’ Clarkson comments as fresh details aired - Nine.com.au</a><a href="https://news.google.com/rss/articles/CBMijwFBVV95cUxQb1FBNGExa2NpWTFmcW9vV2JkVkNRc0VXejBXRkFfYXVHdFFDYmwxcWtCb0xGV1lldkZnSURYOGhYcU1LZG9ETENySHJHekVwTExxRTJaek1sNjA0RTQ0clFlbHdod0N6WWFNRk9vUFRsUVpRZjZjd2xqM2t0Sm8xVEdPM18tUm9NaVU3UkFsMA?oc=5" target="_blank">📰 AFL R17 squad: Four possible inclusions to face Port Adelaide - nmfc.com.au</a>
             </div>
         </div>
     
@@ -151,7 +292,17 @@
             <a href="https://www.google.com/search?q=Melbourne%20vs%20St%20Kilda%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxPbi04S2hVd18xQ0JfQWZFcWJLQUNGWUtDb3l5UkxUMUc4M2lXQlJ4X2J5SXZ5b0tCZEs1YndlR1hteTVQTVZ1X0JlTWZ1c01Jb2NXU1pZRndMblJzTm82OTZwU0d3NjNXTXJzejBMV21nZU85R3NGamNCdUhDVTBuVFN4SW9jaF84YTZUYTNGTHByb2dPN3JB?oc=5" target="_blank">📰 Five things we learned: AFLW Round 4 v North Melbourne - saints.com.au</a><a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxQQWo5SkZzYktPd3QwX3BIeWpCOHBISnpVZTdPQkptOUluQmVaTGwzekNFa2xkNlVTcXFkY1ZhVUY5cUZtb3UtS21DMWhUV2lMTVZNNmZtemRDYUxsSXpKb1ZPR1pFaDhCcnRiM1lPZlljVDNGMzhjdk40V2dMbnhheVRXemR1OGNKM09ieVR6UjI5UzVvcWJxVVVIekVDNlMzZVBDZmdBNFItQQ?oc=5" target="_blank">📰 North Melbourne Kangaroos stay perfect with St Kilda Saints demolition - afl.com.au</a>
+                <a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxPbi04S2hVd18xQ0JfQWZFcWJLQUNGWUtDb3l5UkxUMUc4M2lXQlJ4X2J5SXZ5b0tCZEs1YndlR1hteTVQTVZ1X0JlTWZ1c01Jb2NXU1pZRndMblJzTm82OTZwU0d3NjNXTXJzejBMV21nZU85R3NGamNCdUhDVTBuVFN4SW9jaF84YTZUYTNGTHByb2dPN3JB?oc=5" target="_blank">📰 Five things we learned: AFLW Round 4 v North Melbourne - saints.com.au</a><a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxNZVgteFIybGpkYnRhbkFSZWkxVVl1VDhrM3UtUFMxdUFxVVpuNXlvRWJXcEw4V0tsMWlCZlVwa1UxTXF1N2pqMUhwbUtJNllKRjAyNUd1aDN0SnExZjJfWkpBT09QWE4wYTF0RlNIR0JTazBVcXdPOGowUXQwN21sMWhUTG5NQlhuaTFWVlpCMFE4QnhzME9IMXoyWmo?oc=5" target="_blank">📰 St Kilda, Western Bulldogs’ AFL futures shape ruck trade market - Zero Hanger</a>
+            </div>
+        </div>
+    
+        <div class="card NRL">
+            <div class="card-header">🏉 [NRL] ❌ Sea Eagles  16 - 36 Knights  🏆</div>
+            <div class="card-meta">📅 2026-03-15 05:05 UTC | 📍 4 Pines Park</div>
+            <a href="https://www.google.com/search?q=Sea%20Eagles%20vs%20Knights%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
+            <div class="news-box">
+                <strong>Latest News:</strong><br>
+                <a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxOSXlzUWJhUXV2NFdoc20ybTFqbVNFSXlDZ2RHeVdpelhib2JNZk5XcXBNU1pxT2QyU3lmLXNrNmZDYWlQVHZtRjZ5MFYzNXhqSWNZN1JsZGhqRkxZQlNtUjdfYkgzSFVBWlV1QV9GbjFYMFQyX3ptR19JWlJXeWFPYmk1LTd1WThfSi1wM05iRlJqLUNNOWxhYQ?oc=5" target="_blank">📰 Knights v Sea Eagles: Best back on deck: Trbojevic returns - NRL.com</a><a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxPNURHM0dxd3RicTdJaWxWUzNndXlFbF9iRHBGalFqcEhtVU9GcEJMUkZZM3RLek5qQU5ZTGdBbG5TWWhUTko4YklURFlGbUdFMkJLOWpYNkVSWFdnX0NnS2I0dDBzZ2s2bHowT09FZlhEZ3NqVFRUdHpFNXFOWjhFaE9GZVZSLUduVEE?oc=5" target="_blank">📰 Match Report: NRL Round 25 vs Knights - Manly Warringah Sea Eagles</a>
             </div>
         </div>
     
@@ -161,7 +312,17 @@
             <a href="https://www.google.com/search?q=Gold%20Coast%20SUNS%20vs%20West%20Coast%20Eagles%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxPS0paV1F4OEN4b3lKSkR2SDB6SEZQRUVlT3lUV2dCQ2MxeEpJNXFWMFNVejJiN3Vxc1VoeUtOSVBxNWhhQ0JUN2YteGlTZTRtbUJHbnBqeUQ0dVJsX09EMlQ0dHdKLXgwcXZSNlduekNRQ3VDNlcxQnRlb0lRRHZ6SDhfZG9BOGlnYW1pWmJzdVNXM0t0ZTFJUWF0UUpfMzdLVUE?oc=5" target="_blank">📰 NFL journo falls in love with AFL - Nine.com.au</a><a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxPelJNVjBxRGFpTEFwWldOcGNRdjM0a1ZKUHR4ZW1CYU81Zk9CMGZqdGwzbzJXSEVMa0xZNUlQTmx5d3p0bGFOM29DTmlDVmJVQWFXQXNCYjdianpqM2haaXRtdGhCR0ZNQjdiV1FIcUg2LWg5Y0lXYjlSWm45V3E2V0tkVWU2VW90MFIwX1JiMmFWS0RGaXhvdE1FVkQ1R3JURWQ0NUxzTQ?oc=5" target="_blank">📰 Every AFL team’s 2026 best and fairest winner, top 10, other club awards - Zero Hanger</a>
+                <a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxQTGN6REJ5dGppUklUaTU2OTlLUDZXUHdybmFoNWwxNUE5WTd4RFBwallON3I4X3V6Ni1TRHg5WlRPR25VaVNJbF85QVVKQ1FCdE1tbEFqNVRndDBnUFZzZXVhZWhTWi1ueUt2cnlKNVFNdTVTQkFyYjhBclF1dUlnTGEyMk9sV3pWbEYtakpNU2FQRklUOENuRWVIRF9kOGVOa09HQm1aYw?oc=5" target="_blank">📰 Blakey 'done' at Swans as rivals circle - Nine.com.au</a><a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxPelJNVjBxRGFpTEFwWldOcGNRdjM0a1ZKUHR4ZW1CYU81Zk9CMGZqdGwzbzJXSEVMa0xZNUlQTmx5d3p0bGFOM29DTmlDVmJVQWFXQXNCYjdianpqM2haaXRtdGhCR0ZNQjdiV1FIcUg2LWg5Y0lXYjlSWm45V3E2V0tkVWU2VW90MFIwX1JiMmFWS0RGaXhvdE1FVkQ1R3JURWQ0NUxzTQ?oc=5" target="_blank">📰 Every AFL team’s 2026 best and fairest winner, top 10, other club awards - Zero Hanger</a>
+            </div>
+        </div>
+    
+        <div class="card NRL">
+            <div class="card-header">🏉 [NRL] 🏆 Dolphins  18 - 14 Titans  ❌</div>
+            <div class="card-meta">📅 2026-03-15 07:15 UTC | 📍 Suncorp Stadium</div>
+            <a href="https://www.google.com/search?q=Dolphins%20vs%20Titans%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
+            <div class="news-box">
+                <strong>Latest News:</strong><br>
+                <a href="https://news.google.com/rss/articles/CBMikAFBVV95cUxNQVE0dkJZbjhCTGIyU1VEMlJBVHViSnB0MkJwdUdTSF9xTlBnMmN5NVJSZjd0aWZ3d21XR3lDQzFhTkgxMVl3OU9yeGl4Zno4bkZiSElhZV9IcmlIZ2Uzc09QOUtTVFFtT1RNU3BreUI0cnZfazNOZ0ZQV1FiUUl2NXhEeWNBQk44S2Z1Z0hZVWE?oc=5" target="_blank">📰 Titans v Dolphins: Beau's good to go; Cobbo, Kodi, Kuli rested - NRL.com</a><a href="https://news.google.com/rss/articles/CBMikwFBVV95cUxNdEFXRnNWZkpybmZUOTdfODdON3ZhczFCbnJsRThvTkxIbVgwM0R3YjVtZVNOenZmVDljcThYQ0RxcG5yemFRd2ZfNHFxckU2cDZ4ODlvenVoR2pQNC1seHZQOG5BSmVIMTYwUlQxOVdmekJ0TVVxZWIxbWxEWGdZT2xyZGQ2V2pnMk5qdGFoeEVxZUE?oc=5" target="_blank">📰 Match Preview: Round 27 – Dolphins v Titans - Official website of The Dolphins</a>
             </div>
         </div>
     
@@ -171,7 +332,27 @@
             <a href="https://www.google.com/search?q=Hawthorn%20vs%20Sydney%20Swans%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxQYXlCUTFNamljUkRnVk9XMXJSeFVPMEpXQzZUS3gxUE1TVExhbjV4LWVLX1I2WjNhNHlvaXdEdEZfbG1tWlJWMUxwZFZ4NUswb1Y1cEk1OFJHQ0RyNVZiTWxzSVNHdjlFNlB3a0VraXlwbzZ5bXpXVTREc09JRHJrbjVBZXh5aUZXVkFxYWhHOVF6VHVRLURjNU9OZktmV3NLZmhWb1hpN1dVNHJ5dktfTS0teGtyaUR6czUtdTBSbW92dw?oc=5" target="_blank">📰 Crushing blow confirmed as Swans skipper set for surgery - Nine.com.au</a><a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxPNkRNU3psRVkwUWFYM3VUUVVOQnR3U1c0Q0tVQTctZXRKRXBmenBrRGVxRDdwTXgybE56ZWZ3eVdLWFJkOTVvQm13TlVpMlFuOHRYLWhUMzJoWFdiem16RnpKU2d1R0ZfUHZYVl96ODJoUnVoZGJGQkNnczg1WjFRWnFrSFk?oc=5" target="_blank">📰 Swans fall short against the Hawks - sydneyswans.com.au</a>
+                <a href="https://news.google.com/rss/articles/CBMi-wFBVV95cUxQSU1qbDVvR0drdUttamYtR1V6YzF3MXl2MWVheFo4Rk5TTXJ0Ni1rOXF3Y3hHazlHUFVqRVdfRlhYYU1ZbC1nUmJxN1lZanRiOUFJdW80UjFUY195QVZpYnU3OG1FWnRCSzFsSi16Rl9kUmpUeHNZcEthS0ZWbW5LOFFZTW53MF80N0xjZkFRd1VLaEtHR2lQRHVkMldnX25OX3RBOUVOelB0ay1FaVVjakRLdmROWFJEUFVabUNWaUxfaUpEZkJJRU9zUkR3WnJScTlLYkJSTWVWSElFMW9CMG5JQ0ZFTkdZREszeE0zaVhza1hvZ0lxVWh2OA?oc=5" target="_blank">📰 ‘Elephant in the room’ as clubs secretly circle banned Swans star - Nine.com.au</a><a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxPNkRNU3psRVkwUWFYM3VUUVVOQnR3U1c0Q0tVQTctZXRKRXBmenBrRGVxRDdwTXgybE56ZWZ3eVdLWFJkOTVvQm13TlVpMlFuOHRYLWhUMzJoWFdiem16RnpKU2d1R0ZfUHZYVl96ODJoUnVoZGJGQkNnczg1WjFRWnFrSFk?oc=5" target="_blank">📰 Swans fall short against the Hawks - sydneyswans.com.au</a>
+            </div>
+        </div>
+    
+        <div class="card NRL">
+            <div class="card-header">🏉 [NRL] ❌ Raiders  10 - 14 Bulldogs  🏆</div>
+            <div class="card-meta">📅 2026-03-19 09:00 UTC | 📍 GIO Stadium</div>
+            <a href="https://www.google.com/search?q=Raiders%20vs%20Bulldogs%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
+            <div class="news-box">
+                <strong>Latest News:</strong><br>
+                <a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxPOVRmVG5JSWVBTjVKWXZiSW44aWw3Z2oxZmoxUmFBOWtaalROdVZyXzJkektGZ3JGakpEY0tzRFdJRVZnTTFRNC1YT3Z3Y2IxNnlrMTQ4SUtVbTZkeExMcW1IeHJpLUdlYXh5Sy1xSVpFS1FTSVpSaW41a2FMcHEwRTZ6S0FKODFoWElqUFMwVGM2VHVwd2U4d2pFaGExbzdRWFFHYXhoaHlJRkZULXVaYzRRYjBjTFE?oc=5" target="_blank">📰 Stadium infrastructure in spotlight as rain looms for Raiders' Bulldogs clash - The Canberra Times</a><a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxNRXlON3c4enNGVklkNW9wNjBBYmpmNFdYUGgxcjhJTjRQUHl5WDhkTDRkc3YybWFXT1pnOHhpN3hOTDJ0d080bWUyRXZKTnpyQ1k5S1B2NUFsQ0hMbVVhc3ZYeFpCQ1VsakRBQWplMmdiazNlOUNPUTBiV0RoUEVFSEdrczR6ZEtveEpqdXN2dVJKaGc4RWNjTDQ5aGtmbFZhS0M4bm8zcEM2bHlL?oc=5" target="_blank">📰 NRL Highlights: Cowboys v Raiders - Round 27 - Nine.com.au</a>
+            </div>
+        </div>
+    
+        <div class="card NRL">
+            <div class="card-header">🏉 [NRL] ❌ Roosters  4 - 40 Panthers  🏆</div>
+            <div class="card-meta">📅 2026-03-20 07:00 UTC | 📍 Allianz Stadium</div>
+            <a href="https://www.google.com/search?q=Roosters%20vs%20Panthers%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
+            <div class="news-box">
+                <strong>Latest News:</strong><br>
+                <a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxPTUIwc085ZXNlWG9ubm0xV08xSmZLWlFmcDlfNW9MeDRBbVhrTXNMaVd5YjhFdkg3V2ZwdHdUMmc4OFpPZWM1NlNEMnhaRWNwRXNfUDlheEllekg0TTFNUkFfc3VDOTh2bWx4M0VORTVXTFdSek5xN0tRR1JhazBMWG5INWtpdlA0Yk5GaXJ3NGRsUGZLWTBtWElhNmZXbkFKb2NVY3ZB?oc=5" target="_blank">📰 Panthers embracing pressure as rivals jostle for premiership glory - NRL.com</a><a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxNNGVYbGxIbVR1ZVdPc3N1eE0wNWp3cXQxZ2VyUzRyNC1naldabHVkLXp3aFNaSExvd19HUG5GUVBLMXBRVHVTNWpPdkgtVEU5NDJHMEh4Q3ZrVXQwMUhCUXZVWWU2aFZYaXlmYWN0NlE4bWNOODFHYVlaU003OG45LVRFSDJTVUwwN3k3ZERyM2pqNTNTQkljRl9ZblNJXzdtaU9SSXJ5WmdfbkFYZ2xwTVFHcVR2S2d5d2NSdjNfM1hHVk5M?oc=5" target="_blank">📰 Panthers secure top spot as blockbuster finals clashes locked in - Nine.com.au</a>
             </div>
         </div>
     
@@ -181,7 +362,17 @@
             <a href="https://www.google.com/search?q=Adelaide%20Crows%20vs%20Western%20Bulldogs%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxOMlRuRlJDNHhBWjRnTFJTRHdwVWdXR0ozNmduVlU2SkVRQTZJakZiNHlJbUJqNTM1ZGdPamF1UVR3REh5eG5mNEItd09RUmo4aDVlbTBGR3R3MUszZ002WGMtWDQ4MEE2c25oUGpHdWpnOFJhbWNvY0h6QkVUcEl4cno3ZXhEVExUUTZQYlFUWjA3NFNXM3Q1VUtn?oc=5" target="_blank">📰 AFL Match Report: Surging Crows end Dogs' season - westernbulldogs.com.au</a><a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxPbkRZb0xOZUdJT2lqNU9Yb285Y1J0d0FHbTY1ZC1SQTlIZ3ZibVhjcV84RHN1di1jNHBVTkdhQmZxTjdUb254blZKRi10UXZvNUJKWG9LT3EzNzlMVmpWTWNBVmotMTZkRlFEUjNOdk5YaENUS1M1cEdnWkpJSk9aUXNWQlRTTnBuZGdPWEdHMFBhTnRrRFVGTXpaUnVIV2FNRzRNSFBvMklVOHloUGt1VG55ZnJfOWFkQ2JHZmlKN0RPQUNi?oc=5" target="_blank">📰 Adelaide banish AFL finals demons with victory against wasteful Western Bulldogs - The Guardian</a>
+                <a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE1Qd1BjTXpyaktrTFFvdDR4S0ZkY3NNekwyZzN2UGZKU2VQZXRVbjl2OEhIR3p5OUZCclBPMHg0S1Z4M3Fsdm1BV2F2QUVBMVZrZHZ5SGhvak92ZHM?oc=5" target="_blank">📰 Adelaide Crows v Western Bulldogs - westernbulldogs.com.au</a><a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxPbkRZb0xOZUdJT2lqNU9Yb285Y1J0d0FHbTY1ZC1SQTlIZ3ZibVhjcV84RHN1di1jNHBVTkdhQmZxTjdUb254blZKRi10UXZvNUJKWG9LT3EzNzlMVmpWTWNBVmotMTZkRlFEUjNOdk5YaENUS1M1cEdnWkpJSk9aUXNWQlRTTnBuZGdPWEdHMFBhTnRrRFVGTXpaUnVIV2FNRzRNSFBvMklVOHloUGt1VG55ZnJfOWFkQ2JHZmlKN0RPQUNi?oc=5" target="_blank">📰 Adelaide banish AFL finals demons with victory against wasteful Western Bulldogs - The Guardian</a>
+            </div>
+        </div>
+    
+        <div class="card NRL">
+            <div class="card-header">🏉 [NRL] ❌ Storm  14 - 18 Broncos  🏆</div>
+            <div class="card-meta">📅 2026-03-20 09:00 UTC | 📍 AAMI Park</div>
+            <a href="https://www.google.com/search?q=Storm%20vs%20Broncos%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
+            <div class="news-box">
+                <strong>Latest News:</strong><br>
+                <a href="https://news.google.com/rss/articles/CBMif0FVX3lxTE14Ulpibk00SjVaME9XUUhZcndGcElFTGwtNTNlQXJBZzAyaHBKWWFYaGlrQVFZZkRHczVwVDhhX2R6QWczWGFpLXVLNDBJUUUyTDNOMXZabFRQVGQ4S3pHNlZmVVQ5THd1Vy13Rk1YSlVLNC14M2s2U2RQZmpzMlE?oc=5" target="_blank">📰 NRL Team List Round 26 v Storm - Brisbane Broncos</a><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE91eTNuVkMwcFJ6Ry1KQlJxNnRJcno5X2pnbnNueHFaSHhVaU1kcVNRVi05cHN2ZkhFdm96VTNiTVhLRjJyV0x1MENjOUJQS0ZLR0VQX0MxeDJfU2k0RGxva3BEV2I5NThqeU03Wi1EYlppOXJ1aXhZ?oc=5" target="_blank">📰 Broncos v Storm - Round 26, 2026 - NRL.com</a>
             </div>
         </div>
     
@@ -195,6 +386,16 @@
             </div>
         </div>
     
+        <div class="card NRL">
+            <div class="card-header">🏉 [NRL] ❌ Knights  12 - 38 Warriors  🏆</div>
+            <div class="card-meta">📅 2026-03-21 04:00 UTC | 📍 McDonald Jones Stadium</div>
+            <a href="https://www.google.com/search?q=Knights%20vs%20Warriors%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
+            <div class="news-box">
+                <strong>Latest News:</strong><br>
+                <a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxQMEhjSlBtMWpNU3J6eUhPS2Zsejczek5jMmlvSzctb3RTRWxTdnVUS25CSTVEZDFEaXZxV21KNnZkSVlXal92LVFDQWw0cU5qdzhHNXZNYzlVQ2VGbW41NXlPU0dLYnVDMzlZUWlYdUlQTU54dGJHX0dLaTFpVE5hM1lUUWpUOWk3RFE?oc=5" target="_blank">📰 As it happened: Predebon stars for Knights; Roosters roll on; Sharks salute - NRL.com</a><a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxOdUVjVHdfRy1PVXVuX1lvTFppT0JEV0g0NURiNXpZTHczVUZmNmdPT0cwS2lFTGZGZkQ2TW43WnczZFh6N3MxZU52N3A2VXgwMzlPRmEzX0xkeVllWW1Ua1puTHc1a3REX01XSjhqaFBrTENOZlFkeFMzZFcwb3EwcVR3?oc=5" target="_blank">📰 Final Team | Round 26 - Newcastle Knights</a>
+            </div>
+        </div>
+    
         <div class="card AFL">
             <div class="card-header">🏈 [AFL] ❌ GWS GIANTS  74 - 78 St Kilda  🏆</div>
             <div class="card-meta">📅 2026-03-21 05:15 UTC | 📍 ENGIE Stadium</div>
@@ -205,13 +406,33 @@
             </div>
         </div>
     
+        <div class="card NRL">
+            <div class="card-header">🏉 [NRL] ❌ Sharks  10 - 38 Dolphins  🏆</div>
+            <div class="card-meta">📅 2026-03-21 06:30 UTC | 📍 Ocean Protect Stadium</div>
+            <a href="https://www.google.com/search?q=Sharks%20vs%20Dolphins%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
+            <div class="news-box">
+                <strong>Latest News:</strong><br>
+                <a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxPNnRoQmNSdGlBeFdOamxBUVZ6UXdsalpHckF3MmQ3RTNjSWpiNUZGdW9IX2VRSElDb3U5dFlOaVhlMkhYbjFjZF9iWmtKNDRUSGlsN2lxdF9JMURJOUN0cHhwMEpjeGozUFB6dlFVUkQxMl9HMGloQ0JoeVV0d2sxM1FVMmJZaXVRYjN4R3UxRVBNdw?oc=5" target="_blank">📰 NRL Telstra Premiership 2026 Finals Series Week One - NRL.com</a><a href="https://news.google.com/rss/articles/CBMi6wFBVV95cUxOa29ZcjZraXduU3RxajlJSlZlX0RlRmxvcXpYaWo3c2hjTndNcHF4YmhQREd4MzBQQVZTak9ENGYzVHpfR0xIQktpQ3VwWVpteGtqdnQ2czFEZlNQRXlvdnBCU01TYndVRE82Qi14Q1FXNlNaQTlUNGtKc29CN3NVYzdiZGRJWHVaaWJ2cXNSdTRBMkZ6X0VuWVlKZUNuakF1SXlwVE1UdU94Wl9qTDlvQzRRUnR2Mm11ZWY1Z0hWNmlsU1RZZE5jWHpHb3pxRFhQMkhRQ0FPcVFISDlQSk1LRDNUY2g5blhsbGQ0?oc=5" target="_blank">📰 ‘Keep the trophy in our city’: Phin’s subtle dig over battle of Brisbane - The Courier Mail</a>
+            </div>
+        </div>
+    
         <div class="card AFL">
             <div class="card-header">🏈 [AFL] 🏆 Fremantle  118 - 70 Melbourne  ❌</div>
             <div class="card-meta">📅 2026-03-21 08:35 UTC | 📍 Optus Stadium</div>
             <a href="https://www.google.com/search?q=Fremantle%20vs%20Melbourne%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxPUUFyb2R0ZEEyTHI3Uno1WFJEVW40MjRoNi0yNTJWRkpIc0JuMWZ6b0tybDBtbnN6OGNmQnhmN203VXhnT2RrMGdHX1VmREZabG4ybVZFeno5ZU9xU2dBY0hxNVhHa1V4LTdMNUpiWVBwd0VNX3Juekk2THc5MTBKRlpvUHlpbVlhelR1TC1n?oc=5" target="_blank">📰 Dees stun flag-favourite Dockers in high-scoring shootout - afl.com.au</a><a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxPYThPNXQza0pab2FUV3Nxb28zeVA1cXMzT2pkZDVnTFNWNWhMaEs1azJPM0VaWnNTZFFsLTIteXhDTklzSFpfeGFLTFZudmktZzd3SGNzV0xneHhnVVdLZkVvb18xcDNxY3c4cnhXMEdLejg2ZmpFWlhGWVhScHQ0MFZybFh2MG5ybmRUVThrRzNNRUNDOFFYTVVBZEVXMVdFMThHV1FBREZLdDVqeWl6bUN4ZzdQcEdCTDFZeDVNbVE?oc=5" target="_blank">📰 712-day curse hits as minor premiers shocked in finals capitulation - Nine.com.au</a>
+                <a href="https://news.google.com/rss/articles/CBMi6AJBVV95cUxQLXZlSGsxbTZBcVhhc2RST0I2Y2hySDE0V094UEQyX3FUdWo5M1IzdmZmUF9uZlJYVElHNWRlZ1JhWGI2M0RaWEtXN18tc01LalgtYkw1Y0NMOXdZeWRTdzE4S01xYS1FYldreHBLYkRnU2ZSUnUtUGdFdW1qajB3Unk5MXBtQ3lpUHNMbUZjUXpwZVItNld6dHd1SUZEVGZBWHdRM3hONnF5NG5xV0lvSTJLMklMRWVydHVUVzBxV1NkUUF6dHFpa21BdUx6NVpuS3VHZnRUYVpwMDNhdTJmOG1kYUJFQmkyQms4QjlHekxhMEtHR1FmcWVVRm0tZzFFUVFkc003Uklib0Q0Tmd0NWprd21pbTYxb3M2T0lpaEVZSTN3enppaGdDR3pvSlJjb0RhWUZnOU5MRDNFVHdOWkpiR05sbk16cWVjM0d3a0tuMDFDbnp3SmFDbW5VSzR6NlNtQ2xLQWjSAegCQVVfeXFMUC12ZUhrMW02QXFYYXNkUk9CNmNockgxNFdPeFBEMl9xVHVqOTNSM3ZmZlBfbmZSWFRJRzVkZWdSYVhiNjNEWlhLVzdfLXNNS2pYLWJMNWNDTDl3WXlkU3cxOEtNcWEtRWJXa3hwS2JEZ1NmUlJ1LVBnRXVtamowd1J5OTFwbUN5aVBzTG1GY1F6cGVSLTZXenR3dUlGRFRmQVh3UTN4TjZxeTRucVdJb0kySzJJTEVlcnR1VFcwcVdTZFFBenRxaWttQXVMejVabkt1R2Z0VGFacDAzYXUyZjhtZGFCRUJpMkJrOEI5R3pMYTBLR0dRZnFlVUZtLWcxRVFRZHNNN1JJYm9ENE5ndDVqa3dtaW02MW9zNk9JaWhFWUkzd3p6aWhnQ0d6b0pSY29EYVlGZzlOTEQzRVR3TlpKYkdObG5NenFlYzNHd2tLbjAxQ256d0phQ21uVUs0ejZTbUNsS0Fo?oc=5" target="_blank">📰 Give me a spell. North’s ‘brutal’ Clarko call was right... and it says more about Mitchell - Fox Sports</a><a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxPUUFyb2R0ZEEyTHI3Uno1WFJEVW40MjRoNi0yNTJWRkpIc0JuMWZ6b0tybDBtbnN6OGNmQnhmN203VXhnT2RrMGdHX1VmREZabG4ybVZFeno5ZU9xU2dBY0hxNVhHa1V4LTdMNUpiWVBwd0VNX3Juekk2THc5MTBKRlpvUHlpbVlhelR1TC1n?oc=5" target="_blank">📰 Dees stun flag-favourite Dockers in high-scoring shootout - afl.com.au</a>
+            </div>
+        </div>
+    
+        <div class="card NRL">
+            <div class="card-header">🏉 [NRL] 🏆 Rabbitohs  20 - 16 Wests Tigers  ❌</div>
+            <div class="card-meta">📅 2026-03-21 08:35 UTC | 📍 Polytec Stadium</div>
+            <a href="https://www.google.com/search?q=Rabbitohs%20vs%20Wests%20Tigers%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
+            <div class="news-box">
+                <strong>Latest News:</strong><br>
+                <a href="https://news.google.com/rss/articles/CBMikAFBVV95cUxNd19idkIxWG9zUldlOHZwU2ViZmpjSW5yejNFMWVrWGxFQ0NfLXExUDIzSGZ6djJTVUVvcGQwM1FnSlpBcllHOXNCTkF0VHEwU3NjcHhCRnlsZEdvc2k5ZS1SR1p5YWVDaWpfZjg0X25BekR0T3l0ZEtTb2ExelRHQmZqQ2J3cTQ4RlBBcThVTjQ?oc=5" target="_blank">📰 NRL Match Preview: Rabbitohs vs Wests Tigers RD03, 2026 - South Sydney Rabbitohs</a><a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxNY1l5X05hemRmZ2t1MC1CNVJKWVlheUdKNlNOMXQzY29aTE9vYkhJd01vQmVXdkJTdVJTMmktMmk3c0JnRGhjVkt1UlF5Y0pFSkRycWZlZm1HMVgzejlwbFJMT3lwcVZfek1HVWhqRm5RZkNxenZKc0YxWTFuWVVJMm9lRTJTMnlJVUE?oc=5" target="_blank">📰 Team List: NRL Round 3 v South Sydney Rabbitohs - Wests Tigers</a>
             </div>
         </div>
     
@@ -225,13 +446,33 @@
             </div>
         </div>
     
+        <div class="card NRL">
+            <div class="card-header">🏉 [NRL] 🏆 Eels  30 - 20 Dragons  ❌</div>
+            <div class="card-meta">📅 2026-03-22 05:05 UTC | 📍 CommBank Stadium</div>
+            <a href="https://www.google.com/search?q=Eels%20vs%20Dragons%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
+            <div class="news-box">
+                <strong>Latest News:</strong><br>
+                <a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE0wQnZ1RGVBcjZ5cDBZXzdCanNSU2FjNy1mSzVmTWtTdVB1a1M2c3ZFRjU3WEJ6SzdxcEsyaVBsUS1tNk1zenNNQnVESXVYS09RUHRmajRBVlJ4MlRXcGc4eEtRRlBRNDh6OFJFaEpONA?oc=5" target="_blank">📰 All Tries – Dragons v Eels - NRL.com</a><a href="https://news.google.com/rss/articles/CBMi1wFBVV95cUxNQy1XbEg5YUVmNU1JeDk3RHJmaHhZaFRxUnAwTm42VlZBb0NuS19mNE5fRE5xbUVRQjBVZURBZU1fSWU4TzBJcFhabEc5X24xTGs5RW01WnAtem5kcTZzSWZQQmJtOGU1VUpabWxBazVVeUtaQkhLRVRFS2dxQnc5MFRMNHZEdlFBbVQySkV3LVZsTDBFeUdjaFdhX285Z2pkd3hkSmtQa3JpZjlVX25PLS1kZi1fbmd2eF8wYlBnWmtITFltNXpzcEZWNHp0cmFYOEctdjlXRQ?oc=5" target="_blank">📰 ‘No doubt’: Slater’s bold call as Dragons fans left scratching their heads - Nine.com.au</a>
+            </div>
+        </div>
+    
         <div class="card AFL">
             <div class="card-header">🏈 [AFL] 🏆 West Coast Eagles  111 - 94 North Melbourne  ❌</div>
             <div class="card-meta">📅 2026-03-22 07:10 UTC | 📍 Optus Stadium</div>
             <a href="https://www.google.com/search?q=West%20Coast%20Eagles%20vs%20North%20Melbourne%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMizgFBVV95cUxQeE9kR3dfckhiUXFIVmZWZ21kaDZfeFhEaFhlTVZBeFR0TlFPeDF0dzRvRlEtX3dnblRFRVFsYXpwTXJBdmtxbmtKYmFHRG4yZmlpS3FhbVdwVjNNRVZTVzlmb3ZmRU1PY2ZCS2RrelBNSmJSOWNqR0lmS1JrYXlJWUZKM2NoZ0hYcEVpX0F2WnNCeExmQm93ZkhGS1UwQ0Zucm9vSEJfbjBHdjNHTS1wWHFBTjItUlpOMXh4VWp0STV0VDBLbzl2Z3Q3VVZ2QQ?oc=5" target="_blank">📰 ‘Don’t blame him’: Clarkson dumps Roos gear at local Vinnies - Nine.com.au</a><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxPNko4QmVwdmU4QzhyeXdRcG1TQXJ1Wi1vREFqMGw1YXA0MjRqdHZ2MndudVJUdEU3VlhFVnIyX1YzeGhxenlfbUZ1SWRQSVNzTTh3MThvSzBHYWxlMTAwSkFrS2U2X2dKVE9rU0Jtc2F1MEstaDdZcVZMSW5oSW4yalBTNGV1NHBsa3RseEZYbHFzekltZFItdw?oc=5" target="_blank">📰 Match report: Heartbreak in one-point thriller - westcoasteagles.com.au</a>
+                <a href="https://news.google.com/rss/articles/CBMi9AFBVV95cUxPb3NENHpmRFlySWs5dUhNVTZlcVJsazNTNkVBYXRvUmtqcVM4VmplODJPYnRORC02cG5ZVWtkVVE2OHNxWHB4aUYzRnNUWVh5VkRtWV84QWptVE1HSk5KOUFOcWZrdU1OWkM2X3FZRlBqN3I0ZWFMSW4zdUkxSnJRT01NQU1teUY2djRYRmloS3hCcVJod1FkXzItMjhoeFN4WXBSNWIxdlhqTEJVaE9OWDR3U0duQW05amVxeVp2VXJQdUczMkpqUnlsMUk5RnFmSlZnMmdNWGN1MmZSSVlyeVpvZzkyMF9VcDNMaFVFS3cwSnNY?oc=5" target="_blank">📰 Rival whacks Roos for ‘savage’ Clarkson comments as fresh details aired - Nine.com.au</a><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxPNko4QmVwdmU4QzhyeXdRcG1TQXJ1Wi1vREFqMGw1YXA0MjRqdHZ2MndudVJUdEU3VlhFVnIyX1YzeGhxenlfbUZ1SWRQSVNzTTh3MThvSzBHYWxlMTAwSkFrS2U2X2dKVE9rU0Jtc2F1MEstaDdZcVZMSW5oSW4yalBTNGV1NHBsa3RseEZYbHFzekltZFItdw?oc=5" target="_blank">📰 Match report: Heartbreak in one-point thriller - westcoasteagles.com.au</a>
+            </div>
+        </div>
+    
+        <div class="card NRL">
+            <div class="card-header">🏉 [NRL] 🏆 Cowboys  30 - 16 Titans  ❌</div>
+            <div class="card-meta">📅 2026-03-22 07:15 UTC | 📍 Queensland Country Bank Stadium</div>
+            <a href="https://www.google.com/search?q=Cowboys%20vs%20Titans%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
+            <div class="news-box">
+                <strong>Latest News:</strong><br>
+                <a href="https://news.google.com/rss/articles/CBMieEFVX3lxTFBMcER6V0hzbXNVVXhjYzByU2V4cEdRUVM4YUJXajFuNVJ3LUx5YXl4ZkYxZTU3anNIejktRkRtaHhWUEpBR3RYNzRJN3ZTZU5xMjJqYUVvd0xjTUZCdVBsOEZjem55a1ZHdTcyX1BfczR0X3FFaXpnbw?oc=5" target="_blank">📰 Titans v Cowboys - Round 23, 2026 - NRL.com</a><a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxPOHNNVUtMRFlTT0FXbzZ1X1FiVnFYYTRQSFpleFRuTFdBMjJiM19jREhOZHNwWmhmU1AzZ0RjR19YTXB5NjhuYkJVOWJ6TzFmNlAzdGlSQmVkdFBsQ1R4UlQ5OC1DMENZWUdnY0pHLUVDRk9tUFkxQ1NFZFp1aXdIdEVRNld5dW9QdXU3Qk1jTW42RF9UY3pGQkVzT1dUblJVaVJOSDVRTXkwdw?oc=5" target="_blank">📰 Cowboys NRL team list: Round 23 v Titans - North Queensland Cowboys</a>
             </div>
         </div>
     
@@ -241,7 +482,27 @@
             <a href="https://www.google.com/search?q=Geelong%20Cats%20vs%20Adelaide%20Crows%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMi2AJBVV95cUxNYjRNQWNhYlE4YVVBMXZyb2VXZTdSZzJSbDZmTUV2d1JfV0lKaVF6UzNDTk9BbVRlankwRkNMYVNPWWFCYUZ3QUZwQVpLUVhZTnU3Slp5ZGpYSThwZm5lSzFES3gzR3FFYVp0dnRvSDgta1V3Z0E1N1JyY2NUZTZmYWtCR29ramJoQkExeC10aE1XSjNuTC1uVUJ4ODN3MnMyS25qaDJnODRhMUN2TTZ6SkEwTUpPX21PVFFEMjJESUtQcEhyYTVPd0ZGYXIyOFNWLU93YUNXRWhjVVphblRfVEJncXVMRDdCajZhUWg2S0dKaUlvSjhNOHlrcGlHZ25sR3BQZlh6WVNRamlDUUFqYjRWWk90bTl4T0pyajVJR0hhSlRzamtYV2k2M2c5aHZ4TWM1c193M1A2RXFZY3R4dm93X2dJOWRiVHQ4SzlDbjVKMFd6RHhsetIB2AJBVV95cUxNYjRNQWNhYlE4YVVBMXZyb2VXZTdSZzJSbDZmTUV2d1JfV0lKaVF6UzNDTk9BbVRlankwRkNMYVNPWWFCYUZ3QUZwQVpLUVhZTnU3Slp5ZGpYSThwZm5lSzFES3gzR3FFYVp0dnRvSDgta1V3Z0E1N1JyY2NUZTZmYWtCR29ramJoQkExeC10aE1XSjNuTC1uVUJ4ODN3MnMyS25qaDJnODRhMUN2TTZ6SkEwTUpPX21PVFFEMjJESUtQcEhyYTVPd0ZGYXIyOFNWLU93YUNXRWhjVVphblRfVEJncXVMRDdCajZhUWg2S0dKaUlvSjhNOHlrcGlHZ25sR3BQZlh6WVNRamlDUUFqYjRWWk90bTl4T0pyajVJR0hhSlRzamtYV2k2M2c5aHZ4TWM1c193M1A2RXFZY3R4dm93X2dJOWRiVHQ4SzlDbjVKMFd6RHhseg?oc=5" target="_blank">📰 Swans confirm brutal skipper news; Cats star misses training, Jez concern — Finals Team Tips - Fox Sports</a><a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxNMjBRM09sS3dYcmF3Tk5nR0Vrc3dPeEhBMGhZSmM0amtfMEJNWG9HVUZDT1JOWTM2NlhQOWNfQml1OGZkQ2d6MmtJdXlwcDU5QnR0TVd1WjdVTkM1OE4zNXVoVVFlQWN2VC1ROUxGNXFjNjAxU1EyOWducFpHb2VLRXhSRjc1UjY0MWlwS3VobWh2U2NXa2I2aks2WFJweG83NTZFeEJ3?oc=5" target="_blank">📰 Clarkson offloads his Kangaroos gear - Nine.com.au</a>
+                <a href="https://news.google.com/rss/articles/CBMi2AJBVV95cUxNYjRNQWNhYlE4YVVBMXZyb2VXZTdSZzJSbDZmTUV2d1JfV0lKaVF6UzNDTk9BbVRlankwRkNMYVNPWWFCYUZ3QUZwQVpLUVhZTnU3Slp5ZGpYSThwZm5lSzFES3gzR3FFYVp0dnRvSDgta1V3Z0E1N1JyY2NUZTZmYWtCR29ramJoQkExeC10aE1XSjNuTC1uVUJ4ODN3MnMyS25qaDJnODRhMUN2TTZ6SkEwTUpPX21PVFFEMjJESUtQcEhyYTVPd0ZGYXIyOFNWLU93YUNXRWhjVVphblRfVEJncXVMRDdCajZhUWg2S0dKaUlvSjhNOHlrcGlHZ25sR3BQZlh6WVNRamlDUUFqYjRWWk90bTl4T0pyajVJR0hhSlRzamtYV2k2M2c5aHZ4TWM1c193M1A2RXFZY3R4dm93X2dJOWRiVHQ4SzlDbjVKMFd6RHhsetIB2AJBVV95cUxNYjRNQWNhYlE4YVVBMXZyb2VXZTdSZzJSbDZmTUV2d1JfV0lKaVF6UzNDTk9BbVRlankwRkNMYVNPWWFCYUZ3QUZwQVpLUVhZTnU3Slp5ZGpYSThwZm5lSzFES3gzR3FFYVp0dnRvSDgta1V3Z0E1N1JyY2NUZTZmYWtCR29ramJoQkExeC10aE1XSjNuTC1uVUJ4ODN3MnMyS25qaDJnODRhMUN2TTZ6SkEwTUpPX21PVFFEMjJESUtQcEhyYTVPd0ZGYXIyOFNWLU93YUNXRWhjVVphblRfVEJncXVMRDdCajZhUWg2S0dKaUlvSjhNOHlrcGlHZ25sR3BQZlh6WVNRamlDUUFqYjRWWk90bTl4T0pyajVJR0hhSlRzamtYV2k2M2c5aHZ4TWM1c193M1A2RXFZY3R4dm93X2dJOWRiVHQ4SzlDbjVKMFd6RHhseg?oc=5" target="_blank">📰 Swans confirm brutal skipper news; Cats star misses training, Jez concern — Finals Team Tips - Fox Sports</a><a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxOdG9tem1mY0JFS0pmbmVTUktCQ3c3d1FlOTRzdjMtU2ozZm9zeXUxSkRDTmZDbFFqVjJHMDBHaFdKQXVRRmJVQVFvV25EbnNRaFd1OVdja01YcFk3NlZQQ21GZWQxMDJhc0R3ZkQ4akpSalpUOUZabHpMM2tJWGI5M3RzeVdzVkJQZk5vN1k4WVZ1RmduVjRwVEY0WmJBaGotb09BTXZwbEhjRWUwb08xRnpwVjI?oc=5" target="_blank">📰 Rival coach swipes Kangaroos over coach sacking - Nine.com.au</a>
+            </div>
+        </div>
+    
+        <div class="card NRL">
+            <div class="card-header">🏉 [NRL] ❌ Sea Eagles  16 - 33 Roosters  🏆</div>
+            <div class="card-meta">📅 2026-03-26 09:00 UTC | 📍 4 Pines Park</div>
+            <a href="https://www.google.com/search?q=Sea%20Eagles%20vs%20Roosters%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
+            <div class="news-box">
+                <strong>Latest News:</strong><br>
+                <a href="https://news.google.com/rss/articles/CBMihgFBVV95cUxQbGpHVXpEbHJuRnEyUkZIN0ZSV0ZnYnlJdFRnNUU0M01CREZob25IX0NEVmZjWUUwSjlkOWRUY3JOVUl0czhUUHpVa1RHVnYzbjh0N1E0Y0pEZHF1YmVDUDdPNHpjMGpFMVFUbk95RmlUbEpseXgwSkw2ajVyWm1wSzQzY2NGdw?oc=5" target="_blank">📰 Team List: NRL Round 4 vs Roosters - Manly Warringah Sea Eagles</a><a href="https://news.google.com/rss/articles/CBMifkFVX3lxTFB1X1dEWGRBYWtjNE45QlZNNE1mQjJMYjlVS3k0TkVlb0YzdjVSUmpwRXlpX0VUdk9ZTk4wRGY4cWhaMWJILWhKNjdoT0JNS1FwemY0Y3c4eE1RVjhSMEFneVh6dmM3ekNpOHVEbVVqeFhTaE1Bb3RJZjMwNEFmZw?oc=5" target="_blank">📰 Sea Eagles v Roosters - Round 4, 2026 - NRL.com</a>
+            </div>
+        </div>
+    
+        <div class="card NRL">
+            <div class="card-header">🏉 [NRL] ❌ Warriors  14 - 32 Wests Tigers  🏆</div>
+            <div class="card-meta">📅 2026-03-27 07:00 UTC | 📍 Go Media Stadium</div>
+            <a href="https://www.google.com/search?q=Warriors%20vs%20Wests%20Tigers%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
+            <div class="news-box">
+                <strong>Latest News:</strong><br>
+                <a href="https://news.google.com/rss/articles/CBMifkFVX3lxTE5ydHdSckpjOWhJWEpFcU5lQXhPNmxXekhvby1jbkMyUG9GdzRBaGNMalpaOWJIYlRXZ290dF9qc1dOZ0tCZ0hfb3N2NEFPZnY1OG1EbEo4N3ZPVXZoUnBnSmNzZDF1TkJpSVl3X2NIMzZaYlhGcjlVQ2pvUFJlZw?oc=5" target="_blank">📰 Wests Tigers v Warriors – Round 7, 2026 - NRL.com</a><a href="https://news.google.com/rss/articles/CBMiiwJBVV95cUxPTFdjYm03R1ZpRXA2RjdYdUktbUMzTlFESm4xVFp6aC02RHR4VU95eGdNVUU4UGEtazRGTFk2UExtQ0YtZ3NWVnVRbE5CY242YjRFWm5kOW5LbzlBTnFIdXV1b2RiYkRpVXkxTG0tT3lxS3NkYlA4R0MydGZyX2Q5Vl9tcWQ3UFJVUHc5c2dONDNDa05XVkhKZlpHcDk4amNMR1BWQVFjaUdNS3paQUQwbEstY1BvS3RRdU1jTzJ2a2ZuUk5ZSGxsX0dHU1dUeWFWcGxjUTl0VnZVdjVfQjhFRXZkd09KRFFQMW9EOVFjamxYZkVWclBYc1c5VC1LRU5xckFnUmRhVWZFeFE?oc=5" target="_blank">📰 Turbo blunder duds Manly as field goal snatches victory for Warriors - Nine.com.au</a>
             </div>
         </div>
     
@@ -251,7 +512,17 @@
             <a href="https://www.google.com/search?q=Collingwood%20vs%20GWS%20GIANTS%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE96eVNmdTl2WlFsaDREUXdUdENaVTBRRWNKYVhRYU1oR2VuVk9Ud1dLR0E0Rm1DWWJwblRTTnBzUUhjTWZEZ3RSQzk2ZDYzN3FfUUww?oc=5" target="_blank">📰 Official AFL Website of the GWS GIANTS - gwsgiants.com.au</a><a href="https://news.google.com/rss/articles/CBMizAFBVV95cUxPeWdKc0ozVEFkT0lSMGlYSDhOTEQyal8weUlXWjdBMDJrUlhCUXhwaGdLMThPY2pNbnNjX3dUaldOVjl3azJSUEwtd1RBbFNyUmZBSGxiXzMyd0hWZlVpUGJDVGZBSHVidngzMWwwc21RM291ZDlaejBOc2tUSDZyNVROd0hCaDJDdFhuZU9HNXVxclhheS14aUdLLTJCSV9idGRoWU5SV0tmMG1lM0NZeWZXNjduNGdBejZWSFlZdG5aTnRMaUlsM25XTGQ?oc=5" target="_blank">📰 More injury woe for Giants as Oliver stars in win over Magpies - afl.com.au</a>
+                <a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxQYVRQX2JrNkUyMF8wakRWa3JBT0w4aGRZZnVBN2d3Y2pqZ2k1WDhZUkQ1Tlh2aEhONGRSblA0bVQtemRaTDc1RDhTVElUNzFXWlF1aGxMT3ozWHFMOGxoV0duaEY5bTRrYnVkdjZBUEViSW91QmQ0RzFpT1VaaFZaV0hmTWp2NzQ?oc=5" target="_blank">📰 A GIANT Pre-Season Clash with the Pies - gwsgiants.com.au</a><a href="https://news.google.com/rss/articles/CBMizAFBVV95cUxPeWdKc0ozVEFkT0lSMGlYSDhOTEQyal8weUlXWjdBMDJrUlhCUXhwaGdLMThPY2pNbnNjX3dUaldOVjl3azJSUEwtd1RBbFNyUmZBSGxiXzMyd0hWZlVpUGJDVGZBSHVidngzMWwwc21RM291ZDlaejBOc2tUSDZyNVROd0hCaDJDdFhuZU9HNXVxclhheS14aUdLLTJCSV9idGRoWU5SV0tmMG1lM0NZeWZXNjduNGdBejZWSFlZdG5aTnRMaUlsM25XTGQ?oc=5" target="_blank">📰 More injury woe for Giants as Oliver stars in win over Magpies - afl.com.au</a>
+            </div>
+        </div>
+    
+        <div class="card NRL">
+            <div class="card-header">🏉 [NRL] 🏆 Broncos  26 - 12 Dolphins  ❌</div>
+            <div class="card-meta">📅 2026-03-27 09:00 UTC | 📍 Suncorp Stadium</div>
+            <a href="https://www.google.com/search?q=Broncos%20vs%20Dolphins%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
+            <div class="news-box">
+                <strong>Latest News:</strong><br>
+                <a href="https://news.google.com/rss/articles/CBMi4gFBVV95cUxNeVlFcHd0WlpsOVF0dDMwNzFyUHJsSVRPTGw3Nm0wYlhjMnJhUHAtd0tTdmtlWjJjTVI3dkVLZTlwaVEzR0pWc3hiTmw2amIzekNVQmpJZndQOFFNNkJjVl9UYVI2ZmNhdFY5by05eW1rMVRONWRkWDltemJIV3pYRmM5eU1EU3pYWGZCekZhWlFxNm8tc1BZMVppUXd1Nk84cDgzVXZGZFRzcHFLS0hsUnBXMnNPSWVZdnllekk5eWRMTGU3LVAzRTlid0Nxa2JndGJMMmY3MGp0c3BXWVJuQ0h3?oc=5" target="_blank">📰 Ultimate bandwagoner’s guide to the Dolphins for NRL finals - The Courier Mail</a><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxQX2cwbk1NaG5rQ3JiX2hQSVhidWRUUHB1MlhSdnRoTm05aTk5dkN3VU1KazNqNE15d01USWt0NjczOUpEa2IydV94MlRGMFJhS0w0SW9jcTBYYnlRTHJfOGpuYTlXZmY0MmxXYUhRR3Judk1NYnZsaEFPXzlhemUzMGNqOA?oc=5" target="_blank">📰 NRL Team List Round 23 v Dolphins - Brisbane Broncos</a>
             </div>
         </div>
     
@@ -265,6 +536,16 @@
             </div>
         </div>
     
+        <div class="card NRL">
+            <div class="card-header">🏉 [NRL] ❌ Bulldogs  16 - 24 Knights  🏆</div>
+            <div class="card-meta">📅 2026-03-28 04:00 UTC | 📍 Accor Stadium</div>
+            <a href="https://www.google.com/search?q=Bulldogs%20vs%20Knights%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
+            <div class="news-box">
+                <strong>Latest News:</strong><br>
+                <a href="https://news.google.com/rss/articles/CBMie0FVX3lxTE96UXFaU05uRGF1WTJQc2wwdGFTaVAyZTRMRDVOcmxiMHNEY3pZWENBNDhRWHN4NTZYcFo2Tll6QkI0VjJDZTZvdGQ2eHAzWExHMVNZS2ZURUhyeUtQdFVNcGJSWlp0dEhpYV9nZjAwcldlcU5walZrcmdxaw?oc=5" target="_blank">📰 Knights v Bulldogs - Round 10, 2026 - NRL.com</a><a href="https://news.google.com/rss/articles/CBMikwFBVV95cUxQQ1dZZjhHOEdGQ25QNjRhMlE0bVhWMXdjWFBYRVZ4cDlNUHBfUkQ3MlJfQVFWOFBGMHVaRm1VOXFkVndtZkpBVEc5cDBMSGtUMGFDSUtiRzBlejRfWHNjOHEwX0hBa1NiQm5RSXVwNlUteXhuV2JsZmJWcXBfY0JEYWdWNk5YNHpVZzhGWkx3NW5lRFU?oc=5" target="_blank">📰 Match Highlights: Knights vs Bulldogs - Newcastle Knights</a>
+            </div>
+        </div>
+    
         <div class="card AFL">
             <div class="card-header">🏈 [AFL] 🏆 Fremantle  103 - 43 Richmond  ❌</div>
             <div class="card-meta">📅 2026-03-28 05:15 UTC | 📍 Optus Stadium</div>
@@ -275,13 +556,33 @@
             </div>
         </div>
     
+        <div class="card NRL">
+            <div class="card-header">🏉 [NRL] 🏆 Panthers  48 - 20 Eels  ❌</div>
+            <div class="card-meta">📅 2026-03-28 06:30 UTC | 📍 CommBank Stadium</div>
+            <a href="https://www.google.com/search?q=Panthers%20vs%20Eels%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
+            <div class="news-box">
+                <strong>Latest News:</strong><br>
+                <a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxOWno0NWJtcTVvM0h5SEt5RVQ2TE9hNTItMkNwbVBqSDFkd3VWTWRNcGhzSWVtejRSYWlWeEJVY0xOOGh1aThMaWNlcHpuRnBTekowbHk0Q2MzcDJfX085U010ejhjU3o3X1JrUjgxNHVSM1FlVUJvUFYwVG11N3RvMjRiVW5jbk1UYXBXTXRiRzItdi1wSUFvNg?oc=5" target="_blank">📰 As it happened: Panthers claim minor premiership; Sloan boots Dragons to victory - NRL.com</a><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTFBQODlQMWRENHNJWXVQczByTGtQOVRNZ2xHWlZhNk8yd3JyOGlRODAtZVBQazF0WE9FbGUzTVdRVXdvWGhTRDVhN080VHliYmF2ZlpUQ0h5RnlGN2xWSF9ybUFXTTBsMjhINGdZaTFNUHh2WmJQQzdZ?oc=5" target="_blank">📰 NRL Team List: Round 21 - Parramatta Eels</a>
+            </div>
+        </div>
+    
         <div class="card AFL">
             <div class="card-header">🏈 [AFL] ❌ Essendon  69 - 81 North Melbourne  🏆</div>
             <div class="card-meta">📅 2026-03-28 08:35 UTC | 📍 Marvel Stadium</div>
             <a href="https://www.google.com/search?q=Essendon%20vs%20North%20Melbourne%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxPcUZSanAxUUdlOWduelZScHh0ZjloYlpRVllRNUx6VktwWTZoLVp2TXlSd29BUzRWWktvTFI4OFFMRjBtdDU4dVZhek1QOEgtTk5SQWwwM1RLdkMzdXllbVlWQW1mUWZ2cnhKVFlERzhGNnhfb0J4UXV5bFBwRGtFOXItR0ZHTkgxMnFJQUNn?oc=5" target="_blank">📰 AFL R16 gameday guide: North Melbourne v Essendon - nmfc.com.au</a><a href="https://news.google.com/rss/articles/CBMi1AFBVV95cUxPWUlidVUxUFlweWZka2xZRkpqSkd1bV8zMTg0dlkweUpoNWt3OU5rLTZJb3ctNk96bXVGZzVwQ296emJ1UURYdDREYjVnU0xuRDJ5cHZLdkl0TmdsbWIzeE5ycUo4Z3JwcHZZSHVvMVh3S2pGRGYzMXpIalVGSkhLT0JYN1VpSXZidk5pdGJJc2VMdWlYRlg0cy1OblIwcndUTXE2TWgxY3ZKci1ORlZ2MUttaGp0SWxhSGFCRHMyQlRNelVScTZJY2F4OFNTUmNWcTRLeA?oc=5" target="_blank">📰 Highlights: Essendon v North Melbourne - afl.com.au</a>
+                <a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxPcUZSanAxUUdlOWduelZScHh0ZjloYlpRVllRNUx6VktwWTZoLVp2TXlSd29BUzRWWktvTFI4OFFMRjBtdDU4dVZhek1QOEgtTk5SQWwwM1RLdkMzdXllbVlWQW1mUWZ2cnhKVFlERzhGNnhfb0J4UXV5bFBwRGtFOXItR0ZHTkgxMnFJQUNn?oc=5" target="_blank">📰 AFL R16 gameday guide: North Melbourne v Essendon - nmfc.com.au</a><a href="https://news.google.com/rss/articles/CBMi3gFBVV95cUxOdFpaZFYxekxoZllUcDcxM2VfRHVjeGthbE90c0JOdTFCVEpQN2tUdlpwYTZkLW5jTlVLWG9LTDNPR3BBOGgwcXI4UmtYX1FuWWVzZF9ueklfOXFuNW9ONkVXS1hrTmZtWGFOSkY2UXdRWXJTZzJLZXVuRS1neFlVcG1xb3cyc3VuNFNrU0Q2SnZpV3ZTZXVxUkNQYkU2M2M2OXFKbC0zV3JGRll4MGp3ZnJ0anQ1QVpveDVWWlFhY1p3akNzZ19TZk52QlpNa01lQkpvSTZTdWxUR2thTXc?oc=5" target="_blank">📰 Match Previews R3: Essendon v North Melbourne - afl.com.au</a>
+            </div>
+        </div>
+    
+        <div class="card NRL">
+            <div class="card-header">🏉 [NRL] 🏆 Cowboys  28 - 24 Storm  ❌</div>
+            <div class="card-meta">📅 2026-03-28 08:35 UTC | 📍 Queensland Country Bank Stadium</div>
+            <a href="https://www.google.com/search?q=Cowboys%20vs%20Storm%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
+            <div class="news-box">
+                <strong>Latest News:</strong><br>
+                <a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxPVm5wY1RLeHUtcjlVbW9vWkNNb3lpRnJUd3hHR3BnQ0xudkhBZHFhZkZfMElQN1lsMURDNzIwcWI2ZzRNSWpWVXlLODh1VkR6eTNoUm1lN0Z4cUZwT1QtU0wtQUdIRllJMjhLRXNEblNhaXNUemI3Um03bm5HUi1Ka0lYSlVKdDJFRGtlUmtTTTRPa3RQT0tUUUpPV0JUaVcxMjFwV2dLMDV3QQ?oc=5" target="_blank">📰 As it happened: Raiders do it for Papa; Storm, Wahs win thrillers - NRL.com</a><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE0yMWkzNllFbnBUUWg5a3NpSVByMWtPTHB6QTN2RlFucjlEZmVHOE12R1NycFFWY3ZoNm5XQnI5ZERRRVNiUXRVRFpvYTBoV20xeXltZDBYT254MGpzSlRVY1J1UmRFOWE0TGxjd2l3bmxDTWM0aFBj?oc=5" target="_blank">📰 Cowboys sign Chan - North Queensland Cowboys</a>
             </div>
         </div>
     
@@ -291,7 +592,7 @@
             <a href="https://www.google.com/search?q=Port%20Adelaide%20vs%20West%20Coast%20Eagles%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxPS0paV1F4OEN4b3lKSkR2SDB6SEZQRUVlT3lUV2dCQ2MxeEpJNXFWMFNVejJiN3Vxc1VoeUtOSVBxNWhhQ0JUN2YteGlTZTRtbUJHbnBqeUQ0dVJsX09EMlQ0dHdKLXgwcXZSNlduekNRQ3VDNlcxQnRlb0lRRHZ6SDhfZG9BOGlnYW1pWmJzdVNXM0t0ZTFJUWF0UUpfMzdLVUE?oc=5" target="_blank">📰 NFL journo falls in love with AFL - Nine.com.au</a><a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxOaFBLcXFINFFoRktfQkQxZGFoem1QN21CazlnX1FTZFd5Wk5UXzJCbGk1QTZ5X2EzVHF4Wk9VMkZ1S2lvcGpaUUNJRzdBOGNPTDRDUk9EY0NoUC1WcGN0cTg0azdhT2piZDh5T1I2MElsUnhkX2doMllVbE9POXlZQWhNXzZBZE1BS291MEx6SFcwcFdEYUE?oc=5" target="_blank">📰 AFL Game Day Guide: Round 13 v Port Adelaide - westcoasteagles.com.au</a>
+                <a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxQTGN6REJ5dGppUklUaTU2OTlLUDZXUHdybmFoNWwxNUE5WTd4RFBwallON3I4X3V6Ni1TRHg5WlRPR25VaVNJbF85QVVKQ1FCdE1tbEFqNVRndDBnUFZzZXVhZWhTWi1ueUt2cnlKNVFNdTVTQkFyYjhBclF1dUlnTGEyMk9sV3pWbEYtakpNU2FQRklUOENuRWVIRF9kOGVOa09HQm1aYw?oc=5" target="_blank">📰 Blakey 'done' at Swans as rivals circle - Nine.com.au</a><a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxOaFBLcXFINFFoRktfQkQxZGFoem1QN21CazlnX1FTZFd5Wk5UXzJCbGk1QTZ5X2EzVHF4Wk9VMkZ1S2lvcGpaUUNJRzdBOGNPTDRDUk9EY0NoUC1WcGN0cTg0azdhT2piZDh5T1I2MElsUnhkX2doMllVbE9POXlZQWhNXzZBZE1BS291MEx6SFcwcFdEYUE?oc=5" target="_blank">📰 AFL Game Day Guide: Round 13 v Port Adelaide - westcoasteagles.com.au</a>
             </div>
         </div>
     
@@ -305,223 +606,23 @@
             </div>
         </div>
     
-        <div class="card AFL">
-            <div class="card-header">🏈 [AFL] 🏆 Brisbane Lions  119 - 65 Collingwood  ❌</div>
-            <div class="card-meta">📅 2026-04-02 08:30 UTC | 📍 Gabba</div>
-            <a href="https://www.google.com/search?q=Brisbane%20Lions%20vs%20Collingwood%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
+        <div class="card NRL">
+            <div class="card-header">🏉 [NRL] ❌ Raiders  22 - 34 Sharks  🏆</div>
+            <div class="card-meta">📅 2026-03-29 05:05 UTC | 📍 GIO Stadium</div>
+            <a href="https://www.google.com/search?q=Raiders%20vs%20Sharks%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxOWnRNQWdZVkFGdlR4OW5fZS1IbEtXTzdlbzRDaXRSaGVGb1kwRFVRVzNoWkp6XzNvOVE3ZXJHSW81dUs1THFTT2VTWXRRbzlKSTJianlKdEVxWmREeUdWSS1UelA2MUF1V0paUWJ1QlpfVDN6RS1hRXJnQ05nRzN4M1dZR1p3Nzllek1hUHp6dmFULTk2Z1YxazBqMG1zWVpoakdQcDJMYnR0UWdBbXVzaXZuLW5FWUdrWjJQS2dkcw?oc=5" target="_blank">📰 Morris mauls Pies with eight-goal bag as Lions all but lock in third spot - afl.com.au</a><a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxQcXBWS1dpMG9zNTFrY0t1NFdGUTUyVHM5d21aajkzTmdWejFOcjl0TTBTMlpSMm5hekpqMXBWT3c2eTZ3ZmdLVDJYOU80U05fQUFFQTU5bmR5dHlrSUFlSG50UElGRWRIRFhaRDNXNHNtRG5uWUNtNVNhd2Jub1JPa1ln?oc=5" target="_blank">📰 Game Day Guide: Round 24 vs Collingwood - lions.com.au</a>
+                <a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxPVm5wY1RLeHUtcjlVbW9vWkNNb3lpRnJUd3hHR3BnQ0xudkhBZHFhZkZfMElQN1lsMURDNzIwcWI2ZzRNSWpWVXlLODh1VkR6eTNoUm1lN0Z4cUZwT1QtU0wtQUdIRllJMjhLRXNEblNhaXNUemI3Um03bm5HUi1Ka0lYSlVKdDJFRGtlUmtTTTRPa3RQT0tUUUpPV0JUaVcxMjFwV2dLMDV3QQ?oc=5" target="_blank">📰 As it happened: Raiders do it for Papa; Storm, Wahs win thrillers - NRL.com</a><a href="https://news.google.com/rss/articles/CBMif0FVX3lxTE9PakdqM2hKYTlLcVpCRHZLVUNkTHJvbzE0WlQyYXNRRElYMjNHcmlqcVM4aENYdUFsTUtxTDg1VW5oeGJFWEIwREloby1mUkNMZW42WTFVeXhfX1dnTWUxZHQzMUN1YjFnWVNrYktacmo5ZkdsaEIxdG1TT1RiQ0E?oc=5" target="_blank">📰 NRL Team List: Raiders v Sharks - raiders.com.au</a>
             </div>
         </div>
     
-        <div class="card AFL">
-            <div class="card-header">🏈 [AFL] 🏆 North Melbourne  96 - 86 Carlton  ❌</div>
-            <div class="card-meta">📅 2026-04-03 04:15 UTC | 📍 Marvel Stadium</div>
-            <a href="https://www.google.com/search?q=North%20Melbourne%20vs%20Carlton%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
+        <div class="card NRL">
+            <div class="card-header">🏉 [NRL] 🏆 Titans  22 - 14 Dragons  ❌</div>
+            <div class="card-meta">📅 2026-03-29 07:15 UTC | 📍 Cbus Super Stadium</div>
+            <a href="https://www.google.com/search?q=Titans%20vs%20Dragons%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxQTDFaWUo2NlZad0pGQ2RfOVJCLWQ2RFQ4bW1ZZzZXcXZGR0sxVzNrN3ExVE1GLUt3Rk5nLUVmSVFNV2JPU2dfX1B6T3BsU2Uza2Q1OUhFX3RGNkRNRWNOZXpybnVIWVZzTGZpT0w2UnBBb1gtUmpKN0t2MXZVSURPcXFtWHQwVnhjamtOLWxYOE8yd04wVTFFYUtmLUs0c3JxMHQ3QXE5S0dFSUtzMFN2a2QxdUc?oc=5" target="_blank">📰 Carlton's categoric stance on Weitering - SEN</a><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTFBzeGpMQUJaUW44M1hyQVBLWUNVRnpxbDF1TmFpVFV3WlV4dnVKLWdFUnVLSmZBV282VW15VTlSZTF6SGM3X1hYN2ZwaHhueFRFWXVwdURPaEhFOWdGdWotSVA3ZTV0dXFSaklKNGExbUg?oc=5" target="_blank">📰 North Melbourne Kangaroos Women vs Carlton Blues Women - AFL Women's Round 5, 2026 - Fox Sports</a>
-            </div>
-        </div>
-    
-        <div class="card AFL">
-            <div class="card-header">🏈 [AFL] ❌ Adelaide Crows  76 - 78 Fremantle  🏆</div>
-            <div class="card-meta">📅 2026-04-03 08:15 UTC | 📍 Adelaide Oval</div>
-            <a href="https://www.google.com/search?q=Adelaide%20Crows%20vs%20Fremantle%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
-            <div class="news-box">
-                <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMi2AJBVV95cUxNYjRNQWNhYlE4YVVBMXZyb2VXZTdSZzJSbDZmTUV2d1JfV0lKaVF6UzNDTk9BbVRlankwRkNMYVNPWWFCYUZ3QUZwQVpLUVhZTnU3Slp5ZGpYSThwZm5lSzFES3gzR3FFYVp0dnRvSDgta1V3Z0E1N1JyY2NUZTZmYWtCR29ramJoQkExeC10aE1XSjNuTC1uVUJ4ODN3MnMyS25qaDJnODRhMUN2TTZ6SkEwTUpPX21PVFFEMjJESUtQcEhyYTVPd0ZGYXIyOFNWLU93YUNXRWhjVVphblRfVEJncXVMRDdCajZhUWg2S0dKaUlvSjhNOHlrcGlHZ25sR3BQZlh6WVNRamlDUUFqYjRWWk90bTl4T0pyajVJR0hhSlRzamtYV2k2M2c5aHZ4TWM1c193M1A2RXFZY3R4dm93X2dJOWRiVHQ4SzlDbjVKMFd6RHhsetIB2AJBVV95cUxNYjRNQWNhYlE4YVVBMXZyb2VXZTdSZzJSbDZmTUV2d1JfV0lKaVF6UzNDTk9BbVRlankwRkNMYVNPWWFCYUZ3QUZwQVpLUVhZTnU3Slp5ZGpYSThwZm5lSzFES3gzR3FFYVp0dnRvSDgta1V3Z0E1N1JyY2NUZTZmYWtCR29ramJoQkExeC10aE1XSjNuTC1uVUJ4ODN3MnMyS25qaDJnODRhMUN2TTZ6SkEwTUpPX21PVFFEMjJESUtQcEhyYTVPd0ZGYXIyOFNWLU93YUNXRWhjVVphblRfVEJncXVMRDdCajZhUWg2S0dKaUlvSjhNOHlrcGlHZ25sR3BQZlh6WVNRamlDUUFqYjRWWk90bTl4T0pyajVJR0hhSlRzamtYV2k2M2c5aHZ4TWM1c193M1A2RXFZY3R4dm93X2dJOWRiVHQ4SzlDbjVKMFd6RHhseg?oc=5" target="_blank">📰 Swans confirm brutal skipper news; Cats star misses training, Jez concern — Finals Team Tips - Fox Sports</a><a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxOVWxCVTF3cVpESEoyZnl1QmJaV2hvbXZqd1VwOS1MWFc5Zjh2U1JubF8teDcwMmFwSUVRRmFrQW5hY0ZKWTVrbVlCQ1puME4zNnJ1SzBIY1h3a0NqSDdNd2pSc0I0dGpWcEc5MFZWNXEwZnhGc2JWcjdxWld6ellLOFQxOHd6d0tQSHNhak9FeXlZSmd2VVR6NkNFV1lCUWpOUUNXMXFn?oc=5" target="_blank">📰 Final teams in as Dockers look to bounce back against Crows. Follow LIVE - afl.com.au</a>
-            </div>
-        </div>
-    
-        <div class="card AFL">
-            <div class="card-header">🏈 [AFL] ❌ Richmond  48 - 90 Port Adelaide  🏆</div>
-            <div class="card-meta">📅 2026-04-04 05:15 UTC | 📍 MCG</div>
-            <a href="https://www.google.com/search?q=Richmond%20vs%20Port%20Adelaide%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
-            <div class="news-box">
-                <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMipwJBVV95cUxPcFV6TmJaQjlFVGFCdE5Ma21CN1IyZnRRa193Smwxb0JqLUUzRVRKWnlLM0ZqUTZmeG5UUkJiRlZUSXpSR1pWRlhIUnZpTGZXNmRzYWRsVElNWDhab0NCRGRlYzk2Vk1PdzdmNFkxc0FFUWJWeTRJOS1QbDdPUGJuQ3JobmE0SGdlVjI1Y0JnSUZjT3dqRHdDZWlZdmxOVmNxOGxZaERKMzZDTEZEUTNJOXI5TF9qSEZNV25ZSTRtcTVlT2ZEMjhRZHVJSXVZblZRWVotTzE0czFMYndSUFA3WHplV0paUXBxSmhYSHJpb2xuek9JT0pkR1JMWV95ekdqWWVRUVd6ZENVY2V0MWMwLVJzNlFCbmZvMTNsa2lsNjMzWklITE800gGnAkFVX3lxTE9wVXpOYlpCOUVUYUJ0TkxrbUI3UjJmdFFrX3dKbDFvQmotRTNFVEpaeUszRmpRNmZ4blRSQmJGVlRJelJHWlZGWEhSdmlMZlc2ZHNhZGxUSU1YOFpvQ0JEZGVjOTZWTU93N2Y0WTFzQUVRYlZ5NEk5LVBsN09QYm5DcmhuYTRIZ2VWMjVjQmdJRmNPd2pEd0NlaVl2bE5WY3E4bFloREozNkNMRkRRM0k5cjlMX2pIRk1XbllJNG1xNWVPZkQyOFFkdUlJdVluVlFZWi1PMTRzMUxid1JQUDdYemVXSlpRcHFKaFhIcmlvbG56T0lPSmRHUkxZX3l6R2pZZVFRV3pkQ1VjZXQxYzAtUnM2UUJuZm8xM2xraWw2MzNaSUhMTzQ?oc=5" target="_blank">📰 Inside AFL’s biggest trade race: Each club’s best Butters offer... and the players involved - Fox Sports</a><a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxPS0paV1F4OEN4b3lKSkR2SDB6SEZQRUVlT3lUV2dCQ2MxeEpJNXFWMFNVejJiN3Vxc1VoeUtOSVBxNWhhQ0JUN2YteGlTZTRtbUJHbnBqeUQ0dVJsX09EMlQ0dHdKLXgwcXZSNlduekNRQ3VDNlcxQnRlb0lRRHZ6SDhfZG9BOGlnYW1pWmJzdVNXM0t0ZTFJUWF0UUpfMzdLVUE?oc=5" target="_blank">📰 NFL journo falls in love with AFL - Nine.com.au</a>
-            </div>
-        </div>
-    
-        <div class="card AFL">
-            <div class="card-header">🏈 [AFL] ❌ West Coast Eagles  35 - 163 Sydney Swans  🏆</div>
-            <div class="card-meta">📅 2026-04-04 08:35 UTC | 📍 Optus Stadium</div>
-            <a href="https://www.google.com/search?q=West%20Coast%20Eagles%20vs%20Sydney%20Swans%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
-            <div class="news-box">
-                <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxPOFFtVjJKdEtMeFoyVmVrQ1FIdkRONmU5REFFWnpSaUx2WXdLeVlvbVRrZGZiLTkwTzYtbmp1OElUbnhrdk9oUlVZcThLZl96R3dRSVU3QWVKdE9ZeWhlVnBzRndrdWZ3d2RzREhJZjZGUGtaTnBnejVqemNWQ0kydS1YYktYSkNMblB6M3hfcmFDZzFNUFhpRG1ZcmpsWm0zOVo5cGdYcEJfQlRMMkl2bWhnR3BTSDcz?oc=5" target="_blank">📰 How finals draw now opens up for Swans miracle run - Nine.com.au</a><a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE1jTXdGTUx2R1NZU2NTSE1GLWsyRFJLVlVqZmxpa2lzSllEOEtMSi1fM0thOHdMTl9fNmZnNWZYWnJ3Rm02ajVQSjZkRnM1MUYza3puN3JlOEJ6Tm8wcTlCZEpHYk9HcnY0RUVjQjhSZXlmS1RVVXc?oc=5" target="_blank">📰 Sydney Swans Women & West Coast Eagles Women Team Line Ups - AFL Women's Round 10, 2024 - Fox Sports</a>
-            </div>
-        </div>
-    
-        <div class="card AFL">
-            <div class="card-header">🏈 [AFL] 🏆 Melbourne  109 - 89 Gold Coast SUNS  ❌</div>
-            <div class="card-meta">📅 2026-04-05 05:15 UTC | 📍 MCG</div>
-            <a href="https://www.google.com/search?q=Melbourne%20vs%20Gold%20Coast%20SUNS%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
-            <div class="news-box">
-                <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxNMjBRM09sS3dYcmF3Tk5nR0Vrc3dPeEhBMGhZSmM0amtfMEJNWG9HVUZDT1JOWTM2NlhQOWNfQml1OGZkQ2d6MmtJdXlwcDU5QnR0TVd1WjdVTkM1OE4zNXVoVVFlQWN2VC1ROUxGNXFjNjAxU1EyOWducFpHb2VLRXhSRjc1UjY0MWlwS3VobWh2U2NXa2I2aks2WFJweG83NTZFeEJ3?oc=5" target="_blank">📰 Clarkson offloads his Kangaroos gear - Nine.com.au</a><a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxPc1kySHRmT1h5Ql9CLW9yNTdWNHdmdDQ3SzlxRjN5SzI5NlBZZmJzQmNOcWIxVGQyTG5VNVNPVjh1dXBwSzV3N1V6eE0yZU94SmMzWkJoa1hlODkzbUFlOC14RXpkenhVZVQ5bFlfTjZRejVPRzBjMTl3ZzVPbmFvS0xKV3FWdEJRNGV6d2FKRUJDQjRDRkNqVUNRUC1FZ1NpWnlvLXp4dkVlbHAtNUszUlE5SXp3RHM?oc=5" target="_blank">📰 Demons battle past struggling Suns to keep top-four chances alive - afl.com.au</a>
-            </div>
-        </div>
-    
-        <div class="card AFL">
-            <div class="card-header">🏈 [AFL] 🏆 Western Bulldogs  99 - 65 Essendon  ❌</div>
-            <div class="card-meta">📅 2026-04-05 09:20 UTC | 📍 Marvel Stadium</div>
-            <a href="https://www.google.com/search?q=Western%20Bulldogs%20vs%20Essendon%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
-            <div class="news-box">
-                <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxQWGllUHRPNmxUcGJOQTRqSXppVGRHeGttak1lTDFrVHBZSDJ5NVZ0SFVSUGVUNFRndEpEQzJscXBITVRnZjFuaWRXY0w0N0xkb3ZwWEtJQm1WZWowU29RN2RFamFWV3RtN09RU2hBRzJwTllGU0RWZnVJLVBZaEQyaQ?oc=5" target="_blank">📰 AFL Team | Round 4 v Essendon - westernbulldogs.com.au</a><a href="https://news.google.com/rss/articles/CBMi1wFBVV95cUxNWDkzTVY2YWJMTnlRb2dGb2s2Ukw1UVRQS243NnQ0djl3SWNfNHJHVXI1Vm54Q1Zvd3pIV3F3VTRjbEo2dncwVjlsZFN1c1RQTkE3TkJlcU1vOTBEZmZjSDZ5dGkwV1RBQmI1ckdwSXEzc2wzNmZTTlhFSGFGWDBtSEhBX3RGeG1veTBVSTVGZ1l2eXRLQ05oZEVVS3BkXzM4c2kzSkUydjFKbU1GcktTeDlpOV84RC1BYkJnSEpmU0ZTRGFpaU8tbUEySDBfWVpXYlMxcGRocw?oc=5" target="_blank">📰 Quick Recap: Western Bulldogs v Essendon - afl.com.au</a>
-            </div>
-        </div>
-    
-        <div class="card AFL">
-            <div class="card-header">🏈 [AFL] 🏆 Hawthorn  92 - 91 Geelong Cats  ❌</div>
-            <div class="card-meta">📅 2026-04-06 05:15 UTC | 📍 MCG</div>
-            <a href="https://www.google.com/search?q=Hawthorn%20vs%20Geelong%20Cats%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
-            <div class="news-box">
-                <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMi2AJBVV95cUxNYjRNQWNhYlE4YVVBMXZyb2VXZTdSZzJSbDZmTUV2d1JfV0lKaVF6UzNDTk9BbVRlankwRkNMYVNPWWFCYUZ3QUZwQVpLUVhZTnU3Slp5ZGpYSThwZm5lSzFES3gzR3FFYVp0dnRvSDgta1V3Z0E1N1JyY2NUZTZmYWtCR29ramJoQkExeC10aE1XSjNuTC1uVUJ4ODN3MnMyS25qaDJnODRhMUN2TTZ6SkEwTUpPX21PVFFEMjJESUtQcEhyYTVPd0ZGYXIyOFNWLU93YUNXRWhjVVphblRfVEJncXVMRDdCajZhUWg2S0dKaUlvSjhNOHlrcGlHZ25sR3BQZlh6WVNRamlDUUFqYjRWWk90bTl4T0pyajVJR0hhSlRzamtYV2k2M2c5aHZ4TWM1c193M1A2RXFZY3R4dm93X2dJOWRiVHQ4SzlDbjVKMFd6RHhsetIB2AJBVV95cUxNYjRNQWNhYlE4YVVBMXZyb2VXZTdSZzJSbDZmTUV2d1JfV0lKaVF6UzNDTk9BbVRlankwRkNMYVNPWWFCYUZ3QUZwQVpLUVhZTnU3Slp5ZGpYSThwZm5lSzFES3gzR3FFYVp0dnRvSDgta1V3Z0E1N1JyY2NUZTZmYWtCR29ramJoQkExeC10aE1XSjNuTC1uVUJ4ODN3MnMyS25qaDJnODRhMUN2TTZ6SkEwTUpPX21PVFFEMjJESUtQcEhyYTVPd0ZGYXIyOFNWLU93YUNXRWhjVVphblRfVEJncXVMRDdCajZhUWg2S0dKaUlvSjhNOHlrcGlHZ25sR3BQZlh6WVNRamlDUUFqYjRWWk90bTl4T0pyajVJR0hhSlRzamtYV2k2M2c5aHZ4TWM1c193M1A2RXFZY3R4dm93X2dJOWRiVHQ4SzlDbjVKMFd6RHhseg?oc=5" target="_blank">📰 Swans confirm brutal skipper news; Cats star misses training, Jez concern — Finals Team Tips - Fox Sports</a><a href="https://news.google.com/rss/articles/CBMi_wFBVV95cUxON1ROWkdINEJQLVlaNVgzMlJBUEk4bGVRcXFnVFFWaU9Rbk45dmR3cW1hajVMS09WSTRseWozVzBBR2VJN0pyYWlNQ2d5Vmg4QXB1SURkQUhSaGZRY0tQZURNQi1DNGwwUUhWbm9KVnZNVjg2WG9FTktGdmw1VGV0cjdOenRremN0N3pDYXdsTWVETkFiX1dORHJxVTUyZm1SdGpTN1N0ajJ6WGtZQnd4QkdWS0hGTUJua1F4dnRyb21aMHBsR2p2WnBlOWlzY2t3ZmR3UFJUeWJkSG44QnYzZ2pjV3BtaDBQZ2ZWdjZKLXdnRE83N21qMU5COWZVekE?oc=5" target="_blank">📰 Dockers shocker was a blast from the past for Freo fans. Here’s why they can still cling to hope - WAtoday</a>
-            </div>
-        </div>
-    
-        <div class="card AFL">
-            <div class="card-header">🏈 [AFL] 🏆 Adelaide Crows  114 - 86 Carlton  ❌</div>
-            <div class="card-meta">📅 2026-04-09 09:40 UTC | 📍 Adelaide Oval</div>
-            <a href="https://www.google.com/search?q=Adelaide%20Crows%20vs%20Carlton%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
-            <div class="news-box">
-                <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMi-gJBVV95cUxNY1BsVnJncmFCTjNXamlWRXNNbmdBUVVxOGNDZjgxUHZ2UEVUVVRJWUpmdUo1ZGtpMlItM3VlWGthdU53WGpYSzk5WmxiaDY4dUFCc1NxVWZsMFNxXzR0SW1QYVRUM0FTajVGc3VOU3ZqUXRNSzBlZzhTVXZXMGFoUnBCTmo4NDZ5SXh2QkZiSlpTQUQyWHVfekdKUkhpcHVUTEhlQjRIM2pOZ01NTEdUaHJ1d3owUE0yX0tKakV3a19oZzJhSXJ4YmcwZk43RFJoaDh0STNSSXU0MlNocVRUaF91RE1wUlpPbUlCczI5cWtZTVc1aE1pU0RaMVRsTHYwQ2loQjdsMmlJSk90dmY5b3dmZ2ZWMGktNE9KYzBhVTlPbGoweTd3Qzg1MGw5TkVuMWRyY204WDBUZGFRUnlUWHVrWG9BdWtadFBtQlZxX3JtWVkzNTFjeldKamNGcGdVQ1JYOXJDYzJ5MmdKVENoVUZONmJ4ajBvZEHSAfoCQVVfeXFMTWNQbFZyZ3JhQk4zV2ppVkVzTW5nQVFVcThjQ2Y4MVB2dlBFVFVUSVlKZnVKNWRraTJSLTN1ZVhrYXVOd1hqWEs5OVpsYmg2OHVBQnNTcVVmbDBTcV80dEltUGFUVDNBU2o1RnN1TlN2alF0TUswZWc4U1V2VzBhaFJwQk5qODQ2eUl4dkJGYkpaU0FEMlh1X3pHSlJIaXB1VExIZUI0SDNqTmdNTUxHVGhydXd6MFBNMl9LSmpFd2tfaGcyYUlyeGJnMGZON0RSaGg4dEkzUkl1NDJTaHFUVGhfdURNcFJaT21JQnMyOXFrWU1XNWhNaVNEWjFUbEx2MENpaEI3bDJpSUpPdHZmOW93ZmdmVjBpLTRPSmMwYVU5T2xqMHk3d0M4NTBsOU5FbjFkcmNtOFgwVGRhUVJ5VFh1a1hvQXVrWnRQbUJWcV9ybVlZMzUxY3pXSmpjRnBnVUNSWDlyQ2MyeTJnSlRDaFVGTjZieGowb2RB?oc=5" target="_blank">📰 Blues’ $3m warchest as trade rumour addressed; how Swans blew up brutal torpedo call - Fox Sports</a><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxQRVIxZDdtU1FmbmRXRDVERlNQNllEQmdQczVHUGlpTUlwbDVKVllrUmF3RWlvbnowdGpoSUYxRlYtQ2k3QWFhcWo1c3BtNHlQYVdCa3pZeUlmck9RWE1BZjBVYTJLZmZCM1VwMTVhVTJXVlB2UENVbXB2VkJ3eEt2NGw0cw?oc=5" target="_blank">📰 AFL Team Selection: Gather Round v Carlton - afc.com.au</a>
-            </div>
-        </div>
-    
-        <div class="card AFL">
-            <div class="card-header">🏈 [AFL] ❌ Collingwood  39 - 45 Fremantle  🏆</div>
-            <div class="card-meta">📅 2026-04-10 09:40 UTC | 📍 Adelaide Oval</div>
-            <a href="https://www.google.com/search?q=Collingwood%20vs%20Fremantle%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
-            <div class="news-box">
-                <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMi2AFBVV95cUxOTXpibXIwdkVidFFFNkwzdUp3WVNmemV4Y0lKbDd5X003cUlvY3JmLUJsU0lndEJkSEZHaEp6cExJbkRqLXl2a2R6YUtGcW1sd1d4VDlTOHNlSkJMeVhHbFVzM1d1c2xiYndlMTdkNkwxUmY1Rm5qcEtTc2Nsa0ZaRGdkcGpWSklZaHctanVkRU5Td1QteWVHek0zM1pETjRTYVJEOTVGMlpDTmljTEg5VUk2ZDJQeWFZX1ZJZGZoVjdFOTVjcHRxWmd0NG80cml5c2JKRWtxbUU?oc=5" target="_blank">📰 Docker dominance, concerns for Pies: How clubs fared against this year's finalists - afl.com.au</a><a href="https://news.google.com/rss/articles/CBMifEFVX3lxTE5Kbml3QWhmR3A4NmltdmM0NzA4RVJKLVlLYUtGcEJramtPSTNFSURNeHZHOXpxeF9YeWUwMWN6TmhrdWl3ek1DWTJtUFl4Uy1MTkJDaXBMaV91eXpmTUhpeVcydlNjTS10YW11VkNPZXZNMUdZdG1ub1E4YkU?oc=5" target="_blank">📰 Collingwood Magpies Women & Fremantle Dockers Women Team Line Ups - AFL Women's Round 2, 2026 - Fox Sports</a>
-            </div>
-        </div>
-    
-        <div class="card AFL">
-            <div class="card-header">🏈 [AFL] ❌ North Melbourne  66 - 92 Brisbane Lions  🏆</div>
-            <div class="card-meta">📅 2026-04-11 02:35 UTC | 📍 Barossa Park</div>
-            <a href="https://www.google.com/search?q=North%20Melbourne%20vs%20Brisbane%20Lions%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
-            <div class="news-box">
-                <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMizgFBVV95cUxQeE9kR3dfckhiUXFIVmZWZ21kaDZfeFhEaFhlTVZBeFR0TlFPeDF0dzRvRlEtX3dnblRFRVFsYXpwTXJBdmtxbmtKYmFHRG4yZmlpS3FhbVdwVjNNRVZTVzlmb3ZmRU1PY2ZCS2RrelBNSmJSOWNqR0lmS1JrYXlJWUZKM2NoZ0hYcEVpX0F2WnNCeExmQm93ZkhGS1UwQ0Zucm9vSEJfbjBHdjNHTS1wWHFBTjItUlpOMXh4VWp0STV0VDBLbzl2Z3Q3VVZ2QQ?oc=5" target="_blank">📰 ‘Don’t blame him’: Clarkson dumps Roos gear at local Vinnies - Nine.com.au</a><a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxNRUMzT3RhN1JjUllLbDQzSXBnYXM4ekJoN3pMdWpHXzAzbHEtVUV3NENOaWoyZ3NxS0VsM2pLRlpvalNxRm9OQjRKTWd5ckhTWlFoaUZLUVBzcS16RUZ1Ql82OWN6VnVXY1JESVNnRkJZSDh6ZHI3b2JyMThXeks4NlM1MjYxMjBvUmZZejJpMXVhby1fT3NGa0xmc0plRkstN3VpUG5aQV8yVVluejZiSGZ0UQ?oc=5" target="_blank">📰 Fagan lashes Kangaroos over 'unfair' comments after Clarkson axing - ABC News & Headlines – Australian Broadcasting Corporation</a>
-            </div>
-        </div>
-    
-        <div class="card AFL">
-            <div class="card-header">🏈 [AFL] 🏆 Essendon  113 - 68 Melbourne  ❌</div>
-            <div class="card-meta">📅 2026-04-11 03:15 UTC | 📍 Adelaide Oval</div>
-            <a href="https://www.google.com/search?q=Essendon%20vs%20Melbourne%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
-            <div class="news-box">
-                <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMi1AFBVV95cUxOcWZQUVpyR3U3N3V0c2tvWnpseW5PcTJhTDIxbG9WWTN2Zjd3OElPaXNoT2xFUnZrc2xGMVJOV2FHQ0JpMUtoTnVnRDl0TkhhVEM3TGk1WDNXSS1jMEZZdEdqVEZNaFlfTDRKS3Y3di05N2dpc0dDZmxVTDB2ekpDVHdXNW1JRjBxUUxyamZPMDFONHBLdVkwOGUwbVc1NUM1MVprZHQtNHVkWlU4eHhWRFJHWDVhVVRzb1BJR3pLRlFtTktic1NsWmRtZkF4dDlGMUhnQw?oc=5" target="_blank">📰 Door ajar for Merrett to remain a Bomber ahead of crucial meeting - Nine.com.au</a><a href="https://news.google.com/rss/articles/CBMi0AJBVV95cUxOSWEzbkpHSXVtWG1MVHBTZmRFVjUwMlVOdW1pQmp6RktCZUozcndHOERhTVJiQ3JWT21kOHdVUEFINVY3OEZ6U0dXaFJHbEl2anlGUzcwMGF4b2k3UFA5TUtsTTh2R0o4TlRvMjRFcm5UU1BmUjF2ZW95bEZRZHFpZXRzUWZoZUlGU0JYb3dySEZmemd1aDM2RGI2NHRrMGN2NDFRMm0tWmU0SGFPLTZHTFFZUjNJb3pBbTlodHdya0xyNVlRUmZRVWFiVXpQRDRreTRCby1WVDRmbVVqa2lPVGxqWTQ0LWNaakpNbmZKYi1pelVyLUtMWE9qUFUySzc0cmszZ19VTGptLUcxZENvVWVKM0R5c0k3MmJfbDd2NkRFYkg2d0t5dUZIdEtrYjZLRl91WEJ5YnNRZUhlb3NtUDdVTS1VZUNZbXBXTDhoMFnSAdACQVVfeXFMTklhM25KR0l1bVhtTFRwU2ZkRVY1MDJVTnVtaUJqekZLQmVKM3J3RzhEYU1SYkNyVk9tZDh3VVBBSDVWNzhGelNHV2hSR2xJdmp5RlM3MDBheG9pN1BQOU1LbE04dkdKOE5UbzI0RXJuVFNQZlIxdmVveWxGUWRxaWV0c1FmaGVJRlNCWG93ckhGZnpndWgzNkRiNjR0azBjdjQxUTJtLVplNEhhTy02R0xRWVIzSW96QW05aHR3cmtMcjVZUVJmUVVhYlV6UEQ0a3k0Qm8tVlQ0Zm1VamtpT1Rsalk0NC1jWmpKTW5mSmItaXpVci1LTFhPalBVMks3NHJrM2dfVUxqbS1HMWRDb1VlSjNEeXNJNzJiX2w3djZERWJINndLeXVGSHRLa2I2S0ZfdVhCeWJzUWVIZW9zbVA3VU0tVWVDWW1wV0w4aDBZ?oc=5" target="_blank">📰 Contracted Demons champ told club wants to trade him; ruckman asks out again — Whispers - Fox Sports</a>
-            </div>
-        </div>
-    
-        <div class="card AFL">
-            <div class="card-header">🏈 [AFL] 🏆 Sydney Swans  100 - 68 Gold Coast SUNS  ❌</div>
-            <div class="card-meta">📅 2026-04-11 06:15 UTC | 📍 Norwood Oval</div>
-            <a href="https://www.google.com/search?q=Sydney%20Swans%20vs%20Gold%20Coast%20SUNS%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
-            <div class="news-box">
-                <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxQYXlCUTFNamljUkRnVk9XMXJSeFVPMEpXQzZUS3gxUE1TVExhbjV4LWVLX1I2WjNhNHlvaXdEdEZfbG1tWlJWMUxwZFZ4NUswb1Y1cEk1OFJHQ0RyNVZiTWxzSVNHdjlFNlB3a0VraXlwbzZ5bXpXVTREc09JRHJrbjVBZXh5aUZXVkFxYWhHOVF6VHVRLURjNU9OZktmV3NLZmhWb1hpN1dVNHJ5dktfTS0teGtyaUR6czUtdTBSbW92dw?oc=5" target="_blank">📰 Crushing blow confirmed as Swans skipper set for surgery - Nine.com.au</a><a href="https://news.google.com/rss/articles/CBMipAJBVV95cUxPRWpkc053OXZJZS04OEhBeDRCZ1lSdFcyWFZRVGRLbWxla09iaC1nWkNuUmJoZm1ZdTdYTXppMGZrUTNEaFBMamtBSFJIbU5TamZkVkh0WWI3ZS03MFRkeUJsMFVacXFudGN2UExycWZGYjUyWk1IbG1KTDdna1ROMU9qYjExVkxEN0I2Y1dzd3hMYmZmbHVNLUJsWW51QVFGbEotWHVTVHZSZnJ0OHliSDROajJJOW1WZ3JZN2xGM1pISEhmQjlVRHdWMDdqdzhXUW9sV0VfMDdFUDZZT1ktU1dVeDR0d3lSUThSMnNldERrMGNkY25BajhNMTh0SXdYenVhVmIxY05XbkNMeVQtZWJEZWVzRFY0YklPaGtKaHc5bU1E0gGkAkFVX3lxTE9FamRzTnc5dkllLTg4SEF4NEJnWVJ0VzJYVlFUZEttbGVrT2JoLWdaQ25SYmhmbVl1N1hNemkwZmtRM0RoUExqa0FIUkhtTlNqZmRWSHRZYjdlLTcwVGR5QmwwVVpxcW50Y3ZQTHJxZkZiNTJaTUhsbUpMN2drVE4xT2piMTFWTEQ3QjZjV3N3eExiZmZsdU0tQmxZbnVBUUZsSi1YdVNUdlJmcnQ4eWJINE5qMkk5bVZnclk3bEYzWkhISGZCOVVEd1YwN2p3OFdRb2xXRV8wN0VQNllPWS1TV1V4NHR3eVJROFIyc2V0RGswY2RjbkFqOE0xOHRJd1h6dWFWYjFjTlduQ0x5VC1lYkRlZXNEVjRiSU9oa0podzltTUQ?oc=5" target="_blank">📰 ‘Above my pay grade’: Swan breaks silence as teammate’s shock trade bombshell rocks club - Fox Sports</a>
-            </div>
-        </div>
-    
-        <div class="card AFL">
-            <div class="card-header">🏈 [AFL] 🏆 Hawthorn  104 - 64 Western Bulldogs  ❌</div>
-            <div class="card-meta">📅 2026-04-11 09:35 UTC | 📍 Adelaide Oval</div>
-            <a href="https://www.google.com/search?q=Hawthorn%20vs%20Western%20Bulldogs%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
-            <div class="news-box">
-                <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxORE1paFQyWThCVHlyWE9YZGM4TmZacEdpSjNBc1dBa3NfVFlMa2N0TmRHNkJvSTZ2cVVlM3ozQWRRb1JwaFBxOEJqMF9Bd2pjeFd6V1JoXzNNNmVhU1phVkpVRVBCam40dGJwRjd0bENRS1QxSUtHdTE5YXRPbTJVanF3?oc=5" target="_blank">📰 AFL Team | Round 13 v Hawthorn - westernbulldogs.com.au</a><a href="https://news.google.com/rss/articles/CBMicEFVX3lxTFBVQ0ZqQjRaOGQ0VXNqY1FMbGNELTZBcjNiVzc5TFIwNl9fWjdtTGluVEJpTzV5ZkctOE1BUHZQTXV6SWlEM210YzNDMWVmdmxpcUpYNklpeTBvbE1aSDFjTkY2enFZd3JJWFpnWkRGdU0?oc=5" target="_blank">📰 Hawthorn Hawks Women vs Western Bulldogs Women - AFL Women's Round 5, 2026 - Fox Sports</a>
-            </div>
-        </div>
-    
-        <div class="card AFL">
-            <div class="card-header">🏈 [AFL] 🏆 Geelong Cats  122 - 76 West Coast Eagles  ❌</div>
-            <div class="card-meta">📅 2026-04-12 02:30 UTC | 📍 Norwood Oval</div>
-            <a href="https://www.google.com/search?q=Geelong%20Cats%20vs%20West%20Coast%20Eagles%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
-            <div class="news-box">
-                <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxPS0paV1F4OEN4b3lKSkR2SDB6SEZQRUVlT3lUV2dCQ2MxeEpJNXFWMFNVejJiN3Vxc1VoeUtOSVBxNWhhQ0JUN2YteGlTZTRtbUJHbnBqeUQ0dVJsX09EMlQ0dHdKLXgwcXZSNlduekNRQ3VDNlcxQnRlb0lRRHZ6SDhfZG9BOGlnYW1pWmJzdVNXM0t0ZTFJUWF0UUpfMzdLVUE?oc=5" target="_blank">📰 NFL journo falls in love with AFL - Nine.com.au</a><a href="https://news.google.com/rss/articles/CBMikwFBVV95cUxNVjNLRk9XTDlrSVVzTVR0Zk9XeXh5WFNCdDlIT0IyWXFQQTRtTld0TTd4Qk1vb2JGT21ha0Q4YmliZnZ5MG5mRFB3c2lkamRoT2xjQk5RYVhtWU5heDZqUVNmQTR6c21nUnE0ZVQ4YTVYMFhTNkVLOHRlRjY2RmtVUlVIVTY0ZkkzNXI0MU5SWGx1WWs?oc=5" target="_blank">📰 AFL Game Day Guide: Gather Round v Geelong - westcoasteagles.com.au</a>
-            </div>
-        </div>
-    
-        <div class="card AFL">
-            <div class="card-header">🏈 [AFL] 🏆 GWS GIANTS  131 - 75 Richmond  ❌</div>
-            <div class="card-meta">📅 2026-04-12 05:15 UTC | 📍 Barossa Park</div>
-            <a href="https://www.google.com/search?q=GWS%20GIANTS%20vs%20Richmond%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
-            <div class="news-box">
-                <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxQZ2RBX2ZrdU5LY3lraThOMEVVbmw5N3EyWnFQY0FhYVlqUWpJd01IYWxPdWpkSksxTGxpc0s2QVBPR1dGdEs0UFNJZ29qRGt5UlR1RVp1QzlEQzNnTWk2Y0hjMXF4LU5taDR6aUFkNzVsdW1jeVlueU1XNjh0X0FEellJdXpBa3J0Y0pYa19ZekJkVFZvc01BZ05CeDRZeEg5cnVYSDNLaFZ0Ujc3YVlqSzJLMGRIR19FeTRURTFqemtOS0dp?oc=5" target="_blank">📰 Giants free agent to depart as Tigers circle - afl.com.au</a><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxQSjdpVFUxdHFsdk5UVmlYUGFrV2Q4LTRKY0tUMUlKVVpScVYyc3pFaUoyUjA3cS1oUlhtYV92d1JvOGZMTlBzakVFRXpqUGt0azZ6allhWjVkdGVlRjRuRWNMS08wdWVLZjc3YUo2aXBOV29ZSWNGSjdNaDJiUGpBRDZBbw?oc=5" target="_blank">📰 Giants down Tigers in Gather Round - richmondfc.com.au</a>
-            </div>
-        </div>
-    
-        <div class="card AFL">
-            <div class="card-header">🏈 [AFL] ❌ Port Adelaide  67 - 81 St Kilda  🏆</div>
-            <div class="card-meta">📅 2026-04-12 09:15 UTC | 📍 Adelaide Oval</div>
-            <a href="https://www.google.com/search?q=Port%20Adelaide%20vs%20St%20Kilda%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
-            <div class="news-box">
-                <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMipwJBVV95cUxPcFV6TmJaQjlFVGFCdE5Ma21CN1IyZnRRa193Smwxb0JqLUUzRVRKWnlLM0ZqUTZmeG5UUkJiRlZUSXpSR1pWRlhIUnZpTGZXNmRzYWRsVElNWDhab0NCRGRlYzk2Vk1PdzdmNFkxc0FFUWJWeTRJOS1QbDdPUGJuQ3JobmE0SGdlVjI1Y0JnSUZjT3dqRHdDZWlZdmxOVmNxOGxZaERKMzZDTEZEUTNJOXI5TF9qSEZNV25ZSTRtcTVlT2ZEMjhRZHVJSXVZblZRWVotTzE0czFMYndSUFA3WHplV0paUXBxSmhYSHJpb2xuek9JT0pkR1JMWV95ekdqWWVRUVd6ZENVY2V0MWMwLVJzNlFCbmZvMTNsa2lsNjMzWklITE800gGnAkFVX3lxTE9wVXpOYlpCOUVUYUJ0TkxrbUI3UjJmdFFrX3dKbDFvQmotRTNFVEpaeUszRmpRNmZ4blRSQmJGVlRJelJHWlZGWEhSdmlMZlc2ZHNhZGxUSU1YOFpvQ0JEZGVjOTZWTU93N2Y0WTFzQUVRYlZ5NEk5LVBsN09QYm5DcmhuYTRIZ2VWMjVjQmdJRmNPd2pEd0NlaVl2bE5WY3E4bFloREozNkNMRkRRM0k5cjlMX2pIRk1XbllJNG1xNWVPZkQyOFFkdUlJdVluVlFZWi1PMTRzMUxid1JQUDdYemVXSlpRcHFKaFhIcmlvbG56T0lPSmRHUkxZX3l6R2pZZVFRV3pkQ1VjZXQxYzAtUnM2UUJuZm8xM2xraWw2MzNaSUhMTzQ?oc=5" target="_blank">📰 Inside AFL’s biggest trade race: Each club’s best Butters offer... and the players involved - Fox Sports</a><a href="https://news.google.com/rss/articles/CBMi4gFBVV95cUxOaDdweldIVHlEWmI4ZU1RTElCNm81bUw2M1NRdDBvblg4cTQ4NWFNUnBMWTZFcEE0UzNPcHpMbjJLTm5xMksxM3VIbjlhdldhaE9qUC1abk1pZWF1RlI0LUZyV3ZxSjdaZ0pqZENtVTlQRENNZU1rTXNtWXQ1b0VVU2F1bzNFaERKeFJJend2VXczNDduenRqSGM1Rjh3elJGbE91MDQ1RmEwSmZzejJfUmt3eGE2cklRazl6elJQdWJkMTlDdHNFS0gxZjZneXNCSnRHdDJkeE5obEhIRjdhdzlB?oc=5" target="_blank">📰 Highlights: St Kilda vs Port Adelaide - portadelaidefc.com.au</a>
-            </div>
-        </div>
-    
-        <div class="card AFL">
-            <div class="card-header">🏈 [AFL] ❌ Carlton  83 - 88 Collingwood  🏆</div>
-            <div class="card-meta">📅 2026-04-16 09:30 UTC | 📍 MCG</div>
-            <a href="https://www.google.com/search?q=Carlton%20vs%20Collingwood%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
-            <div class="news-box">
-                <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxNZVNkaUdGdDRHNzdzQ2N1Uk1wc0otOW85NXNTendYYy1LY3pualVWRUlnOEtGYjlkV1ItMXFsWklGUW8xSFgyUFZybW9NN0tsQldVUVBpZS1mZDA0RWwteEtxbzdzamhFQ1J3WDJZUDZjWGxaUVlWTXRiM2hWUkRXUHJGVXlxeHdMRjBtOWVZWk9HSEVmV201Mkw0Q1FRMUlON2lPdzI0SVQ2RVJ5djFPaA?oc=5" target="_blank">📰 Graham Wright weighs in on Carlton and Collingwood’s battle for AFL supremacy - Zero Hanger</a><a href="https://news.google.com/rss/articles/CBMi2wFBVV95cUxOVjlpSjRtbTRFeUwtRXB0V2h3UnRlcHJzaWhtSDVab1F5aDBCMzhvY1JpSmhDcENDNjdfTzFsRDJoN1U5TExGUzY2OU5MU3IwV2QtemRldkh6emNtZXBBekNnSVNzRzJia0pxS0Iwa1kyblM2QUQwcHNyMVRMdVpIOGJqVUliZC1ZenUycHc4NmJLVlMtRXdjUVNqTlQ1U1E0VnI5RVQ2UklWdE44eWFXMTExa3FRVktkU3p6NUpvUzYwMXRxcmc2cXI4OXhPMWJwNGZGekRNQS1CSlE?oc=5" target="_blank">📰 AFLW Mini-Match: Carlton v Collingwood - afl.com.au</a>
-            </div>
-        </div>
-    
-        <div class="card AFL">
-            <div class="card-header">🏈 [AFL] 🏆 Geelong Cats  131 - 56 Western Bulldogs  ❌</div>
-            <div class="card-meta">📅 2026-04-17 09:20 UTC | 📍 GMHBA Stadium</div>
-            <a href="https://www.google.com/search?q=Geelong%20Cats%20vs%20Western%20Bulldogs%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
-            <div class="news-box">
-                <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMipwJBVV95cUxPcFV6TmJaQjlFVGFCdE5Ma21CN1IyZnRRa193Smwxb0JqLUUzRVRKWnlLM0ZqUTZmeG5UUkJiRlZUSXpSR1pWRlhIUnZpTGZXNmRzYWRsVElNWDhab0NCRGRlYzk2Vk1PdzdmNFkxc0FFUWJWeTRJOS1QbDdPUGJuQ3JobmE0SGdlVjI1Y0JnSUZjT3dqRHdDZWlZdmxOVmNxOGxZaERKMzZDTEZEUTNJOXI5TF9qSEZNV25ZSTRtcTVlT2ZEMjhRZHVJSXVZblZRWVotTzE0czFMYndSUFA3WHplV0paUXBxSmhYSHJpb2xuek9JT0pkR1JMWV95ekdqWWVRUVd6ZENVY2V0MWMwLVJzNlFCbmZvMTNsa2lsNjMzWklITE800gGnAkFVX3lxTE9wVXpOYlpCOUVUYUJ0TkxrbUI3UjJmdFFrX3dKbDFvQmotRTNFVEpaeUszRmpRNmZ4blRSQmJGVlRJelJHWlZGWEhSdmlMZlc2ZHNhZGxUSU1YOFpvQ0JEZGVjOTZWTU93N2Y0WTFzQUVRYlZ5NEk5LVBsN09QYm5DcmhuYTRIZ2VWMjVjQmdJRmNPd2pEd0NlaVl2bE5WY3E4bFloREozNkNMRkRRM0k5cjlMX2pIRk1XbllJNG1xNWVPZkQyOFFkdUlJdVluVlFZWi1PMTRzMUxid1JQUDdYemVXSlpRcHFKaFhIcmlvbG56T0lPSmRHUkxZX3l6R2pZZVFRV3pkQ1VjZXQxYzAtUnM2UUJuZm8xM2xraWw2MzNaSUhMTzQ?oc=5" target="_blank">📰 Inside AFL’s biggest trade race: Each club’s best Butters offer... and the players involved - Fox Sports</a><a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxQZzNRTmpOd2ZQWTltMENxY3Q1YTlqVXo3MEhaMVZKeXhvMWxQd3pmenZjNGRWTm82M253LWl0c1pxb0lzd1Q0bmwweTloQTFtN0NUcVczaUY5SDc2c1ZVbmgtN3kweDZwRmlHN3pnY25BRFJTS2ZQQTctZkdYWWt1dzJPVnIxR2F6cWhCRkNJaW9KZmFXb3pSQXNnbEM2MnBscmV5b0ZlajRhNmRiZWRTN2VSMmZJQlBJTGhjekpYYVZjRDc0d043Q1ZB?oc=5" target="_blank">📰 Coach ‘concerned’ superstar will snub Dogs as trade race heats up - Nine.com.au</a>
-            </div>
-        </div>
-    
-        <div class="card AFL">
-            <div class="card-header">🏈 [AFL] 🏆 Sydney Swans  107 - 66 GWS GIANTS  ❌</div>
-            <div class="card-meta">📅 2026-04-17 09:50 UTC | 📍 SCG</div>
-            <a href="https://www.google.com/search?q=Sydney%20Swans%20vs%20GWS%20GIANTS%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
-            <div class="news-box">
-                <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMi1AFBVV95cUxQQ0xibnNMa0syc2YwWURGSVB5MHc2NTVHVUw1NXlLaDFRbHg5QTY0eGQyLU10bDdvVHdhRV8tM1VfVjQxbzQxTDN6R2RZS1VDZDZuV3hNQnpNRnZhRG5USm8zUVVkT1RWUURWTjRJUXkzd0J5dXdiMDlMWkJ3a2ZNZnNRRW9Say1LRHhfTnZRdFIwSEl5N0dadVhUSUxIQUxOSDRrQll1TGhieVRUeFljMGtxX3RobmZZX1VmVVZpVjJkb1p0MGxQczlCWWVPRnpLVERxeg?oc=5" target="_blank">📰 The Giants urged their fans to support the Swans. Now they’re back to being rivals - The Age</a><a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxOalJReW5qSkVMUzIyb2RCMnItRFpWRkxUMzJXQXVaRHdBQU44UUxuVWY4RFJEVFNsSS1DYlEwSUEtZWR5SGh5TVR4Z0NlRkRodWVJTWJKWml6YXJDSGxfU01PSWtIeVQyOWV2WTJfN0RrT1RPUGVMS0tSMXBLZVBtcWRPV09PdWpFSUQyM0pSNExObUVfN2ZGaGdn?oc=5" target="_blank">📰 Decade recap of the Sydney Swans Qualifying Finals - sydneyswans.com.au</a>
-            </div>
-        </div>
-    
-        <div class="card AFL">
-            <div class="card-header">🏈 [AFL] 🏆 Gold Coast SUNS  119 - 110 Essendon  ❌</div>
-            <div class="card-meta">📅 2026-04-18 03:15 UTC | 📍 People First Stadium</div>
-            <a href="https://www.google.com/search?q=Gold%20Coast%20SUNS%20vs%20Essendon%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
-            <div class="news-box">
-                <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxNMjBRM09sS3dYcmF3Tk5nR0Vrc3dPeEhBMGhZSmM0amtfMEJNWG9HVUZDT1JOWTM2NlhQOWNfQml1OGZkQ2d6MmtJdXlwcDU5QnR0TVd1WjdVTkM1OE4zNXVoVVFlQWN2VC1ROUxGNXFjNjAxU1EyOWducFpHb2VLRXhSRjc1UjY0MWlwS3VobWh2U2NXa2I2aks2WFJweG83NTZFeEJ3?oc=5" target="_blank">📰 Clarkson offloads his Kangaroos gear - Nine.com.au</a><a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxPelJNVjBxRGFpTEFwWldOcGNRdjM0a1ZKUHR4ZW1CYU81Zk9CMGZqdGwzbzJXSEVMa0xZNUlQTmx5d3p0bGFOM29DTmlDVmJVQWFXQXNCYjdianpqM2haaXRtdGhCR0ZNQjdiV1FIcUg2LWg5Y0lXYjlSWm45V3E2V0tkVWU2VW90MFIwX1JiMmFWS0RGaXhvdE1FVkQ1R3JURWQ0NUxzTQ?oc=5" target="_blank">📰 Every AFL team’s 2026 best and fairest winner, top 10, other club awards - Zero Hanger</a>
-            </div>
-        </div>
-    
-        <div class="card AFL">
-            <div class="card-header">🏈 [AFL] 🏆 Hawthorn  89 - 86 Port Adelaide  ❌</div>
-            <div class="card-meta">📅 2026-04-18 06:15 UTC | 📍 Marvel Stadium</div>
-            <a href="https://www.google.com/search?q=Hawthorn%20vs%20Port%20Adelaide%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
-            <div class="news-box">
-                <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMi4AFBVV95cUxOOU93VnNxWFk4bTZ2TG9jOFZmWXByTXczdDVmcklqZGNac3BUa2hqdk5rcU5GbW5wZENYVTYySUh2cklGMERJZHBEU0NvSHJybXJXd1BFVVVDWDN6dE5YTzczeVVJMndTSzRFYm5MajJuRU5fb3dWOVYwemlJM1dsNGVtQXdKYUhTakVxbl9xLUZENngtNUFzcFlyQ1VmRWlNQVBrU25qN0JnQ1JiX19uV1JKYlJpWmxpRW5hUDBsM1VFc2tyM2VQYVhwUklKNEZzVzkxcFpEMElrNTRONnU0bw?oc=5" target="_blank">📰 Highlights: Hawthorn v Port Adelaide - portadelaidefc.com.au</a><a href="https://news.google.com/rss/articles/CBMi3wFBVV95cUxOMjlxVS1JWUxHZE5ENTQySERtX2xoMk1EYzFxRWNDOG5FT1lKMjVhaFlFTUlNaHpRQWswbm1FVUtVVkdFbVlOeEpsQTFTSHhycmsxczlQQ1h1U2tkc3h3alZZYk5halN5alhsM3ZXdDhjMk5ZQjNlOUFCR2xXMlFMV0lnLWVwSnFIY2lsV2YyaTNHOEk2VVJRWF9ZMGpGV2pkN1lmcEhYS2laMTRpazFlMGVOZXlUNERoNnJGelF2aFdYYzB4Ym9QekpjbHpPQ0I4YWFENnNQblcxTmNjNzVv?oc=5" target="_blank">📰 AFLW Highlights: Port Adelaide v Hawthorn - afl.com.au</a>
+                <a href="https://news.google.com/rss/articles/CBMingFBVV95cUxNVTNick84WHBjWDVrc0RLc0V3RGc5Ymp0SThqX0dON2ptS0VDRkpkMkNpYTVTVkZPeVBtV1B2MnVEbGo5T1htUG9aV18tZVVRODIya2QxVEttNDk0T1pzRXBKVjdxbEdkNUx6bGJnNVN2WVlZZkJiaDZMQXBKMXo2WllZdGFPbUZ4SHlYRDQ4dFlXRnNNRVd6enJRUXpvZw?oc=5" target="_blank">📰 NRLW Sunday: Eels edge Raiders; Titans, Broncos claim key wins - NRL.com</a><a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxOZkcyYWN4RFZaN29OcHd4Rm5DZDltRUh5dDU2TFQxcHlQaEt4Z1ZnWmNyRVdvMlVXN0xCRmdlZkZ5ZXVDTmt5LXhYQlo5RThQQldOOFpobHl6cUZfbWIxR2Vta2RKT2lpMjltYWp3OU9HN3Jqd3V6Z0RXc1BkbFpwTnVldkk?oc=5" target="_blank">📰 NRL Final Team: Round 21 vs. Titans - St George Illawarra Dragons</a>
             </div>
         </div>
     
