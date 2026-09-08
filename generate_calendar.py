@@ -14,13 +14,13 @@ headers = {
     'Accept': 'application/json, text/plain, */*',
 }
 
-# Image CDN Links for TV Channels
+# Reliable CDN TV Logo Badges
 LOGOS = {
-    'KAYO': 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Kayo_Sports_logo.svg/320px-Kayo_Sports_logo.svg.png',
-    'FOXTEL': 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Foxtel_iQ5_logo.png/320px-Foxtel_iQ5_logo.png',
-    'CH7': 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Seven_Network_logo.svg/320px-Seven_Network_logo.svg.png',
-    'NINE': 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Nine_Network_logo_%282012%29.svg/320px-Nine_Network_logo_%282012%29.svg.png',
-    'ESPN': 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/320px-ESPN_wordmark.svg.png'
+    'KAYO': 'https://img.shields.io/badge/Kayo-003366?style=for-the-badge&logo=kayo&logoColor=white',
+    'FOXTEL': 'https://img.shields.io/badge/Foxtel-FF5000?style=for-the-badge&logoColor=white',
+    'CH7': 'https://img.shields.io/badge/Ch7-ED1C24?style=for-the-badge&logoColor=white',
+    'NINE': 'https://img.shields.io/badge/Nine-0099FF?style=for-the-badge&logoColor=white',
+    'ESPN': 'https://img.shields.io/badge/ESPN-CC0000?style=for-the-badge&logoColor=white'
 }
 
 sports_config = {
@@ -35,19 +35,17 @@ two_weeks_ago = now_utc - timedelta(days=14)
 two_weeks_ahead = now_utc + timedelta(days=14)
 
 def get_broadcasters(sport, start_awst, full_title):
-    """Assigns broadcast logos based on league and kick-off time."""
+    """Assigns broadcast badges based on league and local kick-off time."""
     logos = []
     
     if sport == 'AFL':
         logos.extend([LOGOS['KAYO'], LOGOS['FOXTEL']])
-        # Thursday/Friday nights, Sunday afternoon, or Finals on Ch7
         weekday = start_awst.weekday() # 3=Thu, 4=Fri, 6=Sun
         if weekday in [3, 4, 6] or 'final' in full_title.lower():
             logos.append(LOGOS['CH7'])
 
     elif sport == 'NRL':
         logos.extend([LOGOS['KAYO'], LOGOS['FOXTEL']])
-        # Thursday/Friday nights, Sunday afternoon, or Finals on Channel 9
         weekday = start_awst.weekday()
         if weekday in [3, 4, 6] or 'final' in full_title.lower():
             logos.append(LOGOS['NINE'])
@@ -141,13 +139,16 @@ for sport, config in sports_config.items():
         print(f"Error processing {sport}: {e}")
 
 # --- 2. PROCESS UFC DATA ---
-ufc_feed_urls = ['https://raw.githubusercontent.com/f1cal/ufc/main/ufc-calendar.ics']
+ufc_feed_urls = [
+    'https://raw.githubusercontent.com/clarencechaan/ufc-cal/ics/UFC.ics'
+]
 
 for ufc_feed_url in ufc_feed_urls:
     try:
         req = urllib.request.Request(ufc_feed_url, headers=headers)
         with urllib.request.urlopen(req, timeout=10) as response:
             ufc_cal = Calendar.from_ical(response.read())
+            count = 0
             for component in ufc_cal.walk():
                 if component.name == "VEVENT":
                     summary = str(component.get('summary'))
@@ -156,6 +157,7 @@ for ufc_feed_url in ufc_feed_urls:
 
                     component['summary'] = full_summary
                     cal.add_component(component)
+                    count += 1
 
                     dtstart = component.get('dtstart').dt
                     if not isinstance(dtstart, datetime):
@@ -178,6 +180,7 @@ for ufc_feed_url in ufc_feed_urls:
                             'odds_link': f"https://www.google.com/search?q={urllib.parse.quote(clean_summary + ' odds')}",
                             'news': get_news(f"{clean_summary} UFC")
                         })
+            print(f"Successfully processed {count} UFC events")
             break
     except Exception as e:
         print(f"Failed fetching UFC: {e}")
@@ -202,10 +205,10 @@ html_content = f"""<!DOCTYPE html>
         .card {{ background: #1e1e1e; border-radius: 8px; padding: 15px; margin-bottom: 15px; border-left: 8px solid #2ed573; position: relative; }}
         .card.played {{ border-left-color: #ff4d4d !important; }}
         .card.upcoming {{ border-left-color: #2ed573 !important; }}
-        .card-header {{ font-size: 1.15em; font-weight: bold; margin-bottom: 5px; padding-right: 110px; }}
+        .card-header {{ font-size: 1.15em; font-weight: bold; margin-bottom: 5px; padding-right: 140px; }}
         .card-meta {{ color: #aaa; font-size: 0.9em; margin-bottom: 10px; }}
-        .tv-logos {{ position: absolute; top: 15px; right: 15px; display: flex; gap: 8px; background: rgba(255,255,255,0.05); padding: 4px 8px; border-radius: 6px; }}
-        .tv-logos img {{ height: 20px; object-fit: contain; filter: brightness(0.9); }}
+        .tv-logos {{ position: absolute; top: 15px; right: 15px; display: flex; gap: 6px; }}
+        .tv-logos img {{ height: 22px; border-radius: 3px; }}
         .news-box {{ background: #2a2a2a; padding: 10px; border-radius: 5px; margin-top: 10px; }}
         .news-box a {{ color: #70a1ff; text-decoration: none; display: block; margin-bottom: 5px; }}
         .news-box a:hover {{ text-decoration: underline; }}
@@ -227,7 +230,6 @@ for game in all_games:
         news_html = '<span style="color:#777;">No recent news articles found.</span>'
 
     status_class = "played" if game['is_played'] else "upcoming"
-    
     logo_imgs = "".join([f'<img src="{logo}" alt="TV">' for logo in game['broadcasters']])
 
     html_content += f"""
