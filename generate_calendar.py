@@ -20,9 +20,10 @@ sports_config = {
 }
 
 all_games = []
-now = datetime.now(timezone.utc)
-two_weeks_ago = now - timedelta(days=14)
-two_weeks_ahead = now + timedelta(days=14)
+now_utc = datetime.now(timezone.utc)
+awst_tz = timezone(timedelta(hours=8))
+two_weeks_ago = now_utc - timedelta(days=14)
+two_weeks_ahead = now_utc + timedelta(days=14)
 
 def get_news(query):
     """Fetches top 2 news headlines from Google News RSS."""
@@ -36,13 +37,37 @@ def get_news(query):
     except Exception:
         return []
 
+def format_round_name(round_val):
+    """Parses round numbers and converts finals strings to pretty format."""
+    if not round_val:
+        return ""
+    r_str = str(round_val).strip()
+    
+    # Check for Finals Names
+    low_r = r_str.lower()
+    if 'grand final' in low_r:
+        return "Grand Final"
+    elif 'preliminary' in low_r or 'prelim' in low_r:
+        return "Preliminary Final"
+    elif 'semi' in low_r:
+        return "Semi Final"
+    elif 'elimination' in low_r:
+        return "Elimination Final"
+    elif 'qualifying' in low_r:
+        return "Qualifying Final"
+    elif 'final' in low_r:
+        return f"Finals ({r_str.title()})"
+    elif r_str.isdigit():
+        return f"Round {r_str}"
+    
+    return r_str
+
 # --- 1. PROCESS AFL & NRL ---
 for sport, config in sports_config.items():
     try:
         req = urllib.request.Request(config['url'], headers=headers)
         with urllib.request.urlopen(req, timeout=10) as response:
             data = json.loads(response.read().decode('utf-8'))
-            print(f"Fetched {len(data)} items for {sport}")
             for item in data:
                 home = item.get('HomeTeam', '')
                 away = item.get('AwayTeam', '')
@@ -51,42 +76,46 @@ for sport, config in sports_config.items():
                 h_pos = f"({item.get('HomeTeamPosition')}th)" if item.get('HomeTeamPosition') else ""
                 a_pos = f"({item.get('AwayTeamPosition')}th)" if item.get('AwayTeamPosition') else ""
 
+                round_label = format_round_name(item.get('RoundNumber') or item.get('Round'))
+                round_prefix = f"[{round_label}] " if round_label else ""
+
                 if h_score is not None and a_score is not None:
                     h_val, a_val = int(h_score), int(a_score)
                     if h_val > a_val:
-                        title = f"{config['emoji']} [{sport}] 🏆 {home} {h_pos} {h_val} - {a_val} {away} {a_pos} ❌"
+                        title = f"{config['emoji']} [{sport}] {round_prefix}🏆 {home} {h_pos} {h_val} - {a_val} {away} {a_pos} ❌"
                     elif a_val > h_val:
-                        title = f"{config['emoji']} [{sport}] ❌ {home} {h_pos} {h_val} - {a_val} {away} {a_pos} 🏆"
+                        title = f"{config['emoji']} [{sport}] {round_prefix}❌ {home} {h_pos} {h_val} - {a_val} {away} {a_pos} 🏆"
                     else:
-                        title = f"{config['emoji']} [{sport}] 🤝 {home} {h_pos} {h_val} - {a_val} {away} {a_pos}"
+                        title = f"{config['emoji']} [{sport}] {round_prefix}🤝 {home} {h_pos} {h_val} - {a_val} {away} {a_pos}"
                 else:
-                    title = f"{config['emoji']} [{sport}] {home} {h_pos} vs {away} {a_pos}".replace("  ", " ")
+                    title = f"{config['emoji']} [{sport}] {round_prefix}{home} {h_pos} vs {away} {a_pos}".replace("  ", " ")
 
                 date_str = item.get('DateUtc') or item.get('UtcDate')
                 if not date_str:
                     continue
 
-                start = datetime.fromisoformat(date_str.replace('Z', '+00:00'))
-                
+                start_utc = datetime.fromisoformat(date_str.replace('Z', '+00:00'))
+                start_awst = start_utc.astimezone(awst_tz)
+
                 # Store for ICS Master Calendar
                 event = Event()
                 event.add('uid', f"{sport.lower()}-{item.get('MatchNumber', '0')}-{home}")
                 event.add('summary', title)
-                event.add('dtstart', start)
-                event.add('dtend', datetime.fromtimestamp(start.timestamp() + 9000, tz=timezone.utc))
+                event.add('dtstart', start_utc)
+                event.add('dtend', datetime.fromtimestamp(start_utc.timestamp() + 9000, tz=timezone.utc))
                 if item.get('Location'):
                     event.add('location', item.get('Location'))
                 cal.add_component(event)
 
-                # Filter for Web Dashboard: -14 Days to +14 Days
-                if two_weeks_ago <= start <= two_weeks_ahead:
+                # Filter Web Dashboard: -14 Days to +14 Days
+                if two_weeks_ago <= start_utc <= two_weeks_ahead:
                     all_games.append({
                         'sport': sport,
                         'emoji': config['emoji'],
-                        'title': f"{home} vs {away}",
                         'full_title': title,
-                        'date': start.strftime('%Y-%m-%d %H:%M UTC'),
-                        'start_dt': start,
+                        'date_awst': start_awst.strftime('%d/%m/%Y %H:%M +08:00'),
+                        'start_utc': start_utc,
+                        'is_played': start_utc < now_utc and h_score is not None,
                         'location': item.get('Location', 'TBD'),
                         'odds_link': f"https://www.google.com/search?q={urllib.parse.quote(home + ' vs ' + away + ' odds')}",
                         'news': get_news(f"{home} {away} {sport}")
@@ -95,57 +124,51 @@ for sport, config in sports_config.items():
         print(f"Error processing {sport}: {e}")
 
 # --- 2. PROCESS UFC DATA ---
-# Using backup working endpoint
 ufc_feed_urls = [
     'https://raw.githubusercontent.com/f1cal/ufc/main/ufc-calendar.ics',
     'https://raw.githubusercontent.com/clarencechaan/ufc-cal/ics/UFC.ics'
 ]
 
-ufc_success = False
 for ufc_feed_url in ufc_feed_urls:
     try:
         req = urllib.request.Request(ufc_feed_url, headers=headers)
         with urllib.request.urlopen(req, timeout=10) as response:
             ufc_cal = Calendar.from_ical(response.read())
-            count = 0
             for component in ufc_cal.walk():
                 if component.name == "VEVENT":
                     summary = str(component.get('summary'))
                     clean_summary = summary.replace('[UFC]', '').replace('🥊', '').strip()
                     full_summary = f"🥊 [UFC] {clean_summary}"
-                    
+
                     component['summary'] = full_summary
                     cal.add_component(component)
-                    count += 1
-                    
-                    # Parse start date
+
                     dtstart = component.get('dtstart').dt
                     if not isinstance(dtstart, datetime):
                         dtstart = datetime.combine(dtstart, datetime.min.time(), tzinfo=timezone.utc)
                     elif dtstart.tzinfo is None:
                         dtstart = dtstart.replace(tzinfo=timezone.utc)
 
-                    # Filter for Web Dashboard: -14 Days to +14 Days
+                    dtstart_awst = dtstart.astimezone(awst_tz)
+
                     if two_weeks_ago <= dtstart <= two_weeks_ahead:
                         all_games.append({
                             'sport': 'UFC',
                             'emoji': '🥊',
-                            'title': clean_summary,
                             'full_title': full_summary,
-                            'date': dtstart.strftime('%Y-%m-%d %H:%M UTC'),
-                            'start_dt': dtstart,
+                            'date_awst': dtstart_awst.strftime('%d/%m/%Y %H:%M +08:00'),
+                            'start_utc': dtstart,
+                            'is_played': dtstart < now_utc,
                             'location': str(component.get('location', 'TBD')),
                             'odds_link': f"https://www.google.com/search?q={urllib.parse.quote(clean_summary + ' odds')}",
                             'news': get_news(f"{clean_summary} UFC")
                         })
-            print(f"Successfully processed {count} UFC events from {ufc_feed_url}")
-            ufc_success = True
             break
     except Exception as e:
-        print(f"Failed to fetch UFC from {ufc_feed_url}: {e}")
+        print(f"Failed fetching UFC: {e}")
 
-# Sort Web Dashboard games DESCENDING (Newest/Future first, Past games last)
-all_games.sort(key=lambda x: x['start_dt'], reverse=True)
+# Sort Web Dashboard games DESCENDING (Newest/Future first)
+all_games.sort(key=lambda x: x['start_utc'], reverse=True)
 
 # Save Master ICS File
 with open('sports_master.ics', 'wb') as f:
@@ -163,11 +186,10 @@ html_content = f"""<!DOCTYPE html>
         .container {{ max-width: 900px; margin: 0 auto; }}
         h1 {{ text-align: center; color: #fff; border-bottom: 2px solid #333; padding-bottom: 10px; margin-bottom:5px; }}
         .subtitle {{ text-align:center; color:#aaa; font-size:0.9em; margin-bottom:25px; }}
-        .card {{ background: #1e1e1e; border-radius: 8px; padding: 15px; margin-bottom: 15px; border-left: 5px solid #007bff; }}
-        .card.AFL {{ border-color: #ff4757; }}
-        .card.NRL {{ border-color: #2ed573; }}
-        .card.UFC {{ border-color: #ffa500; }}
-        .card-header {{ font-size: 1.2em; font-weight: bold; margin-bottom: 5px; }}
+        .card {{ background: #1e1e1e; border-radius: 8px; padding: 15px; margin-bottom: 15px; border-left: 8px solid #2ed573; }}
+        .card.played {{ border-left-color: #ff4d4d !important; }}
+        .card.upcoming {{ border-left-color: #2ed573 !important; }}
+        .card-header {{ font-size: 1.15em; font-weight: bold; margin-bottom: 5px; }}
         .card-meta {{ color: #aaa; font-size: 0.9em; margin-bottom: 10px; }}
         .news-box {{ background: #2a2a2a; padding: 10px; border-radius: 5px; margin-top: 10px; }}
         .news-box a {{ color: #70a1ff; text-decoration: none; display: block; margin-bottom: 5px; }}
@@ -178,7 +200,7 @@ html_content = f"""<!DOCTYPE html>
 <body>
     <div class="container">
         <h1>🏈 🏉 🥊 Multi-Sport Live Hub</h1>
-        <div class="subtitle">Showing matches from past 2 weeks & next 2 weeks (Descending)</div>
+        <div class="subtitle">Perth Time (AWST +08:00) | Green = Upcoming, Red = Played</div>
         <div id="games">
 """
 
@@ -189,10 +211,12 @@ for game in all_games:
     if not news_html:
         news_html = '<span style="color:#777;">No recent news articles found.</span>'
 
+    status_class = "played" if game['is_played'] else "upcoming"
+
     html_content += f"""
-        <div class="card {game['sport']}">
+        <div class="card {status_class}">
             <div class="card-header">{game['full_title']}</div>
-            <div class="card-meta">📅 {game['date']} | 📍 {game['location']}</div>
+            <div class="card-meta">📅 {game['date_awst']} | 📍 {game['location']}</div>
             <a href="{game['odds_link']}" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>

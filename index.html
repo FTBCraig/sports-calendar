@@ -9,11 +9,10 @@
         .container { max-width: 900px; margin: 0 auto; }
         h1 { text-align: center; color: #fff; border-bottom: 2px solid #333; padding-bottom: 10px; margin-bottom:5px; }
         .subtitle { text-align:center; color:#aaa; font-size:0.9em; margin-bottom:25px; }
-        .card { background: #1e1e1e; border-radius: 8px; padding: 15px; margin-bottom: 15px; border-left: 5px solid #007bff; }
-        .card.AFL { border-color: #ff4757; }
-        .card.NRL { border-color: #2ed573; }
-        .card.UFC { border-color: #ffa500; }
-        .card-header { font-size: 1.2em; font-weight: bold; margin-bottom: 5px; }
+        .card { background: #1e1e1e; border-radius: 8px; padding: 15px; margin-bottom: 15px; border-left: 8px solid #2ed573; }
+        .card.played { border-left-color: #ff4d4d !important; }
+        .card.upcoming { border-left-color: #2ed573 !important; }
+        .card-header { font-size: 1.15em; font-weight: bold; margin-bottom: 5px; }
         .card-meta { color: #aaa; font-size: 0.9em; margin-bottom: 10px; }
         .news-box { background: #2a2a2a; padding: 10px; border-radius: 5px; margin-top: 10px; }
         .news-box a { color: #70a1ff; text-decoration: none; display: block; margin-bottom: 5px; }
@@ -24,12 +23,12 @@
 <body>
     <div class="container">
         <h1>🏈 🏉 🥊 Multi-Sport Live Hub</h1>
-        <div class="subtitle">Showing matches from past 2 weeks & next 2 weeks (Descending)</div>
+        <div class="subtitle">Perth Time (AWST +08:00) | Green = Upcoming, Red = Played</div>
         <div id="games">
 
-        <div class="card UFC">
+        <div class="card upcoming">
             <div class="card-header">🥊 [UFC] UFC 331: Van vs Pantoja 2</div>
-            <div class="card-meta">📅 2026-09-20 01:00 UTC | 📍 Crypto.com Arena, Los Angeles, United States</div>
+            <div class="card-meta">📅 20/09/2026 09:00 +08:00 | 📍 Crypto.com Arena, Los Angeles, United States</div>
             <a href="https://www.google.com/search?q=UFC%20331%3A%20Van%20vs%20Pantoja%202%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
@@ -37,9 +36,9 @@
             </div>
         </div>
     
-        <div class="card AFL">
-            <div class="card-header">🏈 [AFL] Hawthorn vs To be announced </div>
-            <div class="card-meta">📅 2026-09-19 02:00 UTC | 📍 TBC</div>
+        <div class="card upcoming">
+            <div class="card-header">🏈 [AFL] [Round 28] Hawthorn vs To be announced </div>
+            <div class="card-meta">📅 19/09/2026 10:00 +08:00 | 📍 TBC</div>
             <a href="https://www.google.com/search?q=Hawthorn%20vs%20To%20be%20announced%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
@@ -47,9 +46,9 @@
             </div>
         </div>
     
-        <div class="card AFL">
-            <div class="card-header">🏈 [AFL] Sydney Swans vs To be announced </div>
-            <div class="card-meta">📅 2026-09-19 02:00 UTC | 📍 TBC</div>
+        <div class="card upcoming">
+            <div class="card-header">🏈 [AFL] [Round 28] Sydney Swans vs To be announced </div>
+            <div class="card-meta">📅 19/09/2026 10:00 +08:00 | 📍 TBC</div>
             <a href="https://www.google.com/search?q=Sydney%20Swans%20vs%20To%20be%20announced%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
@@ -57,9 +56,9 @@
             </div>
         </div>
     
-        <div class="card NRL">
-            <div class="card-header">🏉 [NRL] Panthers vs Roosters </div>
-            <div class="card-meta">📅 2026-09-13 06:05 UTC | 📍 CommBank Stadium</div>
+        <div class="card upcoming">
+            <div class="card-header">🏉 [NRL] [Round 28] Panthers vs Roosters </div>
+            <div class="card-meta">📅 13/09/2026 14:05 +08:00 | 📍 CommBank Stadium</div>
             <a href="https://www.google.com/search?q=Panthers%20vs%20Roosters%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
@@ -67,9 +66,9 @@
             </div>
         </div>
     
-        <div class="card UFC">
+        <div class="card upcoming">
             <div class="card-header">🥊 [UFC] Noche UFC: Silva vs Delgado</div>
-            <div class="card-meta">📅 2026-09-12 21:00 UTC | 📍 Desert Diamond Arena, Glendale, United States</div>
+            <div class="card-meta">📅 13/09/2026 05:00 +08:00 | 📍 Desert Diamond Arena, Glendale, United States</div>
             <a href="https://www.google.com/search?q=Noche%20UFC%3A%20Silva%20vs%20Delgado%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
@@ -77,9 +76,9 @@
             </div>
         </div>
     
-        <div class="card NRL">
-            <div class="card-header">🏉 [NRL] Sharks vs Cowboys </div>
-            <div class="card-meta">📅 2026-09-12 09:50 UTC | 📍 Allianz Stadium</div>
+        <div class="card upcoming">
+            <div class="card-header">🏉 [NRL] [Round 28] Sharks vs Cowboys </div>
+            <div class="card-meta">📅 12/09/2026 17:50 +08:00 | 📍 Allianz Stadium</div>
             <a href="https://www.google.com/search?q=Sharks%20vs%20Cowboys%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
@@ -87,9 +86,9 @@
             </div>
         </div>
     
-        <div class="card AFL">
-            <div class="card-header">🏈 [AFL] Brisbane Lions vs Adelaide Crows </div>
-            <div class="card-meta">📅 2026-09-12 09:35 UTC | 📍 Gabba</div>
+        <div class="card upcoming">
+            <div class="card-header">🏈 [AFL] [Round 27] Brisbane Lions vs Adelaide Crows </div>
+            <div class="card-meta">📅 12/09/2026 17:35 +08:00 | 📍 Gabba</div>
             <a href="https://www.google.com/search?q=Brisbane%20Lions%20vs%20Adelaide%20Crows%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
@@ -97,9 +96,9 @@
             </div>
         </div>
     
-        <div class="card NRL">
-            <div class="card-header">🏉 [NRL] Warriors vs Dolphins </div>
-            <div class="card-meta">📅 2026-09-12 06:05 UTC | 📍 Go Media Stadium</div>
+        <div class="card upcoming">
+            <div class="card-header">🏉 [NRL] [Round 28] Warriors vs Dolphins </div>
+            <div class="card-meta">📅 12/09/2026 14:05 +08:00 | 📍 Go Media Stadium</div>
             <a href="https://www.google.com/search?q=Warriors%20vs%20Dolphins%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
@@ -107,9 +106,9 @@
             </div>
         </div>
     
-        <div class="card AFL">
-            <div class="card-header">🏈 [AFL] Fremantle vs Geelong Cats </div>
-            <div class="card-meta">📅 2026-09-11 10:10 UTC | 📍 Optus Stadium</div>
+        <div class="card upcoming">
+            <div class="card-header">🏈 [AFL] [Round 27] Fremantle vs Geelong Cats </div>
+            <div class="card-meta">📅 11/09/2026 18:10 +08:00 | 📍 Optus Stadium</div>
             <a href="https://www.google.com/search?q=Fremantle%20vs%20Geelong%20Cats%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
@@ -117,19 +116,19 @@
             </div>
         </div>
     
-        <div class="card NRL">
-            <div class="card-header">🏉 [NRL] Rabbitohs vs Knights </div>
-            <div class="card-meta">📅 2026-09-11 09:50 UTC | 📍 Allianz Stadium</div>
+        <div class="card upcoming">
+            <div class="card-header">🏉 [NRL] [Round 28] Rabbitohs vs Knights </div>
+            <div class="card-meta">📅 11/09/2026 17:50 +08:00 | 📍 Allianz Stadium</div>
             <a href="https://www.google.com/search?q=Rabbitohs%20vs%20Knights%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxOOU1TbW1kU0JVbUVNVXVLb0QyS3dnbklEWXN4dnVncTRXdXFYbll5Y1djN2RHek9pbjlMcTRDNEdWR3d6WGVsQUV1dzNJbTZ0cXFHclhvYlJrYXVCd2dJT0o0ZDdSRmwwTms4SGYzVnpMVmlSSzVmZUU5dU81dFh6MjNiNmhBVFQxRXZzVmNvQkdNeWw3OF9nbXVSQVloMnFrTjV5YzdiTEphc2s?oc=5" target="_blank">📰 Sharks sweat on key man; Bennett faces crunch selection call - Nine.com.au</a><a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxPNnRoQmNSdGlBeFdOamxBUVZ6UXdsalpHckF3MmQ3RTNjSWpiNUZGdW9IX2VRSElDb3U5dFlOaVhlMkhYbjFjZF9iWmtKNDRUSGlsN2lxdF9JMURJOUN0cHhwMEpjeGozUFB6dlFVUkQxMl9HMGloQ0JoeVV0d2sxM1FVMmJZaXVRYjN4R3UxRVBNdw?oc=5" target="_blank">📰 NRL Telstra Premiership 2026 Finals Series Week One - NRL.com</a>
+                <a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxPNnRoQmNSdGlBeFdOamxBUVZ6UXdsalpHckF3MmQ3RTNjSWpiNUZGdW9IX2VRSElDb3U5dFlOaVhlMkhYbjFjZF9iWmtKNDRUSGlsN2lxdF9JMURJOUN0cHhwMEpjeGozUFB6dlFVUkQxMl9HMGloQ0JoeVV0d2sxM1FVMmJZaXVRYjN4R3UxRVBNdw?oc=5" target="_blank">📰 NRL Telstra Premiership 2026 Finals Series Week One - NRL.com</a><a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxOOU1TbW1kU0JVbUVNVXVLb0QyS3dnbklEWXN4dnVncTRXdXFYbll5Y1djN2RHek9pbjlMcTRDNEdWR3d6WGVsQUV1dzNJbTZ0cXFHclhvYlJrYXVCd2dJT0o0ZDdSRmwwTms4SGYzVnpMVmlSSzVmZUU5dU81dFh6MjNiNmhBVFQxRXZzVmNvQkdNeWw3OF9nbXVSQVloMnFrTjV5YzdiTEphc2s?oc=5" target="_blank">📰 Sharks sweat on key man; Bennett faces crunch selection call - Nine.com.au</a>
             </div>
         </div>
     
-        <div class="card NRL">
-            <div class="card-header">🏉 [NRL] 🏆 Panthers  38 - 10 Wests Tigers  ❌</div>
-            <div class="card-meta">📅 2026-09-06 06:05 UTC | 📍 CommBank Stadium</div>
+        <div class="card played">
+            <div class="card-header">🏉 [NRL] [Round 27] 🏆 Panthers  38 - 10 Wests Tigers  ❌</div>
+            <div class="card-meta">📅 06/09/2026 14:05 +08:00 | 📍 CommBank Stadium</div>
             <a href="https://www.google.com/search?q=Panthers%20vs%20Wests%20Tigers%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
@@ -137,9 +136,9 @@
             </div>
         </div>
     
-        <div class="card NRL">
-            <div class="card-header">🏉 [NRL] 🏆 Dragons  24 - 22 Eels  ❌</div>
-            <div class="card-meta">📅 2026-09-06 04:00 UTC | 📍 WIN Stadium</div>
+        <div class="card played">
+            <div class="card-header">🏉 [NRL] [Round 27] 🏆 Dragons  24 - 22 Eels  ❌</div>
+            <div class="card-meta">📅 06/09/2026 12:00 +08:00 | 📍 WIN Stadium</div>
             <a href="https://www.google.com/search?q=Dragons%20vs%20Eels%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
@@ -147,9 +146,9 @@
             </div>
         </div>
     
-        <div class="card UFC">
+        <div class="card played">
             <div class="card-header">🥊 [UFC] UFC Fight Night: Hooker vs Parnasse</div>
-            <div class="card-meta">📅 2026-09-05 19:00 UTC | 📍 Accor Arena, Paris, France</div>
+            <div class="card-meta">📅 06/09/2026 03:00 +08:00 | 📍 Accor Arena, Paris, France</div>
             <a href="https://www.google.com/search?q=UFC%20Fight%20Night%3A%20Hooker%20vs%20Parnasse%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
@@ -157,9 +156,9 @@
             </div>
         </div>
     
-        <div class="card AFL">
-            <div class="card-header">🏈 [AFL] 🏆 Adelaide Crows  90 - 68 Western Bulldogs  ❌</div>
-            <div class="card-meta">📅 2026-09-05 09:35 UTC | 📍 Adelaide Oval</div>
+        <div class="card played">
+            <div class="card-header">🏈 [AFL] [Round 26] 🏆 Adelaide Crows  90 - 68 Western Bulldogs  ❌</div>
+            <div class="card-meta">📅 05/09/2026 17:35 +08:00 | 📍 Adelaide Oval</div>
             <a href="https://www.google.com/search?q=Adelaide%20Crows%20vs%20Western%20Bulldogs%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
@@ -167,9 +166,9 @@
             </div>
         </div>
     
-        <div class="card NRL">
-            <div class="card-header">🏉 [NRL] ❌ Sharks  20 - 23 Storm  🏆</div>
-            <div class="card-meta">📅 2026-09-05 09:35 UTC | 📍 Ocean Protect Stadium</div>
+        <div class="card played">
+            <div class="card-header">🏉 [NRL] [Round 27] ❌ Sharks  20 - 23 Storm  🏆</div>
+            <div class="card-meta">📅 05/09/2026 17:35 +08:00 | 📍 Ocean Protect Stadium</div>
             <a href="https://www.google.com/search?q=Sharks%20vs%20Storm%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
@@ -177,9 +176,9 @@
             </div>
         </div>
     
-        <div class="card NRL">
-            <div class="card-header">🏉 [NRL] ❌ Cowboys  30 - 50 Raiders  🏆</div>
-            <div class="card-meta">📅 2026-09-05 07:30 UTC | 📍 Queensland Country Bank Stadium</div>
+        <div class="card played">
+            <div class="card-header">🏉 [NRL] [Round 27] ❌ Cowboys  30 - 50 Raiders  🏆</div>
+            <div class="card-meta">📅 05/09/2026 15:30 +08:00 | 📍 Queensland Country Bank Stadium</div>
             <a href="https://www.google.com/search?q=Cowboys%20vs%20Raiders%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
@@ -187,19 +186,19 @@
             </div>
         </div>
     
-        <div class="card AFL">
-            <div class="card-header">🏈 [AFL] 🏆 Sydney Swans  141 - 88 Brisbane Lions  ❌</div>
-            <div class="card-meta">📅 2026-09-05 05:15 UTC | 📍 SCG</div>
+        <div class="card played">
+            <div class="card-header">🏈 [AFL] [Round 26] 🏆 Sydney Swans  141 - 88 Brisbane Lions  ❌</div>
+            <div class="card-meta">📅 05/09/2026 13:15 +08:00 | 📍 SCG</div>
             <a href="https://www.google.com/search?q=Sydney%20Swans%20vs%20Brisbane%20Lions%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxPVDJMWVhiRzlaTjhGSVp2TTFzQ25mRXVXVHJ3R2w0cXdJMHN3bU81SUJMQUtURC1oUmVHa3U2Qk40azRBNGpHRFQ4QURDNUluYV9fYmZNMGRRNl9KUHh3c1VtMFg1WkQ5WWpFZWVVdThwUTJGbGFzUW5PX2pPc3hGTE53UWExT2M0TXdHYjdWMlN4WWtjX1ZqM1VWU3BYb19Wem9VMFNfd0ZxZ0VtMW1ZUG5BUnZJaWQ2QXBqelRaVDU?oc=5" target="_blank">📰 Sydney blow away shellshocked Brisbane to revive ‘torpedoed’ AFL season - The Guardian</a><a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxPUllVMDhpZGdheWR1UmQ4c0RJNHdsTDE0NXhhZFZpMGI0UWV5WGlKR05IT1lCLTNiVk80U1NYWlZKMHRuRXZTS2ktMi1ITnZQUXFzVUZKT1VocjNUSDQyVHJPTDU5VEVhVE16SDltUEJlTmhxb3lqUG5IbzdFTTJ1bDB4aGVEVzhHN25WazkwTktfcDJpeUY0?oc=5" target="_blank">📰 RECAP: Crows fly home to down Dogs, Swans shock Lions - afl.com.au</a>
+                <a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxPVDJMWVhiRzlaTjhGSVp2TTFzQ25mRXVXVHJ3R2w0cXdJMHN3bU81SUJMQUtURC1oUmVHa3U2Qk40azRBNGpHRFQ4QURDNUluYV9fYmZNMGRRNl9KUHh3c1VtMFg1WkQ5WWpFZWVVdThwUTJGbGFzUW5PX2pPc3hGTE53UWExT2M0TXdHYjdWMlN4WWtjX1ZqM1VWU3BYb19Wem9VMFNfd0ZxZ0VtMW1ZUG5BUnZJaWQ2QXBqelRaVDU?oc=5" target="_blank">📰 Sydney blow away shellshocked Brisbane to revive ‘torpedoed’ AFL season - The Guardian</a><a href="https://news.google.com/rss/articles/CBMiY0FVX3lxTFBsZmNudEpvbWJfOGZCcGF2azhpdjBUNEphSFlHYlRGNjFxQnZjVXdCQ0VYZW03QklTbXRuWVAxdkJjMlgwZ1hqV2otalVMaTNJZWJQN2I2WFRldG9xc0xaTDBlRQ?oc=5" target="_blank">📰 Sydney Swans vs. Brisbane Lions - Box Score - September 5, 2026 - ESPN</a>
             </div>
         </div>
     
-        <div class="card NRL">
-            <div class="card-header">🏉 [NRL] 🏆 Warriors  31 - 30 Sea Eagles  ❌</div>
-            <div class="card-meta">📅 2026-09-05 05:00 UTC | 📍 Go Media Stadium</div>
+        <div class="card played">
+            <div class="card-header">🏉 [NRL] [Round 27] 🏆 Warriors  31 - 30 Sea Eagles  ❌</div>
+            <div class="card-meta">📅 05/09/2026 13:00 +08:00 | 📍 Go Media Stadium</div>
             <a href="https://www.google.com/search?q=Warriors%20vs%20Sea%20Eagles%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
@@ -207,9 +206,9 @@
             </div>
         </div>
     
-        <div class="card NRL">
-            <div class="card-header">🏉 [NRL] 🏆 Rabbitohs  50 - 20 Roosters  ❌</div>
-            <div class="card-meta">📅 2026-09-04 10:00 UTC | 📍 Allianz Stadium</div>
+        <div class="card played">
+            <div class="card-header">🏉 [NRL] [Round 27] 🏆 Rabbitohs  50 - 20 Roosters  ❌</div>
+            <div class="card-meta">📅 04/09/2026 18:00 +08:00 | 📍 Allianz Stadium</div>
             <a href="https://www.google.com/search?q=Rabbitohs%20vs%20Roosters%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
@@ -217,9 +216,9 @@
             </div>
         </div>
     
-        <div class="card AFL">
-            <div class="card-header">🏈 [AFL] 🏆 Geelong Cats  107 - 74 Carlton  ❌</div>
-            <div class="card-meta">📅 2026-09-04 09:40 UTC | 📍 MCG</div>
+        <div class="card played">
+            <div class="card-header">🏈 [AFL] [Round 26] 🏆 Geelong Cats  107 - 74 Carlton  ❌</div>
+            <div class="card-meta">📅 04/09/2026 17:40 +08:00 | 📍 MCG</div>
             <a href="https://www.google.com/search?q=Geelong%20Cats%20vs%20Carlton%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
@@ -227,19 +226,19 @@
             </div>
         </div>
     
-        <div class="card NRL">
-            <div class="card-header">🏉 [NRL] ❌ Titans  20 - 24 Dolphins  🏆</div>
-            <div class="card-meta">📅 2026-09-04 08:00 UTC | 📍 Cbus Super Stadium</div>
+        <div class="card played">
+            <div class="card-header">🏉 [NRL] [Round 27] ❌ Titans  20 - 24 Dolphins  🏆</div>
+            <div class="card-meta">📅 04/09/2026 16:00 +08:00 | 📍 Cbus Super Stadium</div>
             <a href="https://www.google.com/search?q=Titans%20vs%20Dolphins%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMi1gJBVV95cUxQMkc2a3JvN1JIc3ZqNnhVcEZnaVM2Q1pUVzNIMkt3amo5RkZ2SWRuYmFSNlRqY1F4NmhEd2lQTlBjSE5ucGI4YWRmTFhsRFRhNzA1dE9OVFpPcHBpVDdJMU9pUzdRNGNUQ2tjbVZWWWRYMWlPLUNyaFQ3NGRBcF85VmJQbTNZS2ZvMTN4TFJnV1ViLUlqZ3ZhT2w2RGY1S1g1N2p4S1NZZ00yTzFvRHhSZ1pyVzhmeUJfWnJpLTVfbWtORGE5aUd0bDlnU2hFaS11cmxRdG5FcU9JWkx1X194Yy1ZMzM5WDNTSEdfRVRYV085V1cwSS1wS0tSTzIyWWluN09fQ245OEVQelRXVk5CQktnYnBDU0s4TkZHZ2wxaW5FMC0tdWNkSUhnZ3Z3ZWJ3X3FSamt3U1g2MU0tUllKOXhPVkp5MFpwRFkzcldrWGVtX1U4akHSAdYCQVVfeXFMUDJHNmtybzdSSHN2ajZ4VXBGZ2lTNkNaVFczSDJLd2pqOUZGdklkbmJhUjZUamNReDZoRHdpUE5QY0hObnBiOGFkZkxYbERUYTcwNXRPTlRaT3BwaVQ3STFPaVM3UTRjVENrY21WVllkWDFpTy1DcmhUNzRkQXBfOVZiUG0zWUtmbzEzeExSZ1dVYi1Jamd2YU9sNkRmNUtYNTdqeEtTWWdNMk8xb0R4Umdaclc4ZnlCX1pyaS01X21rTkRhOWlHdGw5Z1NoRWktdXJsUXRuRXFPSVpMdV9feGMtWTMzOVgzU0hHX0VUWFdPOVdXMEktcEtLUk8yMllpbjdPX0NuOThFUHpUV1ZOQkJLZ2JwQ1NLOE5GR2dsMWluRTAtLXVjZElIZ2d2d2Vid19xUmprd1NYNjFNLVJZSjl4T1ZKeTBacERZM3JXa1hlbV9VOGpB?oc=5" target="_blank">📰 NRL great erupts at ‘shocking decision’ as tempers flare in controversy-filled Dolphins win - Fox Sports</a><a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxONy1SYW5tWm1GbTlLdDdxaWgwajM1VjJSTjRvYzdpYi0tdWNWUDJNNUNqN0dDeDBNbFZSRWFNVjF5aml4R196SldOTFJ2OElJWV90WDJGTndWNlVqclB5aDdlbmlKTnNWdnc5WmRwMEVqRFh5VEc3MGpOSWo1RFpXTlFrLWJXUE5tbElwYlFoWXZWdUpyOVZpSXBnSGNLYXhoOTc0N3U2Y1B1R010dVE?oc=5" target="_blank">📰 Bulldogs reveal motivation behind Crichton's shock positional move - ABC News & Headlines – Australian Broadcasting Corporation</a>
+                <a href="https://news.google.com/rss/articles/CBMikAFBVV95cUxNQVE0dkJZbjhCTGIyU1VEMlJBVHViSnB0MkJwdUdTSF9xTlBnMmN5NVJSZjd0aWZ3d21XR3lDQzFhTkgxMVl3OU9yeGl4Zno4bkZiSElhZV9IcmlIZ2Uzc09QOUtTVFFtT1RNU3BreUI0cnZfazNOZ0ZQV1FiUUl2NXhEeWNBQk44S2Z1Z0hZVWE?oc=5" target="_blank">📰 Titans v Dolphins: Beau's good to go; Cobbo, Kodi, Kuli rested - NRL.com</a><a href="https://news.google.com/rss/articles/CBMikwFBVV95cUxNdEFXRnNWZkpybmZUOTdfODdON3ZhczFCbnJsRThvTkxIbVgwM0R3YjVtZVNOenZmVDljcThYQ0RxcG5yemFRd2ZfNHFxckU2cDZ4ODlvenVoR2pQNC1seHZQOG5BSmVIMTYwUlQxOVdmekJ0TVVxZWIxbWxEWGdZT2xyZGQ2V2pnMk5qdGFoeEVxZUE?oc=5" target="_blank">📰 Match Preview: Round 27 – Dolphins v Titans - Official website of The Dolphins</a>
             </div>
         </div>
     
-        <div class="card AFL">
-            <div class="card-header">🏈 [AFL] ❌ Fremantle  40 - 72 Hawthorn  🏆</div>
-            <div class="card-meta">📅 2026-09-03 10:10 UTC | 📍 Optus Stadium</div>
+        <div class="card played">
+            <div class="card-header">🏈 [AFL] [Round 26] ❌ Fremantle  40 - 72 Hawthorn  🏆</div>
+            <div class="card-meta">📅 03/09/2026 18:10 +08:00 | 📍 Optus Stadium</div>
             <a href="https://www.google.com/search?q=Fremantle%20vs%20Hawthorn%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
@@ -247,9 +246,9 @@
             </div>
         </div>
     
-        <div class="card NRL">
-            <div class="card-header">🏉 [NRL] ❌ Bulldogs  20 - 34 Broncos  🏆</div>
-            <div class="card-meta">📅 2026-09-03 09:50 UTC | 📍 Accor Stadium</div>
+        <div class="card played">
+            <div class="card-header">🏉 [NRL] [Round 27] ❌ Bulldogs  20 - 34 Broncos  🏆</div>
+            <div class="card-meta">📅 03/09/2026 17:50 +08:00 | 📍 Accor Stadium</div>
             <a href="https://www.google.com/search?q=Bulldogs%20vs%20Broncos%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
@@ -257,9 +256,9 @@
             </div>
         </div>
     
-        <div class="card NRL">
-            <div class="card-header">🏉 [NRL] 🏆 Eels  38 - 18 Sharks  ❌</div>
-            <div class="card-meta">📅 2026-08-30 06:05 UTC | 📍 CommBank Stadium</div>
+        <div class="card played">
+            <div class="card-header">🏉 [NRL] [Round 26] 🏆 Eels  38 - 18 Sharks  ❌</div>
+            <div class="card-meta">📅 30/08/2026 14:05 +08:00 | 📍 CommBank Stadium</div>
             <a href="https://www.google.com/search?q=Eels%20vs%20Sharks%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
@@ -267,19 +266,19 @@
             </div>
         </div>
     
-        <div class="card NRL">
-            <div class="card-header">🏉 [NRL] 🏆 Warriors  46 - 32 Knights  ❌</div>
-            <div class="card-meta">📅 2026-08-30 04:00 UTC | 📍 Go Media Stadium</div>
+        <div class="card played">
+            <div class="card-header">🏉 [NRL] [Round 26] 🏆 Warriors  46 - 32 Knights  ❌</div>
+            <div class="card-meta">📅 30/08/2026 12:00 +08:00 | 📍 Go Media Stadium</div>
             <a href="https://www.google.com/search?q=Warriors%20vs%20Knights%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE8xVGNyR2kwdFFrQVEwWVJUdTB0SVpNaWJpMWRVdmJwNXhSSHJVT192aUM5TGpLdHIzMTl1UXNxR1VVbnpiWEVoaUpJaFg0M1pMRGhLcE9HV0xTZkZ1dHBzbGdwcTVBWTAwNGtmYWZ5bFRXY0dkV0cxQg?oc=5" target="_blank">📰 Warriors v Knights – Round 26, 2026 - NRL.com</a><a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxOdUVjVHdfRy1PVXVuX1lvTFppT0JEV0g0NURiNXpZTHczVUZmNmdPT0cwS2lFTGZGZkQ2TW43WnczZFh6N3MxZU52N3A2VXgwMzlPRmEzX0xkeVllWW1Ua1puTHc1a3REX01XSjhqaFBrTENOZlFkeFMzZFcwb3EwcVR3?oc=5" target="_blank">📰 Final Team | Round 26 - Newcastle Knights</a>
+                <a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxOdUVjVHdfRy1PVXVuX1lvTFppT0JEV0g0NURiNXpZTHczVUZmNmdPT0cwS2lFTGZGZkQ2TW43WnczZFh6N3MxZU52N3A2VXgwMzlPRmEzX0xkeVllWW1Ua1puTHc1a3REX01XSjhqaFBrTENOZlFkeFMzZFcwb3EwcVR3?oc=5" target="_blank">📰 Final Team | Round 26 - Newcastle Knights</a><a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE8xVGNyR2kwdFFrQVEwWVJUdTB0SVpNaWJpMWRVdmJwNXhSSHJVT192aUM5TGpLdHIzMTl1UXNxR1VVbnpiWEVoaUpJaFg0M1pMRGhLcE9HV0xTZkZ1dHBzbGdwcTVBWTAwNGtmYWZ5bFRXY0dkV0cxQg?oc=5" target="_blank">📰 Warriors v Knights – Round 26, 2026 - NRL.com</a>
             </div>
         </div>
     
-        <div class="card UFC">
+        <div class="card played">
             <div class="card-header">🥊 [UFC] UFC Fight Night: Nurmagomedov vs Song</div>
-            <div class="card-meta">📅 2026-08-29 10:00 UTC | 📍 Oriental Sports Center, Pudong District, China</div>
+            <div class="card-meta">📅 29/08/2026 18:00 +08:00 | 📍 Oriental Sports Center, Pudong District, China</div>
             <a href="https://www.google.com/search?q=UFC%20Fight%20Night%3A%20Nurmagomedov%20vs%20Song%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
@@ -287,9 +286,9 @@
             </div>
         </div>
     
-        <div class="card AFL">
-            <div class="card-header">🏈 [AFL] ❌ Melbourne  55 - 74 Carlton  🏆</div>
-            <div class="card-meta">📅 2026-08-29 09:35 UTC | 📍 MCG</div>
+        <div class="card played">
+            <div class="card-header">🏈 [AFL] [Round 25] ❌ Melbourne  55 - 74 Carlton  🏆</div>
+            <div class="card-meta">📅 29/08/2026 17:35 +08:00 | 📍 MCG</div>
             <a href="https://www.google.com/search?q=Melbourne%20vs%20Carlton%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
@@ -297,9 +296,9 @@
             </div>
         </div>
     
-        <div class="card NRL">
-            <div class="card-header">🏉 [NRL] 🏆 Cowboys  24 - 10 Wests Tigers  ❌</div>
-            <div class="card-meta">📅 2026-08-29 09:35 UTC | 📍 Queensland Country Bank Stadium</div>
+        <div class="card played">
+            <div class="card-header">🏉 [NRL] [Round 26] 🏆 Cowboys  24 - 10 Wests Tigers  ❌</div>
+            <div class="card-meta">📅 29/08/2026 17:35 +08:00 | 📍 Queensland Country Bank Stadium</div>
             <a href="https://www.google.com/search?q=Cowboys%20vs%20Wests%20Tigers%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
@@ -307,9 +306,9 @@
             </div>
         </div>
     
-        <div class="card NRL">
-            <div class="card-header">🏉 [NRL] ❌ Roosters  12 - 26 Dolphins  🏆</div>
-            <div class="card-meta">📅 2026-08-29 07:30 UTC | 📍 Allianz Stadium</div>
+        <div class="card played">
+            <div class="card-header">🏉 [NRL] [Round 26] ❌ Roosters  12 - 26 Dolphins  🏆</div>
+            <div class="card-meta">📅 29/08/2026 15:30 +08:00 | 📍 Allianz Stadium</div>
             <a href="https://www.google.com/search?q=Roosters%20vs%20Dolphins%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
@@ -317,9 +316,9 @@
             </div>
         </div>
     
-        <div class="card NRL">
-            <div class="card-header">🏉 [NRL] ❌ Titans  22 - 42 Rabbitohs  🏆</div>
-            <div class="card-meta">📅 2026-08-29 05:00 UTC | 📍 Cbus Super Stadium</div>
+        <div class="card played">
+            <div class="card-header">🏉 [NRL] [Round 26] ❌ Titans  22 - 42 Rabbitohs  🏆</div>
+            <div class="card-meta">📅 29/08/2026 13:00 +08:00 | 📍 Cbus Super Stadium</div>
             <a href="https://www.google.com/search?q=Titans%20vs%20Rabbitohs%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
@@ -327,9 +326,9 @@
             </div>
         </div>
     
-        <div class="card NRL">
-            <div class="card-header">🏉 [NRL] 🏆 Panthers  24 - 10 Bulldogs  ❌</div>
-            <div class="card-meta">📅 2026-08-28 10:00 UTC | 📍 CommBank Stadium</div>
+        <div class="card played">
+            <div class="card-header">🏉 [NRL] [Round 26] 🏆 Panthers  24 - 10 Bulldogs  ❌</div>
+            <div class="card-meta">📅 28/08/2026 18:00 +08:00 | 📍 CommBank Stadium</div>
             <a href="https://www.google.com/search?q=Panthers%20vs%20Bulldogs%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
@@ -337,9 +336,9 @@
             </div>
         </div>
     
-        <div class="card AFL">
-            <div class="card-header">🏈 [AFL] 🏆 Western Bulldogs  96 - 93 Collingwood  ❌</div>
-            <div class="card-meta">📅 2026-08-28 09:40 UTC | 📍 MCG</div>
+        <div class="card played">
+            <div class="card-header">🏈 [AFL] [Round 25] 🏆 Western Bulldogs  96 - 93 Collingwood  ❌</div>
+            <div class="card-meta">📅 28/08/2026 17:40 +08:00 | 📍 MCG</div>
             <a href="https://www.google.com/search?q=Western%20Bulldogs%20vs%20Collingwood%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
@@ -347,9 +346,9 @@
             </div>
         </div>
     
-        <div class="card UFC">
+        <div class="card played">
             <div class="card-header">🥊 [UFC] Road To UFC: Maheshate vs Flowers</div>
-            <div class="card-meta">📅 2026-08-28 09:00 UTC | 📍 TBD</div>
+            <div class="card-meta">📅 28/08/2026 17:00 +08:00 | 📍 TBD</div>
             <a href="https://www.google.com/search?q=Road%20To%20UFC%3A%20Maheshate%20vs%20Flowers%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
@@ -357,9 +356,9 @@
             </div>
         </div>
     
-        <div class="card NRL">
-            <div class="card-header">🏉 [NRL] 🏆 Sea Eagles  44 - 10 Dragons  ❌</div>
-            <div class="card-meta">📅 2026-08-28 08:00 UTC | 📍 4 Pines Park</div>
+        <div class="card played">
+            <div class="card-header">🏉 [NRL] [Round 26] 🏆 Sea Eagles  44 - 10 Dragons  ❌</div>
+            <div class="card-meta">📅 28/08/2026 16:00 +08:00 | 📍 4 Pines Park</div>
             <a href="https://www.google.com/search?q=Sea%20Eagles%20vs%20Dragons%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
@@ -367,9 +366,9 @@
             </div>
         </div>
     
-        <div class="card NRL">
-            <div class="card-header">🏉 [NRL] ❌ Broncos  20 - 46 Storm  🏆</div>
-            <div class="card-meta">📅 2026-08-27 09:50 UTC | 📍 Suncorp Stadium</div>
+        <div class="card played">
+            <div class="card-header">🏉 [NRL] [Round 26] ❌ Broncos  20 - 46 Storm  🏆</div>
+            <div class="card-meta">📅 27/08/2026 17:50 +08:00 | 📍 Suncorp Stadium</div>
             <a href="https://www.google.com/search?q=Broncos%20vs%20Storm%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
