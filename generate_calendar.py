@@ -14,6 +14,15 @@ headers = {
     'Accept': 'application/json, text/plain, */*',
 }
 
+# Embedded Vector SVG Logos (Zero hotlinking restrictions, works everywhere)
+SVG_LOGOS = {
+    'KAYO': '''<svg viewBox="0 0 100 40" class="svg-logo"><rect width="100" height="40" rx="6" fill="#003366"/><text x="50" y="26" fill="#40F87F" font-family="Impact, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">KAYO</text></svg>''',
+    'FOXTEL': '''<svg viewBox="0 0 100 40" class="svg-logo"><rect width="100" height="40" rx="6" fill="#FF5000"/><text x="50" y="26" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="16" font-weight="900" text-anchor="middle">FOXTEL</text></svg>''',
+    'CH7': '''<svg viewBox="0 0 60 40" class="svg-logo"><rect width="60" height="40" rx="6" fill="#ED1C24"/><text x="30" y="29" fill="#FFFFFF" font-family="Impact, sans-serif" font-size="28" font-weight="bold" text-anchor="middle">7</text></svg>''',
+    'NINE': '''<svg viewBox="0 0 60 40" class="svg-logo"><rect width="60" height="40" rx="6" fill="#0099FF"/><circle cx="18" cy="20" r="4" fill="#FFF"/><circle cx="30" cy="20" r="4" fill="#FFF"/><circle cx="42" cy="20" r="4" fill="#FFF"/></svg>''',
+    'ESPN': '''<svg viewBox="0 0 100 40" class="svg-logo"><rect width="100" height="40" rx="6" fill="#CC0000"/><text x="50" y="27" fill="#FFFFFF" font-family="Arial Black, sans-serif" font-size="20" font-style="italic" font-weight="900" text-anchor="middle">ESPN</text></svg>'''
+}
+
 sports_config = {
     'AFL': {'url': 'https://fixturedownload.com/feed/json/afl-2026', 'emoji': '🏈'},
     'NRL': {'url': 'https://fixturedownload.com/feed/json/nrl-2026', 'emoji': '🏉'}
@@ -26,34 +35,25 @@ two_weeks_ago = now_utc - timedelta(days=14)
 two_weeks_ahead = now_utc + timedelta(days=14)
 
 def get_broadcasters(sport, start_awst, full_title):
-    """Assigns custom HTML badges based on league and local kick-off time."""
-    badges = []
+    """Assigns vector SVG logos based on league and local kick-off time."""
+    logos = []
     
     if sport == 'AFL':
-        badges.extend([
-            '<span class="badge kayo">KAYO</span>',
-            '<span class="badge foxtel">FOXTEL</span>'
-        ])
+        logos.extend([SVG_LOGOS['KAYO'], SVG_LOGOS['FOXTEL']])
         weekday = start_awst.weekday() # 3=Thu, 4=Fri, 6=Sun
         if weekday in [3, 4, 6] or 'final' in full_title.lower():
-            badges.append('<span class="badge ch7">CH 7</span>')
+            logos.append(SVG_LOGOS['CH7'])
 
     elif sport == 'NRL':
-        badges.extend([
-            '<span class="badge kayo">KAYO</span>',
-            '<span class="badge foxtel">FOXTEL</span>'
-        ])
+        logos.extend([SVG_LOGOS['KAYO'], SVG_LOGOS['FOXTEL']])
         weekday = start_awst.weekday()
         if weekday in [3, 4, 6] or 'final' in full_title.lower():
-            badges.append('<span class="badge nine">CH 9</span>')
+            logos.append(SVG_LOGOS['NINE'])
 
     elif sport == 'UFC':
-        badges.extend([
-            '<span class="badge espn">ESPN</span>',
-            '<span class="badge kayo">KAYO</span>'
-        ])
+        logos.extend([SVG_LOGOS['ESPN'], SVG_LOGOS['KAYO']])
 
-    return "".join(badges)
+    return "".join(logos)
 
 def get_news(query):
     try:
@@ -113,7 +113,7 @@ for sport, config in sports_config.items():
                 start_utc = datetime.fromisoformat(date_str.replace('Z', '+00:00'))
                 start_awst = start_utc.astimezone(awst_tz)
 
-                # Store for ICS Master Calendar
+                # Store for ICS
                 event = Event()
                 event.add('uid', f"{sport.lower()}-{item.get('MatchNumber', '0')}-{home}")
                 event.add('summary', title)
@@ -144,7 +144,6 @@ try:
     req = urllib.request.Request(ufc_url, headers=headers)
     with urllib.request.urlopen(req, timeout=10) as response:
         ufc_cal = Calendar.from_ical(response.read())
-        ufc_count = 0
         for component in ufc_cal.walk():
             if component.name == "VEVENT":
                 summary = str(component.get('summary'))
@@ -155,8 +154,6 @@ try:
                 cal.add_component(component)
 
                 dt_raw = component.get('dtstart').dt
-                
-                # Robust UTC Datetime conversion
                 if isinstance(dt_raw, datetime):
                     dtstart_utc = dt_raw if dt_raw.tzinfo else dt_raw.replace(tzinfo=timezone.utc)
                 else:
@@ -177,8 +174,6 @@ try:
                         'odds_link': f"https://www.google.com/search?q={urllib.parse.quote(clean_summary + ' odds')}",
                         'news': get_news(f"{clean_summary} UFC")
                     })
-                    ufc_count += 1
-        print(f"Successfully added {ufc_count} UFC events to Web View")
 except Exception as e:
     print(f"Error fetching UFC: {e}")
 
@@ -202,17 +197,11 @@ html_content = f"""<!DOCTYPE html>
         .card {{ background: #1e1e1e; border-radius: 8px; padding: 15px; margin-bottom: 15px; border-left: 8px solid #2ed573; position: relative; }}
         .card.played {{ border-left-color: #ff4d4d !important; }}
         .card.upcoming {{ border-left-color: #2ed573 !important; }}
-        .card-header {{ font-size: 1.15em; font-weight: bold; margin-bottom: 10px; padding-right: 120px; }}
+        .card-header {{ font-size: 1.15em; font-weight: bold; margin-bottom: 10px; padding-right: 140px; }}
         .card-meta {{ color: #aaa; font-size: 0.9em; margin-bottom: 10px; }}
         
-        /* Custom TV Channel Badges */
-        .tv-logos {{ position: absolute; top: 15px; right: 15px; display: flex; gap: 4px; }}
-        .badge {{ font-size: 0.7em; font-weight: 800; padding: 3px 6px; border-radius: 4px; color: #fff; letter-spacing: 0.5px; text-transform: uppercase; }}
-        .badge.kayo {{ background: #003366; border: 1px solid #0055a5; }}
-        .badge.foxtel {{ background: #FF5000; }}
-        .badge.ch7 {{ background: #ED1C24; }}
-        .badge.nine {{ background: #0099FF; }}
-        .badge.espn {{ background: #CC0000; }}
+        .tv-logos {{ position: absolute; top: 15px; right: 15px; display: flex; gap: 6px; align-items: center; }}
+        .svg-logo {{ height: 22px; width: auto; filter: drop-shadow(0px 1px 2px rgba(0,0,0,0.5)); }}
 
         .news-box {{ background: #2a2a2a; padding: 10px; border-radius: 5px; margin-top: 10px; }}
         .news-box a {{ color: #70a1ff; text-decoration: none; display: block; margin-bottom: 5px; }}
