@@ -14,15 +14,6 @@ headers = {
     'Accept': 'application/json, text/plain, */*',
 }
 
-# Reliable CDN TV Logo Badges
-LOGOS = {
-    'KAYO': 'https://img.shields.io/badge/Kayo-003366?style=for-the-badge&logo=kayo&logoColor=white',
-    'FOXTEL': 'https://img.shields.io/badge/Foxtel-FF5000?style=for-the-badge&logoColor=white',
-    'CH7': 'https://img.shields.io/badge/Ch7-ED1C24?style=for-the-badge&logoColor=white',
-    'NINE': 'https://img.shields.io/badge/Nine-0099FF?style=for-the-badge&logoColor=white',
-    'ESPN': 'https://img.shields.io/badge/ESPN-CC0000?style=for-the-badge&logoColor=white'
-}
-
 sports_config = {
     'AFL': {'url': 'https://fixturedownload.com/feed/json/afl-2026', 'emoji': '🏈'},
     'NRL': {'url': 'https://fixturedownload.com/feed/json/nrl-2026', 'emoji': '🏉'}
@@ -35,25 +26,34 @@ two_weeks_ago = now_utc - timedelta(days=14)
 two_weeks_ahead = now_utc + timedelta(days=14)
 
 def get_broadcasters(sport, start_awst, full_title):
-    """Assigns broadcast badges based on league and local kick-off time."""
-    logos = []
+    """Assigns custom HTML badges based on league and local kick-off time."""
+    badges = []
     
     if sport == 'AFL':
-        logos.extend([LOGOS['KAYO'], LOGOS['FOXTEL']])
+        badges.extend([
+            '<span class="badge kayo">KAYO</span>',
+            '<span class="badge foxtel">FOXTEL</span>'
+        ])
         weekday = start_awst.weekday() # 3=Thu, 4=Fri, 6=Sun
         if weekday in [3, 4, 6] or 'final' in full_title.lower():
-            logos.append(LOGOS['CH7'])
+            badges.append('<span class="badge ch7">CH 7</span>')
 
     elif sport == 'NRL':
-        logos.extend([LOGOS['KAYO'], LOGOS['FOXTEL']])
+        badges.extend([
+            '<span class="badge kayo">KAYO</span>',
+            '<span class="badge foxtel">FOXTEL</span>'
+        ])
         weekday = start_awst.weekday()
         if weekday in [3, 4, 6] or 'final' in full_title.lower():
-            logos.append(LOGOS['NINE'])
+            badges.append('<span class="badge nine">CH 9</span>')
 
     elif sport == 'UFC':
-        logos.extend([LOGOS['ESPN'], LOGOS['KAYO']])
+        badges.extend([
+            '<span class="badge espn">ESPN</span>',
+            '<span class="badge kayo">KAYO</span>'
+        ])
 
-    return logos
+    return "".join(badges)
 
 def get_news(query):
     try:
@@ -113,7 +113,7 @@ for sport, config in sports_config.items():
                 start_utc = datetime.fromisoformat(date_str.replace('Z', '+00:00'))
                 start_awst = start_utc.astimezone(awst_tz)
 
-                # Store for ICS
+                # Store for ICS Master Calendar
                 event = Event()
                 event.add('uid', f"{sport.lower()}-{item.get('MatchNumber', '0')}-{home}")
                 event.add('summary', title)
@@ -139,51 +139,48 @@ for sport, config in sports_config.items():
         print(f"Error processing {sport}: {e}")
 
 # --- 2. PROCESS UFC DATA ---
-ufc_feed_urls = [
-    'https://raw.githubusercontent.com/clarencechaan/ufc-cal/ics/UFC.ics'
-]
+ufc_url = 'https://raw.githubusercontent.com/clarencechaan/ufc-cal/ics/UFC.ics'
+try:
+    req = urllib.request.Request(ufc_url, headers=headers)
+    with urllib.request.urlopen(req, timeout=10) as response:
+        ufc_cal = Calendar.from_ical(response.read())
+        ufc_count = 0
+        for component in ufc_cal.walk():
+            if component.name == "VEVENT":
+                summary = str(component.get('summary'))
+                clean_summary = summary.replace('[UFC]', '').replace('🥊', '').strip()
+                full_summary = f"🥊 [UFC] {clean_summary}"
 
-for ufc_feed_url in ufc_feed_urls:
-    try:
-        req = urllib.request.Request(ufc_feed_url, headers=headers)
-        with urllib.request.urlopen(req, timeout=10) as response:
-            ufc_cal = Calendar.from_ical(response.read())
-            count = 0
-            for component in ufc_cal.walk():
-                if component.name == "VEVENT":
-                    summary = str(component.get('summary'))
-                    clean_summary = summary.replace('[UFC]', '').replace('🥊', '').strip()
-                    full_summary = f"🥊 [UFC] {clean_summary}"
+                component['summary'] = full_summary
+                cal.add_component(component)
 
-                    component['summary'] = full_summary
-                    cal.add_component(component)
-                    count += 1
+                dt_raw = component.get('dtstart').dt
+                
+                # Robust UTC Datetime conversion
+                if isinstance(dt_raw, datetime):
+                    dtstart_utc = dt_raw if dt_raw.tzinfo else dt_raw.replace(tzinfo=timezone.utc)
+                else:
+                    dtstart_utc = datetime.combine(dt_raw, datetime.min.time(), tzinfo=timezone.utc)
 
-                    dtstart = component.get('dtstart').dt
-                    if not isinstance(dtstart, datetime):
-                        dtstart = datetime.combine(dtstart, datetime.min.time(), tzinfo=timezone.utc)
-                    elif dtstart.tzinfo is None:
-                        dtstart = dtstart.replace(tzinfo=timezone.utc)
+                dtstart_awst = dtstart_utc.astimezone(awst_tz)
 
-                    dtstart_awst = dtstart.astimezone(awst_tz)
-
-                    if two_weeks_ago <= dtstart <= two_weeks_ahead:
-                        all_games.append({
-                            'sport': 'UFC',
-                            'emoji': '🥊',
-                            'full_title': full_summary,
-                            'date_awst': dtstart_awst.strftime('%d/%m/%Y %H:%M AWST'),
-                            'start_utc': dtstart,
-                            'is_played': dtstart < now_utc,
-                            'location': str(component.get('location', 'TBD')),
-                            'broadcasters': get_broadcasters('UFC', dtstart_awst, full_summary),
-                            'odds_link': f"https://www.google.com/search?q={urllib.parse.quote(clean_summary + ' odds')}",
-                            'news': get_news(f"{clean_summary} UFC")
-                        })
-            print(f"Successfully processed {count} UFC events")
-            break
-    except Exception as e:
-        print(f"Failed fetching UFC: {e}")
+                if two_weeks_ago <= dtstart_utc <= two_weeks_ahead:
+                    all_games.append({
+                        'sport': 'UFC',
+                        'emoji': '🥊',
+                        'full_title': full_summary,
+                        'date_awst': dtstart_awst.strftime('%d/%m/%Y %H:%M AWST'),
+                        'start_utc': dtstart_utc,
+                        'is_played': dtstart_utc < now_utc,
+                        'location': str(component.get('location', 'TBD')),
+                        'broadcasters': get_broadcasters('UFC', dtstart_awst, full_summary),
+                        'odds_link': f"https://www.google.com/search?q={urllib.parse.quote(clean_summary + ' odds')}",
+                        'news': get_news(f"{clean_summary} UFC")
+                    })
+                    ufc_count += 1
+        print(f"Successfully added {ufc_count} UFC events to Web View")
+except Exception as e:
+    print(f"Error fetching UFC: {e}")
 
 all_games.sort(key=lambda x: x['start_utc'], reverse=True)
 
@@ -205,10 +202,18 @@ html_content = f"""<!DOCTYPE html>
         .card {{ background: #1e1e1e; border-radius: 8px; padding: 15px; margin-bottom: 15px; border-left: 8px solid #2ed573; position: relative; }}
         .card.played {{ border-left-color: #ff4d4d !important; }}
         .card.upcoming {{ border-left-color: #2ed573 !important; }}
-        .card-header {{ font-size: 1.15em; font-weight: bold; margin-bottom: 5px; padding-right: 140px; }}
+        .card-header {{ font-size: 1.15em; font-weight: bold; margin-bottom: 10px; padding-right: 120px; }}
         .card-meta {{ color: #aaa; font-size: 0.9em; margin-bottom: 10px; }}
-        .tv-logos {{ position: absolute; top: 15px; right: 15px; display: flex; gap: 6px; }}
-        .tv-logos img {{ height: 22px; border-radius: 3px; }}
+        
+        /* Custom TV Channel Badges */
+        .tv-logos {{ position: absolute; top: 15px; right: 15px; display: flex; gap: 4px; }}
+        .badge {{ font-size: 0.7em; font-weight: 800; padding: 3px 6px; border-radius: 4px; color: #fff; letter-spacing: 0.5px; text-transform: uppercase; }}
+        .badge.kayo {{ background: #003366; border: 1px solid #0055a5; }}
+        .badge.foxtel {{ background: #FF5000; }}
+        .badge.ch7 {{ background: #ED1C24; }}
+        .badge.nine {{ background: #0099FF; }}
+        .badge.espn {{ background: #CC0000; }}
+
         .news-box {{ background: #2a2a2a; padding: 10px; border-radius: 5px; margin-top: 10px; }}
         .news-box a {{ color: #70a1ff; text-decoration: none; display: block; margin-bottom: 5px; }}
         .news-box a:hover {{ text-decoration: underline; }}
@@ -230,11 +235,10 @@ for game in all_games:
         news_html = '<span style="color:#777;">No recent news articles found.</span>'
 
     status_class = "played" if game['is_played'] else "upcoming"
-    logo_imgs = "".join([f'<img src="{logo}" alt="TV">' for logo in game['broadcasters']])
 
     html_content += f"""
         <div class="card {status_class}">
-            <div class="tv-logos">{logo_imgs}</div>
+            <div class="tv-logos">{game['broadcasters']}</div>
             <div class="card-header">{game['full_title']}</div>
             <div class="card-meta">📅 {game['date_awst']} | 📍 {game['location']}</div>
             <a href="{game['odds_link']}" target="_blank" class="btn-odds">📈 View Live Odds</a>

@@ -12,10 +12,18 @@
         .card { background: #1e1e1e; border-radius: 8px; padding: 15px; margin-bottom: 15px; border-left: 8px solid #2ed573; position: relative; }
         .card.played { border-left-color: #ff4d4d !important; }
         .card.upcoming { border-left-color: #2ed573 !important; }
-        .card-header { font-size: 1.15em; font-weight: bold; margin-bottom: 5px; padding-right: 140px; }
+        .card-header { font-size: 1.15em; font-weight: bold; margin-bottom: 10px; padding-right: 120px; }
         .card-meta { color: #aaa; font-size: 0.9em; margin-bottom: 10px; }
-        .tv-logos { position: absolute; top: 15px; right: 15px; display: flex; gap: 6px; }
-        .tv-logos img { height: 22px; border-radius: 3px; }
+        
+        /* Custom TV Channel Badges */
+        .tv-logos { position: absolute; top: 15px; right: 15px; display: flex; gap: 4px; }
+        .badge { font-size: 0.7em; font-weight: 800; padding: 3px 6px; border-radius: 4px; color: #fff; letter-spacing: 0.5px; text-transform: uppercase; }
+        .badge.kayo { background: #003366; border: 1px solid #0055a5; }
+        .badge.foxtel { background: #FF5000; }
+        .badge.ch7 { background: #ED1C24; }
+        .badge.nine { background: #0099FF; }
+        .badge.espn { background: #CC0000; }
+
         .news-box { background: #2a2a2a; padding: 10px; border-radius: 5px; margin-top: 10px; }
         .news-box a { color: #70a1ff; text-decoration: none; display: block; margin-bottom: 5px; }
         .news-box a:hover { text-decoration: underline; }
@@ -29,7 +37,7 @@
         <div id="games">
 
         <div class="card upcoming">
-            <div class="tv-logos"><img src="https://img.shields.io/badge/ESPN-CC0000?style=for-the-badge&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Kayo-003366?style=for-the-badge&logo=kayo&logoColor=white" alt="TV"></div>
+            <div class="tv-logos"><span class="badge espn">ESPN</span><span class="badge kayo">KAYO</span></div>
             <div class="card-header">🥊 [UFC] UFC 331: Van vs Pantoja 2</div>
             <div class="card-meta">📅 20/09/2026 09:00 AWST | 📍 Crypto.com Arena, Los Angeles, United States</div>
             <a href="https://www.google.com/search?q=UFC%20331%3A%20Van%20vs%20Pantoja%202%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
@@ -40,7 +48,7 @@
         </div>
     
         <div class="card upcoming">
-            <div class="tv-logos"><img src="https://img.shields.io/badge/Kayo-003366?style=for-the-badge&logo=kayo&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Foxtel-FF5000?style=for-the-badge&logoColor=white" alt="TV"></div>
+            <div class="tv-logos"><span class="badge kayo">KAYO</span><span class="badge foxtel">FOXTEL</span></div>
             <div class="card-header">🏈 [AFL] [Round 28] Hawthorn vs To be announced </div>
             <div class="card-meta">📅 19/09/2026 10:00 AWST | 📍 TBC</div>
             <a href="https://www.google.com/search?q=Hawthorn%20vs%20To%20be%20announced%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
@@ -51,7 +59,7 @@
         </div>
     
         <div class="card upcoming">
-            <div class="tv-logos"><img src="https://img.shields.io/badge/Kayo-003366?style=for-the-badge&logo=kayo&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Foxtel-FF5000?style=for-the-badge&logoColor=white" alt="TV"></div>
+            <div class="tv-logos"><span class="badge kayo">KAYO</span><span class="badge foxtel">FOXTEL</span></div>
             <div class="card-header">🏈 [AFL] [Round 28] Sydney Swans vs To be announced </div>
             <div class="card-meta">📅 19/09/2026 10:00 AWST | 📍 TBC</div>
             <a href="https://www.google.com/search?q=Sydney%20Swans%20vs%20To%20be%20announced%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
@@ -62,7 +70,7 @@
         </div>
     
         <div class="card upcoming">
-            <div class="tv-logos"><img src="https://img.shields.io/badge/Kayo-003366?style=for-the-badge&logo=kayo&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Foxtel-FF5000?style=for-the-badge&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Nine-0099FF?style=for-the-badge&logoColor=white" alt="TV"></div>
+            <div class="tv-logos"><span class="badge kayo">KAYO</span><span class="badge foxtel">FOXTEL</span><span class="badge nine">CH 9</span></div>
             <div class="card-header">🏉 [NRL] [Round 28] Panthers vs Roosters </div>
             <div class="card-meta">📅 13/09/2026 14:05 AWST | 📍 CommBank Stadium</div>
             <a href="https://www.google.com/search?q=Panthers%20vs%20Roosters%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
@@ -73,7 +81,7 @@
         </div>
     
         <div class="card upcoming">
-            <div class="tv-logos"><img src="https://img.shields.io/badge/ESPN-CC0000?style=for-the-badge&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Kayo-003366?style=for-the-badge&logo=kayo&logoColor=white" alt="TV"></div>
+            <div class="tv-logos"><span class="badge espn">ESPN</span><span class="badge kayo">KAYO</span></div>
             <div class="card-header">🥊 [UFC] Noche UFC: Silva vs Delgado</div>
             <div class="card-meta">📅 13/09/2026 05:00 AWST | 📍 Desert Diamond Arena, Glendale, United States</div>
             <a href="https://www.google.com/search?q=Noche%20UFC%3A%20Silva%20vs%20Delgado%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
@@ -84,7 +92,7 @@
         </div>
     
         <div class="card upcoming">
-            <div class="tv-logos"><img src="https://img.shields.io/badge/Kayo-003366?style=for-the-badge&logo=kayo&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Foxtel-FF5000?style=for-the-badge&logoColor=white" alt="TV"></div>
+            <div class="tv-logos"><span class="badge kayo">KAYO</span><span class="badge foxtel">FOXTEL</span></div>
             <div class="card-header">🏉 [NRL] [Round 28] Sharks vs Cowboys </div>
             <div class="card-meta">📅 12/09/2026 17:50 AWST | 📍 Allianz Stadium</div>
             <a href="https://www.google.com/search?q=Sharks%20vs%20Cowboys%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
@@ -95,7 +103,7 @@
         </div>
     
         <div class="card upcoming">
-            <div class="tv-logos"><img src="https://img.shields.io/badge/Kayo-003366?style=for-the-badge&logo=kayo&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Foxtel-FF5000?style=for-the-badge&logoColor=white" alt="TV"></div>
+            <div class="tv-logos"><span class="badge kayo">KAYO</span><span class="badge foxtel">FOXTEL</span></div>
             <div class="card-header">🏈 [AFL] [Round 27] Brisbane Lions vs Adelaide Crows </div>
             <div class="card-meta">📅 12/09/2026 17:35 AWST | 📍 Gabba</div>
             <a href="https://www.google.com/search?q=Brisbane%20Lions%20vs%20Adelaide%20Crows%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
@@ -106,7 +114,7 @@
         </div>
     
         <div class="card upcoming">
-            <div class="tv-logos"><img src="https://img.shields.io/badge/Kayo-003366?style=for-the-badge&logo=kayo&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Foxtel-FF5000?style=for-the-badge&logoColor=white" alt="TV"></div>
+            <div class="tv-logos"><span class="badge kayo">KAYO</span><span class="badge foxtel">FOXTEL</span></div>
             <div class="card-header">🏉 [NRL] [Round 28] Warriors vs Dolphins </div>
             <div class="card-meta">📅 12/09/2026 14:05 AWST | 📍 Go Media Stadium</div>
             <a href="https://www.google.com/search?q=Warriors%20vs%20Dolphins%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
@@ -117,7 +125,7 @@
         </div>
     
         <div class="card upcoming">
-            <div class="tv-logos"><img src="https://img.shields.io/badge/Kayo-003366?style=for-the-badge&logo=kayo&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Foxtel-FF5000?style=for-the-badge&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Ch7-ED1C24?style=for-the-badge&logoColor=white" alt="TV"></div>
+            <div class="tv-logos"><span class="badge kayo">KAYO</span><span class="badge foxtel">FOXTEL</span><span class="badge ch7">CH 7</span></div>
             <div class="card-header">🏈 [AFL] [Round 27] Fremantle vs Geelong Cats </div>
             <div class="card-meta">📅 11/09/2026 18:10 AWST | 📍 Optus Stadium</div>
             <a href="https://www.google.com/search?q=Fremantle%20vs%20Geelong%20Cats%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
@@ -128,18 +136,18 @@
         </div>
     
         <div class="card upcoming">
-            <div class="tv-logos"><img src="https://img.shields.io/badge/Kayo-003366?style=for-the-badge&logo=kayo&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Foxtel-FF5000?style=for-the-badge&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Nine-0099FF?style=for-the-badge&logoColor=white" alt="TV"></div>
+            <div class="tv-logos"><span class="badge kayo">KAYO</span><span class="badge foxtel">FOXTEL</span><span class="badge nine">CH 9</span></div>
             <div class="card-header">🏉 [NRL] [Round 28] Rabbitohs vs Knights </div>
             <div class="card-meta">📅 11/09/2026 17:50 AWST | 📍 Allianz Stadium</div>
             <a href="https://www.google.com/search?q=Rabbitohs%20vs%20Knights%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxPNnRoQmNSdGlBeFdOamxBUVZ6UXdsalpHckF3MmQ3RTNjSWpiNUZGdW9IX2VRSElDb3U5dFlOaVhlMkhYbjFjZF9iWmtKNDRUSGlsN2lxdF9JMURJOUN0cHhwMEpjeGozUFB6dlFVUkQxMl9HMGloQ0JoeVV0d2sxM1FVMmJZaXVRYjN4R3UxRVBNdw?oc=5" target="_blank">📰 NRL Telstra Premiership 2026 Finals Series Week One - NRL.com</a><a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxOOU1TbW1kU0JVbUVNVXVLb0QyS3dnbklEWXN4dnVncTRXdXFYbll5Y1djN2RHek9pbjlMcTRDNEdWR3d6WGVsQUV1dzNJbTZ0cXFHclhvYlJrYXVCd2dJT0o0ZDdSRmwwTms4SGYzVnpMVmlSSzVmZUU5dU81dFh6MjNiNmhBVFQxRXZzVmNvQkdNeWw3OF9nbXVSQVloMnFrTjV5YzdiTEphc2s?oc=5" target="_blank">📰 Sharks sweat on key man; Bennett faces crunch selection call - Nine.com.au</a>
+                <a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxOOU1TbW1kU0JVbUVNVXVLb0QyS3dnbklEWXN4dnVncTRXdXFYbll5Y1djN2RHek9pbjlMcTRDNEdWR3d6WGVsQUV1dzNJbTZ0cXFHclhvYlJrYXVCd2dJT0o0ZDdSRmwwTms4SGYzVnpMVmlSSzVmZUU5dU81dFh6MjNiNmhBVFQxRXZzVmNvQkdNeWw3OF9nbXVSQVloMnFrTjV5YzdiTEphc2s?oc=5" target="_blank">📰 Sharks sweat on key man; Bennett faces crunch selection call - Nine.com.au</a><a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxPNnRoQmNSdGlBeFdOamxBUVZ6UXdsalpHckF3MmQ3RTNjSWpiNUZGdW9IX2VRSElDb3U5dFlOaVhlMkhYbjFjZF9iWmtKNDRUSGlsN2lxdF9JMURJOUN0cHhwMEpjeGozUFB6dlFVUkQxMl9HMGloQ0JoeVV0d2sxM1FVMmJZaXVRYjN4R3UxRVBNdw?oc=5" target="_blank">📰 NRL Telstra Premiership 2026 Finals Series Week One - NRL.com</a>
             </div>
         </div>
     
         <div class="card played">
-            <div class="tv-logos"><img src="https://img.shields.io/badge/Kayo-003366?style=for-the-badge&logo=kayo&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Foxtel-FF5000?style=for-the-badge&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Nine-0099FF?style=for-the-badge&logoColor=white" alt="TV"></div>
+            <div class="tv-logos"><span class="badge kayo">KAYO</span><span class="badge foxtel">FOXTEL</span><span class="badge nine">CH 9</span></div>
             <div class="card-header">🏉 [NRL] [Round 27] 🏆 Panthers  38 - 10 Wests Tigers  ❌</div>
             <div class="card-meta">📅 06/09/2026 14:05 AWST | 📍 CommBank Stadium</div>
             <a href="https://www.google.com/search?q=Panthers%20vs%20Wests%20Tigers%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
@@ -150,7 +158,7 @@
         </div>
     
         <div class="card played">
-            <div class="tv-logos"><img src="https://img.shields.io/badge/Kayo-003366?style=for-the-badge&logo=kayo&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Foxtel-FF5000?style=for-the-badge&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Nine-0099FF?style=for-the-badge&logoColor=white" alt="TV"></div>
+            <div class="tv-logos"><span class="badge kayo">KAYO</span><span class="badge foxtel">FOXTEL</span><span class="badge nine">CH 9</span></div>
             <div class="card-header">🏉 [NRL] [Round 27] 🏆 Dragons  24 - 22 Eels  ❌</div>
             <div class="card-meta">📅 06/09/2026 12:00 AWST | 📍 WIN Stadium</div>
             <a href="https://www.google.com/search?q=Dragons%20vs%20Eels%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
@@ -161,7 +169,7 @@
         </div>
     
         <div class="card played">
-            <div class="tv-logos"><img src="https://img.shields.io/badge/ESPN-CC0000?style=for-the-badge&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Kayo-003366?style=for-the-badge&logo=kayo&logoColor=white" alt="TV"></div>
+            <div class="tv-logos"><span class="badge espn">ESPN</span><span class="badge kayo">KAYO</span></div>
             <div class="card-header">🥊 [UFC] UFC Fight Night: Hooker vs Parnasse</div>
             <div class="card-meta">📅 06/09/2026 03:00 AWST | 📍 Accor Arena, Paris, France</div>
             <a href="https://www.google.com/search?q=UFC%20Fight%20Night%3A%20Hooker%20vs%20Parnasse%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
@@ -172,7 +180,7 @@
         </div>
     
         <div class="card played">
-            <div class="tv-logos"><img src="https://img.shields.io/badge/Kayo-003366?style=for-the-badge&logo=kayo&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Foxtel-FF5000?style=for-the-badge&logoColor=white" alt="TV"></div>
+            <div class="tv-logos"><span class="badge kayo">KAYO</span><span class="badge foxtel">FOXTEL</span></div>
             <div class="card-header">🏈 [AFL] [Round 26] 🏆 Adelaide Crows  90 - 68 Western Bulldogs  ❌</div>
             <div class="card-meta">📅 05/09/2026 17:35 AWST | 📍 Adelaide Oval</div>
             <a href="https://www.google.com/search?q=Adelaide%20Crows%20vs%20Western%20Bulldogs%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
@@ -183,7 +191,7 @@
         </div>
     
         <div class="card played">
-            <div class="tv-logos"><img src="https://img.shields.io/badge/Kayo-003366?style=for-the-badge&logo=kayo&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Foxtel-FF5000?style=for-the-badge&logoColor=white" alt="TV"></div>
+            <div class="tv-logos"><span class="badge kayo">KAYO</span><span class="badge foxtel">FOXTEL</span></div>
             <div class="card-header">🏉 [NRL] [Round 27] ❌ Sharks  20 - 23 Storm  🏆</div>
             <div class="card-meta">📅 05/09/2026 17:35 AWST | 📍 Ocean Protect Stadium</div>
             <a href="https://www.google.com/search?q=Sharks%20vs%20Storm%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
@@ -194,7 +202,7 @@
         </div>
     
         <div class="card played">
-            <div class="tv-logos"><img src="https://img.shields.io/badge/Kayo-003366?style=for-the-badge&logo=kayo&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Foxtel-FF5000?style=for-the-badge&logoColor=white" alt="TV"></div>
+            <div class="tv-logos"><span class="badge kayo">KAYO</span><span class="badge foxtel">FOXTEL</span></div>
             <div class="card-header">🏉 [NRL] [Round 27] ❌ Cowboys  30 - 50 Raiders  🏆</div>
             <div class="card-meta">📅 05/09/2026 15:30 AWST | 📍 Queensland Country Bank Stadium</div>
             <a href="https://www.google.com/search?q=Cowboys%20vs%20Raiders%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
@@ -205,29 +213,29 @@
         </div>
     
         <div class="card played">
-            <div class="tv-logos"><img src="https://img.shields.io/badge/Kayo-003366?style=for-the-badge&logo=kayo&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Foxtel-FF5000?style=for-the-badge&logoColor=white" alt="TV"></div>
+            <div class="tv-logos"><span class="badge kayo">KAYO</span><span class="badge foxtel">FOXTEL</span></div>
             <div class="card-header">🏈 [AFL] [Round 26] 🏆 Sydney Swans  141 - 88 Brisbane Lions  ❌</div>
             <div class="card-meta">📅 05/09/2026 13:15 AWST | 📍 SCG</div>
             <a href="https://www.google.com/search?q=Sydney%20Swans%20vs%20Brisbane%20Lions%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxPVDJMWVhiRzlaTjhGSVp2TTFzQ25mRXVXVHJ3R2w0cXdJMHN3bU81SUJMQUtURC1oUmVHa3U2Qk40azRBNGpHRFQ4QURDNUluYV9fYmZNMGRRNl9KUHh3c1VtMFg1WkQ5WWpFZWVVdThwUTJGbGFzUW5PX2pPc3hGTE53UWExT2M0TXdHYjdWMlN4WWtjX1ZqM1VWU3BYb19Wem9VMFNfd0ZxZ0VtMW1ZUG5BUnZJaWQ2QXBqelRaVDU?oc=5" target="_blank">📰 Sydney blow away shellshocked Brisbane to revive ‘torpedoed’ AFL season - The Guardian</a><a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxPUllVMDhpZGdheWR1UmQ4c0RJNHdsTDE0NXhhZFZpMGI0UWV5WGlKR05IT1lCLTNiVk80U1NYWlZKMHRuRXZTS2ktMi1ITnZQUXFzVUZKT1VocjNUSDQyVHJPTDU5VEVhVE16SDltUEJlTmhxb3lqUG5IbzdFTTJ1bDB4aGVEVzhHN25WazkwTktfcDJpeUY0?oc=5" target="_blank">📰 RECAP: Crows fly home to down Dogs, Swans shock Lions - afl.com.au</a>
+                <a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxPVDJMWVhiRzlaTjhGSVp2TTFzQ25mRXVXVHJ3R2w0cXdJMHN3bU81SUJMQUtURC1oUmVHa3U2Qk40azRBNGpHRFQ4QURDNUluYV9fYmZNMGRRNl9KUHh3c1VtMFg1WkQ5WWpFZWVVdThwUTJGbGFzUW5PX2pPc3hGTE53UWExT2M0TXdHYjdWMlN4WWtjX1ZqM1VWU3BYb19Wem9VMFNfd0ZxZ0VtMW1ZUG5BUnZJaWQ2QXBqelRaVDU?oc=5" target="_blank">📰 Sydney blow away shellshocked Brisbane to revive ‘torpedoed’ AFL season - The Guardian</a><a href="https://news.google.com/rss/articles/CBMiY0FVX3lxTFBsZmNudEpvbWJfOGZCcGF2azhpdjBUNEphSFlHYlRGNjFxQnZjVXdCQ0VYZW03QklTbXRuWVAxdkJjMlgwZ1hqV2otalVMaTNJZWJQN2I2WFRldG9xc0xaTDBlRQ?oc=5" target="_blank">📰 Sydney Swans vs. Brisbane Lions - Box Score - September 5, 2026 - ESPN</a>
             </div>
         </div>
     
         <div class="card played">
-            <div class="tv-logos"><img src="https://img.shields.io/badge/Kayo-003366?style=for-the-badge&logo=kayo&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Foxtel-FF5000?style=for-the-badge&logoColor=white" alt="TV"></div>
+            <div class="tv-logos"><span class="badge kayo">KAYO</span><span class="badge foxtel">FOXTEL</span></div>
             <div class="card-header">🏉 [NRL] [Round 27] 🏆 Warriors  31 - 30 Sea Eagles  ❌</div>
             <div class="card-meta">📅 05/09/2026 13:00 AWST | 📍 Go Media Stadium</div>
             <a href="https://www.google.com/search?q=Warriors%20vs%20Sea%20Eagles%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMif0FVX3lxTE16WThuQlY5Rlo4LXRQcUhEMktfUkVWb1JHOG1HSGlBYjBodXoxZW56ZnFvNmxaTGJoRUdsX01xcnFOeDBfc2hMSWY3bExuaUhDdmZwWkxqc0VHTFpneEozYXdERWx2SUM1ODNiTFhERm9NS2xZX2JYNFBMVUdNcEk?oc=5" target="_blank">📰 Warriors v Sea Eagles - Round 27, 2026 - NRL.com</a><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPdUt4Y05veEFDSUhBZHItdU5HUW4zS25kMHpkcl9DRkZFM0gwSlVnVUthS013Q3VVbkNObnliVWFjQk9XcmNmdUl5S2dJT3ZodWVDcjJEWW9jZmRkRFk0MTZtOHBJNUtrZTFqVm91d0lIQVhnQ1JoMTNIV3NTN0xMR2VSY3kzWl9p?oc=5" target="_blank">📰 Final Team: NRL Round 27 vs Warriors - Manly Warringah Sea Eagles</a>
+                <a href="https://news.google.com/rss/articles/CBMif0FVX3lxTE16WThuQlY5Rlo4LXRQcUhEMktfUkVWb1JHOG1HSGlBYjBodXoxZW56ZnFvNmxaTGJoRUdsX01xcnFOeDBfc2hMSWY3bExuaUhDdmZwWkxqc0VHTFpneEozYXdERWx2SUM1ODNiTFhERm9NS2xZX2JYNFBMVUdNcEk?oc=5" target="_blank">📰 Warriors v Sea Eagles - Round 27, 2026 - NRL.com</a><a href="https://news.google.com/rss/articles/CBMi7wFBVV95cUxOTDJfR3JnRWViV3ZLZGhRdE1qOEpmQjFYSkU0UUVTeE9kbFJvMUlfczl1Tmt6ZGpLazVaRnZCM01xdjZ0ZHZ1MUxkQldaWnpIQ0UzRkxmb3ZqejN2Y0FxS01hN3ZOYzBTdmdfVDk4ZTU2UkVkNHNGb05WeG9rcmgzU0FJZnZNRTZEaDB1WHlVQ21oMUZWN01VSEZmNVdMckhNdjhURnVRVVlRM2tsek1VTlhweWxhWE5mbGJaQkJaVU9QUDVYek54MDA3TXpmMkxLamFHT3BUVUkwNHNRd2VveEZuNFJOaUpRNmJxNG1YOA?oc=5" target="_blank">📰 Warriors fight back from behind for halftime lead against Sea Eagles - NZ Herald</a>
             </div>
         </div>
     
         <div class="card played">
-            <div class="tv-logos"><img src="https://img.shields.io/badge/Kayo-003366?style=for-the-badge&logo=kayo&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Foxtel-FF5000?style=for-the-badge&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Nine-0099FF?style=for-the-badge&logoColor=white" alt="TV"></div>
+            <div class="tv-logos"><span class="badge kayo">KAYO</span><span class="badge foxtel">FOXTEL</span><span class="badge nine">CH 9</span></div>
             <div class="card-header">🏉 [NRL] [Round 27] 🏆 Rabbitohs  50 - 20 Roosters  ❌</div>
             <div class="card-meta">📅 04/09/2026 18:00 AWST | 📍 Allianz Stadium</div>
             <a href="https://www.google.com/search?q=Rabbitohs%20vs%20Roosters%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
@@ -238,7 +246,7 @@
         </div>
     
         <div class="card played">
-            <div class="tv-logos"><img src="https://img.shields.io/badge/Kayo-003366?style=for-the-badge&logo=kayo&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Foxtel-FF5000?style=for-the-badge&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Ch7-ED1C24?style=for-the-badge&logoColor=white" alt="TV"></div>
+            <div class="tv-logos"><span class="badge kayo">KAYO</span><span class="badge foxtel">FOXTEL</span><span class="badge ch7">CH 7</span></div>
             <div class="card-header">🏈 [AFL] [Round 26] 🏆 Geelong Cats  107 - 74 Carlton  ❌</div>
             <div class="card-meta">📅 04/09/2026 17:40 AWST | 📍 MCG</div>
             <a href="https://www.google.com/search?q=Geelong%20Cats%20vs%20Carlton%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
@@ -249,7 +257,7 @@
         </div>
     
         <div class="card played">
-            <div class="tv-logos"><img src="https://img.shields.io/badge/Kayo-003366?style=for-the-badge&logo=kayo&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Foxtel-FF5000?style=for-the-badge&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Nine-0099FF?style=for-the-badge&logoColor=white" alt="TV"></div>
+            <div class="tv-logos"><span class="badge kayo">KAYO</span><span class="badge foxtel">FOXTEL</span><span class="badge nine">CH 9</span></div>
             <div class="card-header">🏉 [NRL] [Round 27] ❌ Titans  20 - 24 Dolphins  🏆</div>
             <div class="card-meta">📅 04/09/2026 16:00 AWST | 📍 Cbus Super Stadium</div>
             <a href="https://www.google.com/search?q=Titans%20vs%20Dolphins%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
@@ -260,7 +268,7 @@
         </div>
     
         <div class="card played">
-            <div class="tv-logos"><img src="https://img.shields.io/badge/Kayo-003366?style=for-the-badge&logo=kayo&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Foxtel-FF5000?style=for-the-badge&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Ch7-ED1C24?style=for-the-badge&logoColor=white" alt="TV"></div>
+            <div class="tv-logos"><span class="badge kayo">KAYO</span><span class="badge foxtel">FOXTEL</span><span class="badge ch7">CH 7</span></div>
             <div class="card-header">🏈 [AFL] [Round 26] ❌ Fremantle  40 - 72 Hawthorn  🏆</div>
             <div class="card-meta">📅 03/09/2026 18:10 AWST | 📍 Optus Stadium</div>
             <a href="https://www.google.com/search?q=Fremantle%20vs%20Hawthorn%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
@@ -271,7 +279,7 @@
         </div>
     
         <div class="card played">
-            <div class="tv-logos"><img src="https://img.shields.io/badge/Kayo-003366?style=for-the-badge&logo=kayo&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Foxtel-FF5000?style=for-the-badge&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Nine-0099FF?style=for-the-badge&logoColor=white" alt="TV"></div>
+            <div class="tv-logos"><span class="badge kayo">KAYO</span><span class="badge foxtel">FOXTEL</span><span class="badge nine">CH 9</span></div>
             <div class="card-header">🏉 [NRL] [Round 27] ❌ Bulldogs  20 - 34 Broncos  🏆</div>
             <div class="card-meta">📅 03/09/2026 17:50 AWST | 📍 Accor Stadium</div>
             <a href="https://www.google.com/search?q=Bulldogs%20vs%20Broncos%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
@@ -282,7 +290,7 @@
         </div>
     
         <div class="card played">
-            <div class="tv-logos"><img src="https://img.shields.io/badge/Kayo-003366?style=for-the-badge&logo=kayo&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Foxtel-FF5000?style=for-the-badge&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Nine-0099FF?style=for-the-badge&logoColor=white" alt="TV"></div>
+            <div class="tv-logos"><span class="badge kayo">KAYO</span><span class="badge foxtel">FOXTEL</span><span class="badge nine">CH 9</span></div>
             <div class="card-header">🏉 [NRL] [Round 26] 🏆 Eels  38 - 18 Sharks  ❌</div>
             <div class="card-meta">📅 30/08/2026 14:05 AWST | 📍 CommBank Stadium</div>
             <a href="https://www.google.com/search?q=Eels%20vs%20Sharks%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
@@ -293,18 +301,18 @@
         </div>
     
         <div class="card played">
-            <div class="tv-logos"><img src="https://img.shields.io/badge/Kayo-003366?style=for-the-badge&logo=kayo&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Foxtel-FF5000?style=for-the-badge&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Nine-0099FF?style=for-the-badge&logoColor=white" alt="TV"></div>
+            <div class="tv-logos"><span class="badge kayo">KAYO</span><span class="badge foxtel">FOXTEL</span><span class="badge nine">CH 9</span></div>
             <div class="card-header">🏉 [NRL] [Round 26] 🏆 Warriors  46 - 32 Knights  ❌</div>
             <div class="card-meta">📅 30/08/2026 12:00 AWST | 📍 Go Media Stadium</div>
             <a href="https://www.google.com/search?q=Warriors%20vs%20Knights%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxOdUVjVHdfRy1PVXVuX1lvTFppT0JEV0g0NURiNXpZTHczVUZmNmdPT0cwS2lFTGZGZkQ2TW43WnczZFh6N3MxZU52N3A2VXgwMzlPRmEzX0xkeVllWW1Ua1puTHc1a3REX01XSjhqaFBrTENOZlFkeFMzZFcwb3EwcVR3?oc=5" target="_blank">📰 Final Team | Round 26 - Newcastle Knights</a><a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE8xVGNyR2kwdFFrQVEwWVJUdTB0SVpNaWJpMWRVdmJwNXhSSHJVT192aUM5TGpLdHIzMTl1UXNxR1VVbnpiWEVoaUpJaFg0M1pMRGhLcE9HV0xTZkZ1dHBzbGdwcTVBWTAwNGtmYWZ5bFRXY0dkV0cxQg?oc=5" target="_blank">📰 Warriors v Knights – Round 26, 2026 - NRL.com</a>
+                <a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE8xVGNyR2kwdFFrQVEwWVJUdTB0SVpNaWJpMWRVdmJwNXhSSHJVT192aUM5TGpLdHIzMTl1UXNxR1VVbnpiWEVoaUpJaFg0M1pMRGhLcE9HV0xTZkZ1dHBzbGdwcTVBWTAwNGtmYWZ5bFRXY0dkV0cxQg?oc=5" target="_blank">📰 Warriors v Knights – Round 26, 2026 - NRL.com</a><a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxOdUVjVHdfRy1PVXVuX1lvTFppT0JEV0g0NURiNXpZTHczVUZmNmdPT0cwS2lFTGZGZkQ2TW43WnczZFh6N3MxZU52N3A2VXgwMzlPRmEzX0xkeVllWW1Ua1puTHc1a3REX01XSjhqaFBrTENOZlFkeFMzZFcwb3EwcVR3?oc=5" target="_blank">📰 Final Team | Round 26 - Newcastle Knights</a>
             </div>
         </div>
     
         <div class="card played">
-            <div class="tv-logos"><img src="https://img.shields.io/badge/ESPN-CC0000?style=for-the-badge&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Kayo-003366?style=for-the-badge&logo=kayo&logoColor=white" alt="TV"></div>
+            <div class="tv-logos"><span class="badge espn">ESPN</span><span class="badge kayo">KAYO</span></div>
             <div class="card-header">🥊 [UFC] UFC Fight Night: Nurmagomedov vs Song</div>
             <div class="card-meta">📅 29/08/2026 18:00 AWST | 📍 Oriental Sports Center, Pudong District, China</div>
             <a href="https://www.google.com/search?q=UFC%20Fight%20Night%3A%20Nurmagomedov%20vs%20Song%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
@@ -315,7 +323,7 @@
         </div>
     
         <div class="card played">
-            <div class="tv-logos"><img src="https://img.shields.io/badge/Kayo-003366?style=for-the-badge&logo=kayo&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Foxtel-FF5000?style=for-the-badge&logoColor=white" alt="TV"></div>
+            <div class="tv-logos"><span class="badge kayo">KAYO</span><span class="badge foxtel">FOXTEL</span></div>
             <div class="card-header">🏈 [AFL] [Round 25] ❌ Melbourne  55 - 74 Carlton  🏆</div>
             <div class="card-meta">📅 29/08/2026 17:35 AWST | 📍 MCG</div>
             <a href="https://www.google.com/search?q=Melbourne%20vs%20Carlton%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
@@ -326,7 +334,7 @@
         </div>
     
         <div class="card played">
-            <div class="tv-logos"><img src="https://img.shields.io/badge/Kayo-003366?style=for-the-badge&logo=kayo&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Foxtel-FF5000?style=for-the-badge&logoColor=white" alt="TV"></div>
+            <div class="tv-logos"><span class="badge kayo">KAYO</span><span class="badge foxtel">FOXTEL</span></div>
             <div class="card-header">🏉 [NRL] [Round 26] 🏆 Cowboys  24 - 10 Wests Tigers  ❌</div>
             <div class="card-meta">📅 29/08/2026 17:35 AWST | 📍 Queensland Country Bank Stadium</div>
             <a href="https://www.google.com/search?q=Cowboys%20vs%20Wests%20Tigers%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
@@ -337,7 +345,7 @@
         </div>
     
         <div class="card played">
-            <div class="tv-logos"><img src="https://img.shields.io/badge/Kayo-003366?style=for-the-badge&logo=kayo&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Foxtel-FF5000?style=for-the-badge&logoColor=white" alt="TV"></div>
+            <div class="tv-logos"><span class="badge kayo">KAYO</span><span class="badge foxtel">FOXTEL</span></div>
             <div class="card-header">🏉 [NRL] [Round 26] ❌ Roosters  12 - 26 Dolphins  🏆</div>
             <div class="card-meta">📅 29/08/2026 15:30 AWST | 📍 Allianz Stadium</div>
             <a href="https://www.google.com/search?q=Roosters%20vs%20Dolphins%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
@@ -348,7 +356,7 @@
         </div>
     
         <div class="card played">
-            <div class="tv-logos"><img src="https://img.shields.io/badge/Kayo-003366?style=for-the-badge&logo=kayo&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Foxtel-FF5000?style=for-the-badge&logoColor=white" alt="TV"></div>
+            <div class="tv-logos"><span class="badge kayo">KAYO</span><span class="badge foxtel">FOXTEL</span></div>
             <div class="card-header">🏉 [NRL] [Round 26] ❌ Titans  22 - 42 Rabbitohs  🏆</div>
             <div class="card-meta">📅 29/08/2026 13:00 AWST | 📍 Cbus Super Stadium</div>
             <a href="https://www.google.com/search?q=Titans%20vs%20Rabbitohs%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
@@ -359,7 +367,7 @@
         </div>
     
         <div class="card played">
-            <div class="tv-logos"><img src="https://img.shields.io/badge/Kayo-003366?style=for-the-badge&logo=kayo&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Foxtel-FF5000?style=for-the-badge&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Nine-0099FF?style=for-the-badge&logoColor=white" alt="TV"></div>
+            <div class="tv-logos"><span class="badge kayo">KAYO</span><span class="badge foxtel">FOXTEL</span><span class="badge nine">CH 9</span></div>
             <div class="card-header">🏉 [NRL] [Round 26] 🏆 Panthers  24 - 10 Bulldogs  ❌</div>
             <div class="card-meta">📅 28/08/2026 18:00 AWST | 📍 CommBank Stadium</div>
             <a href="https://www.google.com/search?q=Panthers%20vs%20Bulldogs%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
@@ -370,7 +378,7 @@
         </div>
     
         <div class="card played">
-            <div class="tv-logos"><img src="https://img.shields.io/badge/Kayo-003366?style=for-the-badge&logo=kayo&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Foxtel-FF5000?style=for-the-badge&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Ch7-ED1C24?style=for-the-badge&logoColor=white" alt="TV"></div>
+            <div class="tv-logos"><span class="badge kayo">KAYO</span><span class="badge foxtel">FOXTEL</span><span class="badge ch7">CH 7</span></div>
             <div class="card-header">🏈 [AFL] [Round 25] 🏆 Western Bulldogs  96 - 93 Collingwood  ❌</div>
             <div class="card-meta">📅 28/08/2026 17:40 AWST | 📍 MCG</div>
             <a href="https://www.google.com/search?q=Western%20Bulldogs%20vs%20Collingwood%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
@@ -381,7 +389,7 @@
         </div>
     
         <div class="card played">
-            <div class="tv-logos"><img src="https://img.shields.io/badge/ESPN-CC0000?style=for-the-badge&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Kayo-003366?style=for-the-badge&logo=kayo&logoColor=white" alt="TV"></div>
+            <div class="tv-logos"><span class="badge espn">ESPN</span><span class="badge kayo">KAYO</span></div>
             <div class="card-header">🥊 [UFC] Road To UFC: Maheshate vs Flowers</div>
             <div class="card-meta">📅 28/08/2026 17:00 AWST | 📍 TBD</div>
             <a href="https://www.google.com/search?q=Road%20To%20UFC%3A%20Maheshate%20vs%20Flowers%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
@@ -392,7 +400,7 @@
         </div>
     
         <div class="card played">
-            <div class="tv-logos"><img src="https://img.shields.io/badge/Kayo-003366?style=for-the-badge&logo=kayo&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Foxtel-FF5000?style=for-the-badge&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Nine-0099FF?style=for-the-badge&logoColor=white" alt="TV"></div>
+            <div class="tv-logos"><span class="badge kayo">KAYO</span><span class="badge foxtel">FOXTEL</span><span class="badge nine">CH 9</span></div>
             <div class="card-header">🏉 [NRL] [Round 26] 🏆 Sea Eagles  44 - 10 Dragons  ❌</div>
             <div class="card-meta">📅 28/08/2026 16:00 AWST | 📍 4 Pines Park</div>
             <a href="https://www.google.com/search?q=Sea%20Eagles%20vs%20Dragons%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
@@ -403,7 +411,7 @@
         </div>
     
         <div class="card played">
-            <div class="tv-logos"><img src="https://img.shields.io/badge/Kayo-003366?style=for-the-badge&logo=kayo&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Foxtel-FF5000?style=for-the-badge&logoColor=white" alt="TV"><img src="https://img.shields.io/badge/Nine-0099FF?style=for-the-badge&logoColor=white" alt="TV"></div>
+            <div class="tv-logos"><span class="badge kayo">KAYO</span><span class="badge foxtel">FOXTEL</span><span class="badge nine">CH 9</span></div>
             <div class="card-header">🏉 [NRL] [Round 26] ❌ Broncos  20 - 46 Storm  🏆</div>
             <div class="card-meta">📅 27/08/2026 17:50 AWST | 📍 Suncorp Stadium</div>
             <a href="https://www.google.com/search?q=Broncos%20vs%20Storm%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
