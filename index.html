@@ -12,65 +12,146 @@
         .card { background: #1e1e1e; border-radius: 8px; padding: 15px; margin-bottom: 15px; border-left: 8px solid #2ed573; position: relative; }
         .card.played { border-left-color: #ff4d4d !important; }
         .card.upcoming { border-left-color: #2ed573 !important; }
-        .card-header { font-size: 1.15em; font-weight: bold; margin-bottom: 10px; padding-right: 140px; }
+        .card-header { font-size: 1.15em; font-weight: bold; margin-bottom: 10px; padding-right: 160px; }
         .card-meta { color: #aaa; font-size: 0.9em; margin-bottom: 10px; }
-        
         .tv-logos { position: absolute; top: 15px; right: 15px; display: flex; gap: 6px; align-items: center; }
         .svg-logo { height: 22px; width: auto; filter: drop-shadow(0px 1px 2px rgba(0,0,0,0.5)); }
-
         .news-box { background: #2a2a2a; padding: 10px; border-radius: 5px; margin-top: 10px; }
         .news-box a { color: #70a1ff; text-decoration: none; display: block; margin-bottom: 5px; }
         .news-box a:hover { text-decoration: underline; }
         .btn-odds { display: inline-block; padding: 5px 10px; background: #ffa500; color: #000; font-weight: bold; text-decoration: none; border-radius: 4px; font-size: 0.85em; margin-top: 5px; }
+        .empty { text-align:center; color:#777; padding: 40px 0; }
+        @media (max-width: 600px) {
+            body { padding: 12px; }
+            .tv-logos { position: static; margin-bottom: 8px; }
+            .card-header { padding-right: 0; }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>🏈 🏉 🥊 Multi-Sport Live Hub</h1>
-        <div class="subtitle">AWST (+08:00) | Green = Upcoming, Red = Played</div>
+        <h1>🏈 🏉 🥊 🏎️ 🏀 Multi-Sport Live Hub</h1>
+        <div class="subtitle">AWST (+08:00) | Green = Upcoming, Red = Played | Updated Sat 07/11/2026 20:44 AWST</div>
         <div id="games">
 
         <div class="card upcoming">
-            <div class="tv-logos"><svg viewBox="0 0 100 40" class="svg-logo"><rect width="100" height="40" rx="6" fill="#CC0000"/><text x="50" y="27" fill="#FFFFFF" font-family="Arial Black, sans-serif" font-size="20" font-style="italic" font-weight="900" text-anchor="middle">ESPN</text></svg><svg viewBox="0 0 100 40" class="svg-logo"><rect width="100" height="40" rx="6" fill="#003366"/><text x="50" y="26" fill="#40F87F" font-family="Impact, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">KAYO</text></svg></div>
-            <div class="card-header">🥊 [UFC] UFC 334: Gane vs Hokit</div>
-            <div class="card-meta">📅 15/11/2026 10:00 AWST | 📍 Madison Square Garden, New York, United States</div>
-            <a href="https://www.google.com/search?q=UFC%20334%3A%20Gane%20vs%20Hokit%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
+            <div class="tv-logos"><svg viewBox="0 0 100 40" class="svg-logo"><rect width="100" height="40" rx="6" fill="#003366"/><text x="50" y="26" fill="#40F87F" font-family="Impact, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">KAYO</text></svg><svg viewBox="0 0 100 40" class="svg-logo"><rect width="100" height="40" rx="6" fill="#FF5000"/><text x="50" y="26" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="16" font-weight="900" text-anchor="middle">FOXTEL</text></svg></div>
+            <div class="card-header">🏎️ [F1] Brazilian Grand Prix – Qualifying</div>
+            <div class="card-meta">📅 Sun 08/11/2026 02:00 AWST | 📍 Autódromo José Carlos Pace, São Paulo, Brazil</div>
+            <a href="https://www.google.com/search?q=F1%20Brazilian%20Grand%20Prix%202026%20odds" target="_blank" rel="noopener" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxNWEhmR1hSZW11TkFtOVl3SVlGWmNMMnBjM2hBMG8yazZtaGdlQnBtVHpGRnVsS1FnbjJTdWZ0VHhTRDJSWk9aT2JzeGswLTFKUjZhVU9hcW1Pd1pocXd2OV82Z3JHU2hPU1dYTUNPQjZpZjE5VmVZc1dMV2NOT2thVEl4U0dQWk9qRGJJR1pYUHI4WWFLN20xYVJORQ?oc=5" target="_blank">📰 UFC 334: Fight card, date, complete guide as Ciryl Gane takes on Josh Hokit in New York City - CBS Sports</a><a href="https://news.google.com/rss/articles/CBMiekFVX3lxTE96VVhwMGMwUUlDUlBQYkZfN1hPcm1IaG8xbGlRZTItZnBmVWRtV09JQ24wSnZLSzdDN2hqdHpKeGU4ay1PbU1VcVozaE5DNXVoczZrTFZ3djVIb3dxWHNXeFpFTVhoY3VQRlRUZWZRY29MV1hra29SdDRR?oc=5" target="_blank">📰 UFC 334: Gane vs Hokit start time, card and how to watch fights - Yahoo Sports</a>
+                <a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxQSDM4Q3dfXzlYWFVFcDYyNHBZMU1xT21zUGFPbnlwbkI2NDFTTFNVMmJHQ1FxaklRZE1LSkVaSlJFbllmdTA3azNsWE9XWFN2N0w3NTdXc193SmRZZ3NyMWxqZmt6cUhMODhnVzN0SmVVWGpBMkFITHFmc29ZRmtsZGN6T0swYTFNc0tBLWYwMFN5NjJnNTBn?oc=5" target="_blank" rel="noopener">📰 Winners &amp; losers from F1 2026 Brazilian GP Friday practice - The Race</a><a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxOd1BGNFNtRkhydEZuX04yYlMxU3FHM2dBMVN0ekRZZnNGQW95Q0NRa3RqSlpHYkFzVUtQOHIwRWpXNVhBclFsanJhM2dUWGFISENQd0ljb1V4SHdPY0NQN0lBSVpJNXJvd1R4VnZaYnRINlFrajNtLTRvX2k4ano3RkRCSzhoZEhTXzJXWVNn?oc=5" target="_blank" rel="noopener">📰 2026 F1 Sao Paulo Grand Prix - Brazil Free Practice 2 results - RacingNews365</a>
             </div>
         </div>
     
         <div class="card upcoming">
             <div class="tv-logos"><svg viewBox="0 0 100 40" class="svg-logo"><rect width="100" height="40" rx="6" fill="#CC0000"/><text x="50" y="27" fill="#FFFFFF" font-family="Arial Black, sans-serif" font-size="20" font-style="italic" font-weight="900" text-anchor="middle">ESPN</text></svg><svg viewBox="0 0 100 40" class="svg-logo"><rect width="100" height="40" rx="6" fill="#003366"/><text x="50" y="26" fill="#40F87F" font-family="Impact, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">KAYO</text></svg></div>
             <div class="card-header">🥊 [UFC] UFC Fight Night: Cortes Acosta vs Walker</div>
-            <div class="card-meta">📅 08/11/2026 09:00 AWST | 📍 Meta APEX, Las Vegas, United States</div>
-            <a href="https://www.google.com/search?q=UFC%20Fight%20Night%3A%20Cortes%20Acosta%20vs%20Walker%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
+            <div class="card-meta">📅 Sun 08/11/2026 09:00 AWST | 📍 Meta APEX, Las Vegas, United States</div>
+            <a href="https://www.google.com/search?q=UFC%20Fight%20Night%3A%20Cortes%20Acosta%20vs%20Walker%20odds" target="_blank" rel="noopener" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxQd0h3dGkzbEtVck9hVTBZTEZJRUZtdGxmc3BDbE1YTnlGNlJYbkhPYmRnM1hfcXZqZTVaaFZnRUhxYV8xS2tmbWt5cHpISjM2VGRsQVFSdV9ELTQ4blNOYU5URDduaHBFTkxfVkR0MDQ3Y0tENEVXMFRVdGhKb2cwd3NjZXRpdWc4TkctcUhTMGVOd0Zx?oc=5" target="_blank">📰 Official Weigh-In Results | UFC Fight Night: Cortes Acosta vs Walker - UFC.com</a><a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxOLV85WWNlVW1XOE5Namd0eUNuZ2NCRTFBNGRyTTlSTGdueDRYZmZyRHVDWmtFamxucFROWTBFemFfWk1IcEU1X2pFazl3X2pYYTROblB4ek1WMi1XQ1VLbllLTHEyYTY1cWVoZFl3ZGpuMWFud0FFYzVibzBQN2xSWlRwanctZmJ4R2pjcWxhNm9GbElBbmRjanpBVExHZ1g0eWRNcm9kRG9ucW50b3dB0gG0AUFVX3lxTE82NS1zdVJzZHFEVjhRVU5jQWpIVE5vSnFSbGVSZU1XNEYxYmVZUXlJVkl6bzJlYUc0RXNKWjZYSDFjc2hQcm1JVXNyV3A5b3RPdmRKRHZWcURZb2NBdEh2UGh1VWRuX0g5Z0w5Y0NSTllPTkhzTWJzcWpUZlFySGQyeHBuNmF2RUgyUTRlNmlOcjlRWlBxMTJyQl9LUlIxd2p5UTVQS3IwVVN1dVRVNkpoRmY2bw?oc=5" target="_blank">📰 UFC Vegas 124 ‘Cortes-Acosta vs. Walker’ play-by-play, results & round scoring - Sherdog</a>
+                <a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxOLV85WWNlVW1XOE5Namd0eUNuZ2NCRTFBNGRyTTlSTGdueDRYZmZyRHVDWmtFamxucFROWTBFemFfWk1IcEU1X2pFazl3X2pYYTROblB4ek1WMi1XQ1VLbllLTHEyYTY1cWVoZFl3ZGpuMWFud0FFYzVibzBQN2xSWlRwanctZmJ4R2pjcWxhNm9GbElBbmRjanpBVExHZ1g0eWRNcm9kRG9ucW50b3dB0gG0AUFVX3lxTE82NS1zdVJzZHFEVjhRVU5jQWpIVE5vSnFSbGVSZU1XNEYxYmVZUXlJVkl6bzJlYUc0RXNKWjZYSDFjc2hQcm1JVXNyV3A5b3RPdmRKRHZWcURZb2NBdEh2UGh1VWRuX0g5Z0w5Y0NSTllPTkhzTWJzcWpUZlFySGQyeHBuNmF2RUgyUTRlNmlOcjlRWlBxMTJyQl9LUlIxd2p5UTVQS3IwVVN1dVRVNkpoRmY2bw?oc=5" target="_blank" rel="noopener">📰 UFC Vegas 124 ‘Cortes-Acosta vs. Walker’ play-by-play, results &amp; round scoring - Sherdog</a><a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxQd0h3dGkzbEtVck9hVTBZTEZJRUZtdGxmc3BDbE1YTnlGNlJYbkhPYmRnM1hfcXZqZTVaaFZnRUhxYV8xS2tmbWt5cHpISjM2VGRsQVFSdV9ELTQ4blNOYU5URDduaHBFTkxfVkR0MDQ3Y0tENEVXMFRVdGhKb2cwd3NjZXRpdWc4TkctcUhTMGVOd0Zx?oc=5" target="_blank" rel="noopener">📰 Official Weigh-In Results | UFC Fight Night: Cortes Acosta vs Walker - UFC.com</a>
+            </div>
+        </div>
+    
+        <div class="card upcoming">
+            <div class="tv-logos"><svg viewBox="0 0 100 40" class="svg-logo"><rect width="100" height="40" rx="6" fill="#003366"/><text x="50" y="26" fill="#40F87F" font-family="Impact, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">KAYO</text></svg><svg viewBox="0 0 100 40" class="svg-logo"><rect width="100" height="40" rx="6" fill="#FF5000"/><text x="50" y="26" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="16" font-weight="900" text-anchor="middle">FOXTEL</text></svg></div>
+            <div class="card-header">🏎️ [F1] [Round 20] Brazilian Grand Prix</div>
+            <div class="card-meta">📅 Mon 09/11/2026 01:00 AWST | 📍 Autódromo José Carlos Pace, São Paulo, Brazil</div>
+            <a href="https://www.google.com/search?q=F1%20Brazilian%20Grand%20Prix%202026%20odds" target="_blank" rel="noopener" class="btn-odds">📈 View Live Odds</a>
+            <div class="news-box">
+                <strong>Latest News:</strong><br>
+                <a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxQSDM4Q3dfXzlYWFVFcDYyNHBZMU1xT21zUGFPbnlwbkI2NDFTTFNVMmJHQ1FxaklRZE1LSkVaSlJFbllmdTA3azNsWE9XWFN2N0w3NTdXc193SmRZZ3NyMWxqZmt6cUhMODhnVzN0SmVVWGpBMkFITHFmc29ZRmtsZGN6T0swYTFNc0tBLWYwMFN5NjJnNTBn?oc=5" target="_blank" rel="noopener">📰 Winners &amp; losers from F1 2026 Brazilian GP Friday practice - The Race</a><a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxOd1BGNFNtRkhydEZuX04yYlMxU3FHM2dBMVN0ekRZZnNGQW95Q0NRa3RqSlpHYkFzVUtQOHIwRWpXNVhBclFsanJhM2dUWGFISENQd0ljb1V4SHdPY0NQN0lBSVpJNXJvd1R4VnZaYnRINlFrajNtLTRvX2k4ano3RkRCSzhoZEhTXzJXWVNn?oc=5" target="_blank" rel="noopener">📰 2026 F1 Sao Paulo Grand Prix - Brazil Free Practice 2 results - RacingNews365</a>
+            </div>
+        </div>
+    
+        <div class="card upcoming">
+            <div class="tv-logos"><svg viewBox="0 0 100 40" class="svg-logo"><rect width="100" height="40" rx="6" fill="#CC0000"/><text x="50" y="27" fill="#FFFFFF" font-family="Arial Black, sans-serif" font-size="20" font-style="italic" font-weight="900" text-anchor="middle">ESPN</text></svg><svg viewBox="0 0 100 40" class="svg-logo"><rect width="100" height="40" rx="6" fill="#003366"/><text x="50" y="26" fill="#40F87F" font-family="Impact, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">KAYO</text></svg></div>
+            <div class="card-header">🥊 [UFC] UFC 334: Gane vs Hokit</div>
+            <div class="card-meta">📅 Sun 15/11/2026 10:00 AWST | 📍 Madison Square Garden, New York, United States</div>
+            <a href="https://www.google.com/search?q=UFC%20334%3A%20Gane%20vs%20Hokit%20odds" target="_blank" rel="noopener" class="btn-odds">📈 View Live Odds</a>
+            <div class="news-box">
+                <strong>Latest News:</strong><br>
+                <a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTFA2cGJUMjBzRjBPUFNNR0dOSWVMU0dBbWZUa2xNX0xocDZxejNTZEdjVTFPalNRVU5FQWlKQTk3em05ODIxajhWYUZwZUNLV05yY1ZWcDdnbzQzVVhNc0Vwd3JYWFh2UQ?oc=5" target="_blank" rel="noopener">📰 Fight Week Guide - UFC.com</a><a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxNWEhmR1hSZW11TkFtOVl3SVlGWmNMMnBjM2hBMG8yazZtaGdlQnBtVHpGRnVsS1FnbjJTdWZ0VHhTRDJSWk9aT2JzeGswLTFKUjZhVU9hcW1Pd1pocXd2OV82Z3JHU2hPU1dYTUNPQjZpZjE5VmVZc1dMV2NOT2thVEl4U0dQWk9qRGJJR1pYUHI4WWFLN20xYVJORQ?oc=5" target="_blank" rel="noopener">📰 UFC 334: Fight card, date, complete guide as Ciryl Gane takes on Josh Hokit in New York City - CBS Sports</a>
+            </div>
+        </div>
+    
+        <div class="card upcoming">
+            <div class="tv-logos"><svg viewBox="0 0 100 40" class="svg-logo"><rect width="100" height="40" rx="6" fill="#003366"/><text x="50" y="26" fill="#40F87F" font-family="Impact, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">KAYO</text></svg><svg viewBox="0 0 100 40" class="svg-logo"><rect width="100" height="40" rx="6" fill="#FF5000"/><text x="50" y="26" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="16" font-weight="900" text-anchor="middle">FOXTEL</text></svg></div>
+            <div class="card-header">🏎️ [F1] Las Vegas Grand Prix – Qualifying</div>
+            <div class="card-meta">📅 Sat 21/11/2026 12:00 AWST | 📍 Las Vegas Strip Street Circuit, Las Vegas, USA</div>
+            <a href="https://www.google.com/search?q=F1%20Las%20Vegas%20Grand%20Prix%202026%20odds" target="_blank" rel="noopener" class="btn-odds">📈 View Live Odds</a>
+            <div class="news-box">
+                <strong>Latest News:</strong><br>
+                <a href="https://news.google.com/rss/articles/CBMiggJBVV95cUxONDV6aF9ZdDkwVHhDV2dqRG9YcUFoUFZ3OFVXOW93TVJWRXV5c1FRX2thVGNsVFprRnlsX3pGWEx4TDc2aUZBWHBkcTJQREUxZUtOaTZLb0s2YkQ5WmZtSzZIS1RDbGJUc196RGJHd3QyRWliUk5kaVhGSVhsaDUxUlZfVTJ2WmlhUXI4a1Jsa2h3YS1kalhRc0dTZEtWYXBUbzI3ZXllcEV1WnF0QzZrNEVIWlhuSzlneUNfUUp5QUtoakRHbHFrcVNrMmtjcDB4eVZuWldMQU1fa0JaQzg5cFpOeEpidkpQRnF4TTJzM2ozUmgybzVTMFRGQ1lnZzVGX2fSAYICQVVfeXFMTjQ1emhfWXQ5MFR4Q1dnakRvWHFBaFBWdzhVVzlvd01SVkV1eXNRUV9rYVRjbFRaa0Z5bF96RlhMeEw3NmlGQVhwZHEyUERFMWVLTmk2S29LNmJEOVpmbUs2SEtUQ2xiVHNfekRiR3d0MkVpYlJOZGlYRklYbGg1MVJWX1UydlppYVFyOGtSbGtod2EtZGpYUXNHU2RLVmFwVG8yN2V5ZXBFdVpxdEM2azRFSFpYbks5Z3lDX1FKeUFLaGpER2xxa3FTazJrY3AweHlWblpXTEFNX2tCWkM4OXBaTnhKYnZKUEZxeE0yczNqM1JoMm81UzBURkNZZ2c1Rl9n?oc=5" target="_blank" rel="noopener">📰 ‘Encouraging’ sign for Piastri, McLaren; Kiwi’s nervous contract wait: F1 Talking Points - Fox Sports</a><a href="https://news.google.com/rss/articles/CBMi1wFBVV95cUxNVS05c2EyYkdpUm5JQzF0akJBNDRDbVVEdnBaVExjeno1UjdwUXFNczVYZUJaNE01SW1TeUg0UzlrSzNlQlgyUnNtdUt3Q1Z5YW1yMWlKeE9xc2tDcVRyaDNOYkptMnk4WmVERTJDbnFFMnVKWDljb3ZXd1RZY2U2YkRzVVNFODgwRUlQdjJCZW9paFdIY210V1phUXpHbml4Q05fZGt5Ums2VHRKZEI0X3pWTmNOLU84NDNpbVotSFV0MkpneHN1bE9VbVBhcWVXTkJjYzZPcw?oc=5" target="_blank" rel="noopener">📰 When could Mercedes win the 2026 Teams&#x27; Championship? - Formula 1</a>
+            </div>
+        </div>
+    
+        <div class="card played">
+            <div class="tv-logos"><svg viewBox="0 0 100 40" class="svg-logo"><rect width="100" height="40" rx="6" fill="#003366"/><text x="50" y="26" fill="#40F87F" font-family="Impact, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">KAYO</text></svg><svg viewBox="0 0 100 40" class="svg-logo"><rect width="100" height="40" rx="6" fill="#FF5000"/><text x="50" y="26" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="16" font-weight="900" text-anchor="middle">FOXTEL</text></svg></div>
+            <div class="card-header">🏎️ [F1] [Round 19] Mexico City Grand Prix – 🏆 Max Verstappen</div>
+            <div class="card-meta">📅 Mon 02/11/2026 04:00 AWST | 📍 Autódromo Hermanos Rodríguez, Mexico City, Mexico</div>
+            <a href="https://www.google.com/search?q=F1%20Mexico%20City%20Grand%20Prix%202026%20odds" target="_blank" rel="noopener" class="btn-odds">📈 View Live Odds</a>
+            <div class="news-box">
+                <strong>Latest News:</strong><br>
+                <a href="https://news.google.com/rss/articles/CBMi3AFBVV95cUxOZjgxblg2S3pmYTBqdEJLdG1qUnk0Vk1pOFMxZWR2TTAxV19BaUtVR0NpUlo0RUowU0NoSmVRS0tsQVBITXVpblZfX1IzNmY0Q2ZWLWlrbWtvVk9rN1Q5UXZhRXp4MDdtQ05WUm9fc3VveU02bVY1Zk42My1wU1NfN0IzUTJCMGstZDV6cFprWEZ1MW15LThPUmtEMGthck5ZX1RXclBpS2FQcHg5RlFhWHVvMXNuc0V6Z3ZSRjhUWXhfNW1iclBWMTJyWmxBVzdFUDI1R01kNUZ4ZExi?oc=5" target="_blank" rel="noopener">📰 What tyres will the teams have for the Mexico City GP? - Formula 1</a><a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxOX2N2bjBMU0lWUHZzbWRuS3BPM1llaUFkcEs0Qk54LWhwWU5RbHR1czFGTVlWTmU1N3VGVFJ0YUtaY09lT3pac0V5V3JVMFU2Q0t1QjlEaEJkZ2pOOFEzM2g2Mk5xVVctd29qN3dVVmhhdmhqMjJ3SHRoVHRiLVNTa0FtVHZjMVh2X1J2YUJmUE5ZTmJNQXFlaHlKUlp4VDA5czhETlNUY2QxTDNIYVE?oc=5" target="_blank" rel="noopener">📰 F1 - 2026 Mexico City Grand Prix Post-Race &amp; World Champion&#x27;s Press Conference Transcript - Federation Internationale de l&#x27;Automobile</a>
             </div>
         </div>
     
         <div class="card played">
             <div class="tv-logos"><svg viewBox="0 0 100 40" class="svg-logo"><rect width="100" height="40" rx="6" fill="#CC0000"/><text x="50" y="27" fill="#FFFFFF" font-family="Arial Black, sans-serif" font-size="20" font-style="italic" font-weight="900" text-anchor="middle">ESPN</text></svg><svg viewBox="0 0 100 40" class="svg-logo"><rect width="100" height="40" rx="6" fill="#003366"/><text x="50" y="26" fill="#40F87F" font-family="Impact, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">KAYO</text></svg></div>
             <div class="card-header">🥊 [UFC] UFC Fight Night: Moicano vs Nolan</div>
-            <div class="card-meta">📅 01/11/2026 08:00 AWST | 📍 Meta APEX, Las Vegas, United States</div>
-            <a href="https://www.google.com/search?q=UFC%20Fight%20Night%3A%20Moicano%20vs%20Nolan%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
+            <div class="card-meta">📅 Sun 01/11/2026 08:00 AWST | 📍 Meta APEX, Las Vegas, United States</div>
+            <a href="https://www.google.com/search?q=UFC%20Fight%20Night%3A%20Moicano%20vs%20Nolan%20odds" target="_blank" rel="noopener" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxNTm9ERnJuY1RTYVNsT3l6MG43TzdueGEzenFIMm42ZW01dHZ3TzFRS3FsN0dlN1N0blFxLWYyellIeVpMdEUtcm9DaC1IczVkRVN1OV8xX0N6bTBOcFNLX0c4WlEwNFBOOV9MenlkTE11aS1TMDJiTHVpNmxOQkUxeDRibHhSb1FicTZUQm9oYUc2YmFER1RydzJrWnhwSC15VThTWFVCRdIBrAFBVV95cUxPY2tpRm1nYWZEWi13Ym1KMXNRV0Nyd3ctM1MzTmpiaTdreUxoYUFuc0IwYUxpeFZpV2xKYXQ3VkNQSkNUZVQ5aHUzM05jdXFfYmJuSjhscWowQ182emdHWFZSdC11LWVuSGlsM3N0SHo4dkZwSmtyblRlNTUxMm4ySGMwaWNoOExzSjRGUFJFcVNiYkoyU0dqaUlqbzVFeTV1TlJlb0dIN0tVTDlk?oc=5" target="_blank">📰 Live Now! UFC Vegas 123 ‘Moicano vs. Nolan’ play-by-play, results & round scoring - Sherdog</a><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxOaGxqbFQ4QVhjcTIwM1AwUlRiY2tYamdQVVp5ajhjeEJCT0xBYWxkQ3ZTYXVHNnhuRU1QbkZOTGhJR3Y0cXlpS2czaVFPLTY5WnA2TUlCQUY3di1HeHBZQzhmWHNQamJzaGQ0WGx4OVRtVmM3NzA1T2toR0dpRXJqX05qWQ?oc=5" target="_blank">📰 Fight By Fight Preview | UFC Fight Night: Moicano vs Nolan - UFC.com</a>
+                <a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxNTm9ERnJuY1RTYVNsT3l6MG43TzdueGEzenFIMm42ZW01dHZ3TzFRS3FsN0dlN1N0blFxLWYyellIeVpMdEUtcm9DaC1IczVkRVN1OV8xX0N6bTBOcFNLX0c4WlEwNFBOOV9MenlkTE11aS1TMDJiTHVpNmxOQkUxeDRibHhSb1FicTZUQm9oYUc2YmFER1RydzJrWnhwSC15VThTWFVCRdIBrAFBVV95cUxPY2tpRm1nYWZEWi13Ym1KMXNRV0Nyd3ctM1MzTmpiaTdreUxoYUFuc0IwYUxpeFZpV2xKYXQ3VkNQSkNUZVQ5aHUzM05jdXFfYmJuSjhscWowQ182emdHWFZSdC11LWVuSGlsM3N0SHo4dkZwSmtyblRlNTUxMm4ySGMwaWNoOExzSjRGUFJFcVNiYkoyU0dqaUlqbzVFeTV1TlJlb0dIN0tVTDlk?oc=5" target="_blank" rel="noopener">📰 Live Now! UFC Vegas 123 ‘Moicano vs. Nolan’ play-by-play, results &amp; round scoring - Sherdog</a><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxOaGxqbFQ4QVhjcTIwM1AwUlRiY2tYamdQVVp5ajhjeEJCT0xBYWxkQ3ZTYXVHNnhuRU1QbkZOTGhJR3Y0cXlpS2czaVFPLTY5WnA2TUlCQUY3di1HeHBZQzhmWHNQamJzaGQ0WGx4OVRtVmM3NzA1T2toR0dpRXJqX05qWQ?oc=5" target="_blank" rel="noopener">📰 Fight By Fight Preview | UFC Fight Night: Moicano vs Nolan - UFC.com</a>
+            </div>
+        </div>
+    
+        <div class="card played">
+            <div class="tv-logos"><svg viewBox="0 0 100 40" class="svg-logo"><rect width="100" height="40" rx="6" fill="#003366"/><text x="50" y="26" fill="#40F87F" font-family="Impact, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">KAYO</text></svg><svg viewBox="0 0 100 40" class="svg-logo"><rect width="100" height="40" rx="6" fill="#FF5000"/><text x="50" y="26" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="16" font-weight="900" text-anchor="middle">FOXTEL</text></svg></div>
+            <div class="card-header">🏎️ [F1] Mexico City Grand Prix – Qualifying</div>
+            <div class="card-meta">📅 Sun 01/11/2026 05:00 AWST | 📍 Autódromo Hermanos Rodríguez, Mexico City, Mexico</div>
+            <a href="https://www.google.com/search?q=F1%20Mexico%20City%20Grand%20Prix%202026%20odds" target="_blank" rel="noopener" class="btn-odds">📈 View Live Odds</a>
+            <div class="news-box">
+                <strong>Latest News:</strong><br>
+                <a href="https://news.google.com/rss/articles/CBMi3AFBVV95cUxOZjgxblg2S3pmYTBqdEJLdG1qUnk0Vk1pOFMxZWR2TTAxV19BaUtVR0NpUlo0RUowU0NoSmVRS0tsQVBITXVpblZfX1IzNmY0Q2ZWLWlrbWtvVk9rN1Q5UXZhRXp4MDdtQ05WUm9fc3VveU02bVY1Zk42My1wU1NfN0IzUTJCMGstZDV6cFprWEZ1MW15LThPUmtEMGthck5ZX1RXclBpS2FQcHg5RlFhWHVvMXNuc0V6Z3ZSRjhUWXhfNW1iclBWMTJyWmxBVzdFUDI1R01kNUZ4ZExi?oc=5" target="_blank" rel="noopener">📰 What tyres will the teams have for the Mexico City GP? - Formula 1</a><a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxOX2N2bjBMU0lWUHZzbWRuS3BPM1llaUFkcEs0Qk54LWhwWU5RbHR1czFGTVlWTmU1N3VGVFJ0YUtaY09lT3pac0V5V3JVMFU2Q0t1QjlEaEJkZ2pOOFEzM2g2Mk5xVVctd29qN3dVVmhhdmhqMjJ3SHRoVHRiLVNTa0FtVHZjMVh2X1J2YUJmUE5ZTmJNQXFlaHlKUlp4VDA5czhETlNUY2QxTDNIYVE?oc=5" target="_blank" rel="noopener">📰 F1 - 2026 Mexico City Grand Prix Post-Race &amp; World Champion&#x27;s Press Conference Transcript - Federation Internationale de l&#x27;Automobile</a>
+            </div>
+        </div>
+    
+        <div class="card played">
+            <div class="tv-logos"><svg viewBox="0 0 100 40" class="svg-logo"><rect width="100" height="40" rx="6" fill="#003366"/><text x="50" y="26" fill="#40F87F" font-family="Impact, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">KAYO</text></svg><svg viewBox="0 0 100 40" class="svg-logo"><rect width="100" height="40" rx="6" fill="#FF5000"/><text x="50" y="26" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="16" font-weight="900" text-anchor="middle">FOXTEL</text></svg></div>
+            <div class="card-header">🏎️ [F1] [Round 18] United States Grand Prix – 🏆 Andrea Kimi Antonelli</div>
+            <div class="card-meta">📅 Mon 26/10/2026 04:00 AWST | 📍 Circuit of the Americas, Austin, USA</div>
+            <a href="https://www.google.com/search?q=F1%20United%20States%20Grand%20Prix%202026%20odds" target="_blank" rel="noopener" class="btn-odds">📈 View Live Odds</a>
+            <div class="news-box">
+                <strong>Latest News:</strong><br>
+                <a href="https://news.google.com/rss/articles/CBMi9gFBVV95cUxQNUFvQ2Rvd2gwLVVHV1dMSU1kbFNOSGROY0p2MGlGZXRvc0VGRHByUnBqdzh1NUhUT1FqWFBQajcyeHZPRmhiVkpNQ09QQlZuNV95T0ZxbUlMaTdSU01WSHIzYVRMN2R0dlZVY3NhTDFOeWo3SFlQOWNYMW1qeDVhSVlhcTRRampjbndTU3JLZEpaaDBfZlFqV1BSR3VJaVgwWFJkZEhYRHdkdTk4bDhHRXQ5Um5xZWg5SXBVelVkU29jaWp1Z1doOE16R3czdHhhTmNGa0pNRzFGa1ZQUVlZZXRsS0NGUHB2TGlZRWZrR3NnekxkZnc?oc=5" target="_blank" rel="noopener">📰 Facts, stats and trivia ahead of the 2026 United States GP - Formula 1</a><a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxQSkhZdnBZV0VLUTM3bTJpWjFocVpnWDIydVdFVEh0ekJkLUhNZGdZVkJEUlFqWDhTY1lHUVUyemJFQ1BIcTRnVm8wcDJhcmxtUjJHN1RRSldoNmE3V2JhNGoxMDFWYlZsZkFmVGk0OWZYRFQ4WC0yclpFY0NyajRXcUh4NTJ6TE5yWXYyUWF6czNBVzFLUGhpZUxqdThLUDBh?oc=5" target="_blank" rel="noopener">📰 F1 2026 United States Grand Prix starting grid with four penalties - The Race</a>
+            </div>
+        </div>
+    
+        <div class="card played">
+            <div class="tv-logos"><svg viewBox="0 0 100 40" class="svg-logo"><rect width="100" height="40" rx="6" fill="#003366"/><text x="50" y="26" fill="#40F87F" font-family="Impact, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">KAYO</text></svg><svg viewBox="0 0 100 40" class="svg-logo"><rect width="100" height="40" rx="6" fill="#FF5000"/><text x="50" y="26" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="16" font-weight="900" text-anchor="middle">FOXTEL</text></svg></div>
+            <div class="card-header">🏎️ [F1] United States Grand Prix – Qualifying</div>
+            <div class="card-meta">📅 Sun 25/10/2026 05:00 AWST | 📍 Circuit of the Americas, Austin, USA</div>
+            <a href="https://www.google.com/search?q=F1%20United%20States%20Grand%20Prix%202026%20odds" target="_blank" rel="noopener" class="btn-odds">📈 View Live Odds</a>
+            <div class="news-box">
+                <strong>Latest News:</strong><br>
+                <a href="https://news.google.com/rss/articles/CBMi9gFBVV95cUxQNUFvQ2Rvd2gwLVVHV1dMSU1kbFNOSGROY0p2MGlGZXRvc0VGRHByUnBqdzh1NUhUT1FqWFBQajcyeHZPRmhiVkpNQ09QQlZuNV95T0ZxbUlMaTdSU01WSHIzYVRMN2R0dlZVY3NhTDFOeWo3SFlQOWNYMW1qeDVhSVlhcTRRampjbndTU3JLZEpaaDBfZlFqV1BSR3VJaVgwWFJkZEhYRHdkdTk4bDhHRXQ5Um5xZWg5SXBVelVkU29jaWp1Z1doOE16R3czdHhhTmNGa0pNRzFGa1ZQUVlZZXRsS0NGUHB2TGlZRWZrR3NnekxkZnc?oc=5" target="_blank" rel="noopener">📰 Facts, stats and trivia ahead of the 2026 United States GP - Formula 1</a><a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxQSkhZdnBZV0VLUTM3bTJpWjFocVpnWDIydVdFVEh0ekJkLUhNZGdZVkJEUlFqWDhTY1lHUVUyemJFQ1BIcTRnVm8wcDJhcmxtUjJHN1RRSldoNmE3V2JhNGoxMDFWYlZsZkFmVGk0OWZYRFQ4WC0yclpFY0NyajRXcUh4NTJ6TE5yWXYyUWF6czNBVzFLUGhpZUxqdThLUDBh?oc=5" target="_blank" rel="noopener">📰 F1 2026 United States Grand Prix starting grid with four penalties - The Race</a>
             </div>
         </div>
     
         <div class="card played">
             <div class="tv-logos"><svg viewBox="0 0 100 40" class="svg-logo"><rect width="100" height="40" rx="6" fill="#CC0000"/><text x="50" y="27" fill="#FFFFFF" font-family="Arial Black, sans-serif" font-size="20" font-style="italic" font-weight="900" text-anchor="middle">ESPN</text></svg><svg viewBox="0 0 100 40" class="svg-logo"><rect width="100" height="40" rx="6" fill="#003366"/><text x="50" y="26" fill="#40F87F" font-family="Impact, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">KAYO</text></svg></div>
             <div class="card-header">🥊 [UFC] UFC 333: Volkanovski vs Evloev</div>
-            <div class="card-meta">📅 25/10/2026 02:00 AWST | 📍 Etihad Arena, Yas Island/Yas West, United Arab Emirates</div>
-            <a href="https://www.google.com/search?q=UFC%20333%3A%20Volkanovski%20vs%20Evloev%20odds" target="_blank" class="btn-odds">📈 View Live Odds</a>
+            <div class="card-meta">📅 Sun 25/10/2026 02:00 AWST | 📍 Etihad Arena, Yas Island/Yas West, United Arab Emirates</div>
+            <a href="https://www.google.com/search?q=UFC%20333%3A%20Volkanovski%20vs%20Evloev%20odds" target="_blank" rel="noopener" class="btn-odds">📈 View Live Odds</a>
             <div class="news-box">
                 <strong>Latest News:</strong><br>
-                <a href="https://news.google.com/rss/articles/CBMiSEFVX3lxTFBsbzZGajJMblN6cTNsd19tQV83dWZPb21RNmZxbDFXUTJRUi1OVUc2aVRscWVTQ2tBWWE0NHpGZFB1U3RVenRXeQ?oc=5" target="_blank">📰 Volkanovski - UFC.com</a><a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxOc0lndW4xZG9BZEg4WEMwUGN4UmJUVk5UaF85azMydjI2UXFPYWZIMlhtWUZjMDRvbVloV0VlTkRVSVNpZWZlOG1WTDdIZlNlU3BVZHRTTlJ2NGZZbVA5Ny1ncUdZT3RCdTBxVExsQXJFQUN1c0daa2FQYWhKcktCWkFIVFg0TDRkendteHJaMTI2Zw?oc=5" target="_blank">📰 How (and when) to watch UFC 333: Volkanovski vs. Evloev in Australia - WhistleOut</a>
+                <a href="https://news.google.com/rss/articles/CBMiSEFVX3lxTFBsbzZGajJMblN6cTNsd19tQV83dWZPb21RNmZxbDFXUTJRUi1OVUc2aVRscWVTQ2tBWWE0NHpGZFB1U3RVenRXeQ?oc=5" target="_blank" rel="noopener">📰 Volkanovski - UFC.com</a><a href="https://news.google.com/rss/articles/CBMitwJBVV95cUxQeTVxNC1jYmI3ZFZva25iTGdVTlBjRXBTcEhQbWxGb3o3amU1UWFreEdXLWdqT0ZKeUpVM2t2cDJuVmt4NldiVUs4aERwRGM2U0Q1bjVqTW9TRmZ3VFlEWk9PM01NTDNzeWhsQVRIM3lzWkdQZC1EM2I3YlhBYWlzV2JfYS15LURIdzMzR1JSNUpOZU9wbmdxaEpqTHJZbEFabVNNaE11NjJSYWgxVDFXOVI2NzA4QzlLaXNhLWNqTG5kdGxOV2tuQmgyWTIzTFZsVlV2amtFTXJKYnlvclpiaE1VWlU0cHF5ZHN2UUp5c0RCeTgwbkZkTkM5N2pzMFJ3UFQwaWxnOFk1b2w0ZEpSRXVWM2pfZ1hDYzFZdUNaNjFDZWRNRjNHeGlDTXdsSUpPWkY4dGNxMA?oc=5" target="_blank" rel="noopener">📰 UFC 333 start time details: What time will Alex Volkanovski-Movsar Evloev fight start? - Fox Sports</a>
             </div>
         </div>
     
